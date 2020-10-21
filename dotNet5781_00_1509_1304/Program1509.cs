@@ -19,7 +19,7 @@ namespace dotNet5781_00_1509_1304
 
         private static void Welcome1509()
         {
-            Console.Write("Enter your name: ");
+            Console.Write("Enter your name please: ");
             string name = Console.ReadLine();
             Console.WriteLine($"Hello {name}!");
         }
