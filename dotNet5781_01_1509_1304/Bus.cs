@@ -40,8 +40,20 @@ namespace dotNet5781_01_1509_1304
         private int mileage;
         private int gas;
 
-        public Bus(string license, DateTime start) { licenseNumber = license; startActivity = start; lastTreatment = start; km = 0; mileage = 0; gas = 400; }
-        public Bus(string license, DateTime start, DateTime Treatment, int KM, int Mileage, int Gas) { licenseNumber = license; startActivity = start; lastTreatment = Treatment; km = KM; mileage = Mileage; gas = Gas % 401; }
+        public Bus(string license, DateTime start) { licenseNumber = license;
+            startActivity = start; 
+            lastTreatment = start; km = 0;
+            mileage = 0;
+            gas = 400; 
+        }
+        public Bus(string license, DateTime start, DateTime Treatment, int KM, int Mileage, int Gas) { 
+            licenseNumber = license;
+            startActivity = start;
+            lastTreatment = Treatment;
+            km = KM;
+            mileage = Mileage;
+            gas = Gas % 401;
+        }
 
         public void Refuling() { gas = 400; Console.WriteLine("Gas refuled!"); }
         public void DoTheDrive(int Km)
