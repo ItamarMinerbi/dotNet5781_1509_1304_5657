@@ -8,25 +8,27 @@ namespace dotNet5781_01_1509_1304
 {
     /// <summary>
     ///                                               -- IMPORTANT --
-    /// <-- The class based on that the gas container is for 400L (for 1200 KM according the exersise) -->
+    /// <-- The class is based on the fact that the gas container is for 400L (for 1200 KM according to the exersise) -->
     /// 
-    /// The first ctor get the license (the user will enter the license in the format) and get the date the bus started to drive.
+    /// The first ctor get the license number (the user will enter the license number that is in the format) 
+    /// and get the date of the bus that had started the drive.
+    /// 
     /// The second ctor get all of the parameters and match them.
     /// 
     /// Parameters:
-    /// license number - the license of the bus.
-    /// startActivity - the date the bus started to drive.
-    /// lastTreatmrnt - the date of the last treatment of the bus.
-    /// km - the number of KM since last treatment (when equal to 20,000 KM the bus can't do a drive until doing a treatment).
+    /// licenseNumber - the license number of the bus (has a getter).
+    /// startActivity - the date the bus had started to drive.
+    /// lastTest - the date of the last test.
+    /// km - the number of KM since last test (when equal to 20,000 KM the bus can't take a drive until doing a test).
     /// mileage - the number of KM the bus did in total.
     /// gas - the fuel container [400L for 1200 KM (based on wiki)].
     /// 
     /// Functions:
-    /// Refuling - set the gas parameter to 400L (max).
-    /// DoTheDrive - check if the bus can do the drive (check: lastTreatment parameter, km parameter, gas parameter)
-    /// if its possible, the bus do the drive, else a message will displayed.
-    /// Treatment - set the lastTreatment parameter to DateTime.Now .
-    /// PrintDetails - print the license, mileage parameter & the km parameter.
+    /// Refuel - set the gas parameter to 400L (max).
+    /// DoTheDrive - check if the bus can take the drive (check: lastTest parameter, km parameter, gas parameter)
+    /// if its possible, the bus take the drive, else a message will be displayed.
+    /// Test - set the lastTest parameter to DateTime.Now value.
+    /// PrintDetails - print the license number, mileage parameter & the km parameter.
     /// </summary>
     class Bus
     {
@@ -34,7 +36,7 @@ namespace dotNet5781_01_1509_1304
         public string LicenseNumber { get => licenseNumber; }
 
         private DateTime startActivity;
-        private DateTime lastTreatment;
+        private DateTime lastTest;
 
         private int km;
         private int mileage;
@@ -42,28 +44,28 @@ namespace dotNet5781_01_1509_1304
 
         public Bus(string license, DateTime start) { licenseNumber = license;
             startActivity = start; 
-            lastTreatment = start; km = 0;
+            lastTest = start; km = 0;
             mileage = 0;
             gas = 400; 
         }
-        public Bus(string license, DateTime start, DateTime Treatment, int KM, int Mileage, int Gas) { 
+        public Bus(string license, DateTime start, DateTime Test, int KM, int Mileage, int Gas) { 
             licenseNumber = license;
             startActivity = start;
-            lastTreatment = Treatment;
+            lastTest = Test;
             km = KM;
             mileage = Mileage;
             gas = Gas % 401;
         }
 
-        public void Refuling() { gas = 400; Console.WriteLine("Gas refuled!"); }
+        public void Reful() { gas = 400; Console.WriteLine("Gas refuled!"); }
         public void DoTheDrive(int Km)
         {
-            if (DateTime.Now >= lastTreatment.AddYears(1)) Console.WriteLine("You have to do a treatment!");
-            else if ((km + Km) > 20000) Console.WriteLine("Too much killometers! do a treatment!");
-            else if (((Km / 3) + 1) > gas) Console.WriteLine("You have to refuling the gas first!");
+            if (DateTime.Now >= lastTest.AddYears(1)) Console.WriteLine("A year has passed! You have to take a test!");
+            else if ((km + Km) > 20000) Console.WriteLine("Too many kilometers! take a test!");
+            else if (((Km / 3) + 1) > gas) Console.WriteLine("You have to refuel the gas container!");
             else { km += Km; gas -= ((Km / 3) + 1); mileage += Km; }
         }
-        public void Treatment() { km = 0; lastTreatment = DateTime.Now; Console.WriteLine("Treatment complete!"); }
+        public void Test() { km = 0; lastTest = DateTime.Now; Console.WriteLine("Test complete!"); }
         public void PrintDetails() { Console.WriteLine($"{licenseNumber}: {mileage}\\{km}."); }
     }
 }
