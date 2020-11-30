@@ -13,6 +13,7 @@ namespace dotNet5781_02_1509_1304
         {
             List<BusStationLine> stations = new List<BusStationLine>();
             BusLinesController controller = new BusLinesController();
+            
             StartValues(stations, controller);
             
             string msgOptions = @"1) Add.
@@ -141,7 +142,8 @@ Enter the number of the area of the line: [0 - General,
                     list.Add(stations[randIndex]);
                     indexes.Add(randIndex);
                 }
-                controller.AddLine(new Line("" + lineNumber, list, Line.Areas.Center));
+                int area = rand.Next(0, 5);
+                controller.AddLine(new Line("" + lineNumber, list, (Line.Areas)area));
             }
         }
 
