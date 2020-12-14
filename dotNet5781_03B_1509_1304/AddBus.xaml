@@ -1,0 +1,91 @@
+﻿<Window x:Class="dotNet5781_03B_1509_1304.AddBus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dotNet5781_03B_1509_1304"
+        mc:Ignorable="d"
+        Title="Add Bus" Height="450" Width="800" Closed="Window_Closed" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="200*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <CheckBox Content="New Bus" IsChecked="False" x:Name="chbNewBus" Grid.Column="0" Margin="10,10" VerticalContentAlignment="Center"
+                  HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Click="chbNewBus_Click"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Start date:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" x:Name="lblStartDate"
+                   FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <DatePicker Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FirstDayOfWeek="Sunday"
+                        x:Name="calStartDate" SelectedDateChanged="calStartDate_SelectedDateChanged"/>
+            <Label Content="Last test date:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" x:Name="lblLastTestDate"
+                   FontSize="26" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <DatePicker Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FirstDayOfWeek="Sunday" 
+                        x:Name="calLastTestDate" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="200*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="License number:" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="lblLicenseNumber"
+                   Margin="10,10" FontSize="20"/>
+            <TextBox Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="auto" x:Name="txtLicenseNumber"
+                     FontSize="20" Margin="10,10" DataObject.Pasting="TextBoxPasting_AllTextBoxes"
+                     PreviewTextInput="txtLicenseNumber_PreviewTextInput" TextChanged="txtLicenseNumber_TextChanged"/>
+            <Label Grid.Column="1" Content="KM:" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="lblKM"
+                   Margin="10,10" FontSize="20"/>
+            <TextBox Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="auto" x:Name="txtKM"
+                     FontSize="20" Margin="10,10" Text="0" DataObject.Pasting="TextBoxPasting_AllTextBoxes"/>
+            <Label Grid.Column="2" Content="Mileage:" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="lblMileage"
+                   Margin="10,10" FontSize="20"/>
+            <TextBox Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="auto" x:Name="txtMileage"
+                     FontSize="20" Margin="10,10" Text="0" DataObject.Pasting="TextBoxPasting_AllTextBoxes"/>
+            <Label Grid.Column="3" Content="Gas:" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="lblGas"
+                   Margin="10,10" FontSize="20"/>
+            <TextBox Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="auto" x:Name="txtGas"
+                     FontSize="20" Margin="10,10" Text="0" DataObject.Pasting="TextBoxPasting_AllTextBoxes"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400*"/>
+                <ColumnDefinition Width="400*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnAddBus" IsEnabled="False" Grid.Column="0" Content="Add Bus" FontSize="30" FontWeight="Bold" Margin="10,10" Background="GreenYellow" Click="btnAddBus_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="btnCancle" Grid.Column="1" Content="Cancle" FontSize="30" FontWeight="Bold" Margin="10,10" Background="Red" Click="btnCancle_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="20"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

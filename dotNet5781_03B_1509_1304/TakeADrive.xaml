@@ -1,0 +1,14 @@
+﻿<Window x:Class="dotNet5781_03B_1509_1304.TakeADrive"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dotNet5781_03B_1509_1304"
+        mc:Ignorable="d"
+        Title="Take a Drive" Height="200" Width="400" ResizeMode="NoResize" >
+    <Grid>
+        <TextBox x:Name="txtDistance" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"
+                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" DataObject.Pasting="TextBoxPasting"
+                 TextChanged="TextChanged" PreviewTextInput="PreviewTextInput" Text="0" KeyDown="txtDistance_KeyDown"/>
+    </Grid>
+</Window>

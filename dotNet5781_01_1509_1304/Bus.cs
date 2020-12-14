@@ -30,17 +30,17 @@ namespace dotNet5781_01_1509_1304
     /// Test - set the lastTest parameter to DateTime.Now value.
     /// PrintDetails - print the license number, mileage parameter & the km parameter.
     /// </summary>
-    class Bus
+    public class Bus
     {
         private string licenseNumber;
         public string LicenseNumber { get => licenseNumber; }
 
-        private DateTime startActivity;
-        private DateTime lastTest;
+        public DateTime startActivity { get; private set; }
+        public DateTime lastTest { get; private set; }
 
-        private int km;
-        private int mileage;
-        private int gas;
+        public int km { get; private set; }
+        public int mileage { get; private set; }
+        public int gas { get; private set; }
 
         public Bus(string license, DateTime start) { licenseNumber = license;
             startActivity = start; 
@@ -57,6 +57,13 @@ namespace dotNet5781_01_1509_1304
             gas = Gas % 401;
         }
 
+        public string CanDoTheDrive(int Km) //  A new function for ex_03B return a string with info if the bus can do the drive
+        {
+            if (DateTime.Now >= lastTest.AddYears(1)) return "A year has passed! You have to take a test";
+            else if ((km + Km) > 20000) return "Too many kilometers! take a test";
+            else if (((Km / 3) + 1) > gas) return "You have to refuel the gas container";
+            else return "can do the drive";
+        }
         public void Reful() { gas = 400; Console.WriteLine("Gas refuled!"); }
         public void DoTheDrive(int Km)
         {

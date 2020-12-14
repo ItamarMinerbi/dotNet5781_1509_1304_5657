@@ -1,0 +1,82 @@
+﻿<Window x:Class="dotNet5781_03B_1509_1304.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dotNet5781_03B_1509_1304"
+        mc:Ignorable="d"
+        MinWidth="800"
+        MinHeight="450"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="imgStyle" TargetType="Image">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Visibility" Value="Hidden" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBoxItem}},Path=IsMouseOver}" Value="True">
+                    <Setter Property="Visibility" Value="Visible" />
+                </DataTrigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Width" Value="60"/>
+                    <Setter Property="Height" Value="60"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <ListBox x:Name="lbBuses" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDoubleClick="lbBuses_MouseDoubleClick">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel x:Name="satckPanel">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="300*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="{Binding LicenseNumber}" HorizontalContentAlignment="Left" Padding="10,10" 
+                                   FontSize="20" FontWeight="Bold" VerticalContentAlignment="Center"
+                                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" />
+                            <Label x:Name="lblListBox" HorizontalContentAlignment="Left" Padding="10,10" 
+                                   FontSize="10" FontWeight="Bold" VerticalContentAlignment="Bottom"
+                                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Loaded="lblListBox_Loaded" />
+                            <Image Source="images/during event pic.png" Width="20" Height="20" x:Name="imgIcon" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Center"
+                                   Visibility="Hidden" Loaded="imgIcon_Loaded" Grid.Column="2" ToolTip="During Event" />
+                            <Image Margin="20, 0, 10, 0" x:Name="btnRefuel" Style="{StaticResource imgStyle}"
+                                   Source="images/refuel pic.png" ToolTip="Refuel this bus" Grid.Column="3" MouseLeftButtonDown="btnRefuel_MouseLeftButtonDown" />
+                            <Image Margin="10, 0, 10, 0" x:Name="btnRepair" Style="{StaticResource imgStyle}"
+                                   Source="images/repair pic.png" ToolTip="Repair this bus" Grid.Column="4" MouseLeftButtonDown="btnRepair_MouseLeftButtonDown" />
+                            <Image Margin="10, 0, 10, 0" x:Name="btnTakeDrive" Style="{StaticResource imgStyle}"
+                                   Source="images/take a drive pic.png" ToolTip="Take a drive with this bus" Grid.Column="5" MouseLeftButtonDown="btnTakeDrive_MouseLeftButtonDown" />
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Image x:Name="btnAddBus" Source="images/add pic.png" ToolTip="Add new bus"
+               HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10, 10" MouseLeftButtonDown="btnAddBus_MouseLeftButtonDown">
+            <Image.Resources>
+                <Style TargetType="Image">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Width" Value="60"/>
+                            <Setter Property="Height" Value="60"/>
+                        </Trigger>
+                    </Style.Triggers>
+                    <Setter Property="Width" Value="50"/>
+                    <Setter Property="Height" Value="50"/>
+                </Style>
+            </Image.Resources>
+        </Image>
+    </Grid>
+</Window>
