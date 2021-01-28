@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         MinWidth="800"
         MinHeight="450"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+        Title="Main Window" Height="450" Width="800" Closing="Window_Closing">
     <Window.Resources>
         <Style x:Key="imgStyle" TargetType="Image">
             <Setter Property="Width" Value="50"/>

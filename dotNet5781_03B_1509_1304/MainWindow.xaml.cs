@@ -25,7 +25,7 @@ namespace dotNet5781_03B_1509_1304
     public partial class MainWindow : Window
     {
         List<BusExtensions> buses;
-        SpeechSynthesizer speech;
+        SpeechSynthesizer speech = null;
 
         public MainWindow()
         {
@@ -159,7 +159,8 @@ namespace dotNet5781_03B_1509_1304
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //   if the speech is speaking, cancle
-            speech.Dispose();
+            if(speech != null)
+                speech.Dispose();
         }
     }
 }

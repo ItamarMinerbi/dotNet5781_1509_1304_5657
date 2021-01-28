@@ -1,0 +1,43 @@
+﻿<Window x:Class="PlTests.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlTests"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="cmbLinesID" VerticalContentAlignment="Center" 
+                  HorizontalContentAlignment="Center" FontSize="20" SelectedIndex="0" 
+                  SelectionChanged="cmbLinesID_SelectionChanged" HorizontalAlignment="Center" 
+                  VerticalAlignment="Top" Width="200" />
+        
+        <ListBox x:Name="lstStations" Margin="20, 40">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="{Binding StationCode1}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="0" FontSize="20" FontWeight="Bold"/>
+                            <Label Content="{Binding name}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="1" FontSize="15" FontWeight="Bold"/>
+                            <Label Content="{Binding Time}" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="0" Foreground="LightGreen" FontSize="20" FontWeight="Bold"/>
+                            <Label Content="{Binding Distance}" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" Grid.Column="1" Grid.Row="1" FontSize="15" FontWeight="Bold"/>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
