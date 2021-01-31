@@ -54,7 +54,8 @@
                   Margin="0,0,10,10" ItemsSource="{Binding}" EnableRowVirtualization="True" Background="Transparent"
                   AutoGenerateColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False"
                   AlternatingRowBackground="#FF0AF3F3" Grid.Row="1"
-                  BorderThickness="0" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+                  BorderThickness="0" CanUserAddRows="False"
+                  CanUserDeleteRows="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="latitudeColumn" Width="*" Header="Latitude" Binding="{Binding Latitude}"/>
                 <DataGridTextColumn x:Name="longitudeColumn" Width="*" Header="Longitude" Binding="{Binding Longitude}"/>

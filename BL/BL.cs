@@ -12,7 +12,7 @@ namespace BL
 {
     sealed class BL : IBL
     {
-        private static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Object);
+        private static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Xml);
 
         #region Singleton
         static readonly BL instance = new BL();
@@ -146,10 +146,10 @@ namespace BL
                 smtp.EnableSsl = true;  // secure connection
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("loginforms.test@gmail.com", "aaa111aaa");
+                smtp.Credentials = new NetworkCredential("dotnet5781.project.help@gmail.com", "5e16XPKxnlEukKuU");
                 MailMessage mail = new MailMessage();
                 mail.To.Add(Email);
-                mail.From = new MailAddress("loginforms.test@gmail.com");
+                mail.From = new MailAddress("dotnet5781.project.help@gmail.com");
                 mail.Subject = "Register";
                 mail.Body = htmlBody.Replace("{Username}", Username).Replace("{Name}", "Itamar Minerbi & Eli Arazi Project");
                 mail.IsBodyHtml = true;
@@ -201,15 +201,20 @@ namespace BL
             catch (Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); }
 
             // Request Lines in the station from DAL
-            IEnumerable<DO.StationLine> linesInTheStation = dal.GetStationLinesInStation(stationCode);
-
+            IEnumerable<DO.StationLine> linesInTheStation;
+            try { linesInTheStation = dal.GetStationLinesInStation(stationCode); }
+            catch(Exception ex) { throw new AnErrorOccurredException(ex.Message, ex); }
+            
             // Build a new BO station and update the fields
             Station stationResult = stationReply.Convert<DO.Station, Station>();    // update the lon, lat, name, stationcode etc
 
             // Convert the collection of StationLine to LinesInTheStation
             stationResult.Lines = from stationLine in linesInTheStation
                                   select BuildLinesInTheStation(stationLine.ID);
-
+            List<LinesInTheStation> linesWithNoNull = stationResult.Lines.ToList();
+            linesWithNoNull.RemoveAll(i => i == null);
+            stationResult.Lines = from stationLine in linesWithNoNull
+                                  select stationLine;
             // Return the new BO station
             return stationResult;
         }
@@ -219,7 +224,7 @@ namespace BL
             // Request Line from DAL
             DO.Line lineReplay;
             try { lineReplay = dal.RequestLine(Id); }
-            catch(Exception ex) { throw new LineDoesNotExistException(ex.Message, ex); }
+            catch(Exception) { return null; }
 
             // Convert the result to BO LinesInTheStation
             LinesInTheStation linesInTheStationResult = lineReplay.Convert<DO.Line, LinesInTheStation>();
@@ -227,7 +232,7 @@ namespace BL
             // Get the name of the last station
             DO.Station station;
             try { station = dal.RequestStation(lineReplay.LastStation); }
-            catch(Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); }
+            catch(Exception) { return null; }
             linesInTheStationResult.LastStationName = station.Name;
 
             // Return the new BO LinesInTheStation
@@ -1032,34 +1037,30 @@ namespace BL
         #region GetAll Functions (Public functions)
         public IEnumerable<Line> GetLines()
         {
-            List<Line> lines = new List<Line>();
-            foreach (var line in dal.GetLines())
+            Line Line;
+            foreach (var line in dal.GetLines().OrderBy(x => x.ID))
             {
-                try { lines.Add(BuildLine(line.ID)); }
+                try { Line = BuildLine(line.ID); }
                 catch (Exception) { continue; }
+                yield return Line;
             }
-            return from line in lines
-                   orderby line.ID
-                   select line;
         }
 
         public IEnumerable<Station> GetStations()
         {
-            List<Station> stations = new List<Station>();
-            foreach (var station in dal.GetStations())
+            Station Station;
+            foreach (var station in dal.GetStations().OrderBy(x => x.StationCode))
             {
-                try { stations.Add(BuildStation(station.StationCode)); }
+                try { Station = BuildStation(station.StationCode); }
                 catch (Exception) { continue; }
+                yield return Station;
             }
-            return from station in stations
-                   orderby station.StationCode
-                   select station;
         }
 
         public IEnumerable<AdjStations> GetAdjStations()
         {
             AdjStations adjStations;
-            foreach (var singleAdjStations in dal.GetAdjStations())
+            foreach (var singleAdjStations in dal.GetAdjStations().OrderBy(x => x.StationCode1))
             {
                 try { adjStations = BuildAdjStation(singleAdjStations.StationCode1, singleAdjStations.StationCode2); }
                 catch (Exception) { continue; }
@@ -1069,12 +1070,12 @@ namespace BL
 
         public IEnumerable<LineTrip> GetLineTrips()
         {
-            List<LineTrip> trips = new List<LineTrip>();
-            foreach (var singleTrip in dal.GetLineTrips())
-                trips.Add(singleTrip.Convert<DO.LineTrip, LineTrip>());
-            return from trip in trips
-                   orderby trip.StartTime
-                   select trip;
+            LineTrip lineTrip;
+            foreach (var singleTrip in dal.GetLineTrips().OrderBy(x => x.StartTime))
+            { 
+                lineTrip = singleTrip.Convert<DO.LineTrip, LineTrip>();
+                yield return lineTrip;
+            }
         }
         #endregion
     }

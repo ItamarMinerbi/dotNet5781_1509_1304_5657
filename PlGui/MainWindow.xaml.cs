@@ -32,6 +32,7 @@ namespace PlGui
         UserDisplay userReply;
         string workerResultTitle;
         string workerResultContent;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,7 +44,18 @@ namespace PlGui
 
         private void Worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (userReply != null && userReply.IsAdmin)
+            if (workerResultTitle == "UserDoesNotExist")
+            {
+                CustomMessageBox messageBox = new CustomMessageBox(
+                        workerResultContent,
+                        "Values error",
+                        "Login error",
+                        CustomMessageBox.Buttons.OK,
+                        CustomMessageBox.Icons.USERNAME);
+                this.IsEnabled = false;
+                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+            }
+            else if (userReply != null && userReply.IsAdmin)
             {
                 new ManageWindow(userReply.Username).Show();
                 this.Close();
@@ -59,17 +71,6 @@ namespace PlGui
                 this.IsEnabled = false;
                 if (messageBox.ShowDialog() == false) this.IsEnabled = true;
             }
-            else if (workerResultTitle == "UserDoesNotExist")
-            {
-                CustomMessageBox messageBox = new CustomMessageBox(
-                        workerResultContent,
-                        "Values error",
-                        "Login error",
-                        CustomMessageBox.Buttons.OK,
-                        CustomMessageBox.Icons.USERNAME);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
-            }
             else
             {
                 CustomMessageBox messageBox = new CustomMessageBox(
@@ -81,6 +82,7 @@ namespace PlGui
                 this.IsEnabled = false;
                 if (messageBox.ShowDialog() == false) this.IsEnabled = true;
             }
+            workerResultTitle = "";
             txtPassword.Clear();
         }
 

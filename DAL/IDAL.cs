@@ -18,12 +18,12 @@ namespace DalApi
         #endregion
 
         #region Bus
-        IEnumerable<DO.Bus> GetBuses();
-        int BusesCount();
-        void CreateBus(DO.Bus bus);
-        void UpdateBus(DO.Bus bus);
-        DO.Bus RequestBus(string licenseNumber);
-        void RemoveBus(string licenseNumber);
+        //IEnumerable<DO.Bus> GetBuses();
+        //int BusesCount();
+        //void CreateBus(DO.Bus bus);
+        //void UpdateBus(DO.Bus bus);
+        //DO.Bus RequestBus(string licenseNumber);
+        //void RemoveBus(string licenseNumber);
         #endregion
 
         #region Station

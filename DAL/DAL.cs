@@ -40,10 +40,10 @@ namespace DAL
         public void RemoveUser(User user)
         {
             int searchIndex = ds.Users.FindIndex(i =>
-                              i.Username == user.Username &&
-                              i.Password == user.Password &&
-                              i.Email == user.Email &&
-                              i.IsActive);
+                              (i.Username == user.Username ||
+                                i.Email == user.Email) &&
+                               i.Password == user.Password &&
+                               i.IsActive);
 
             if (searchIndex == -1)          // User does not exist
                 throw new UserDoesNotExistException($"Incorrect username or password.");

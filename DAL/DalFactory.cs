@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DalApi
 {
-    public enum Options { Object, Xml, NotSet }
+    public enum Options { Object, Xml }
     public static class DalFactory
     {
         public static IDAL GetDal(Options type)
@@ -16,9 +16,7 @@ namespace DalApi
                 case Options.Object:
                     return DAL.DAL.Instance;
                 case Options.Xml:
-                    return null;
-                case Options.NotSet:
-                    return null;
+                    return DAL.DalXml.Instance;
                 default:
                     return null;
             }

@@ -7,6 +7,61 @@ using System.Threading.Tasks;
 
 namespace DalExceptions
 {
+    #region An Error Occur Exception
+    public class AnErrorOccurredException : Exception
+    {
+        public object Argument { get; set; }
+        public AnErrorOccurredException() : base() { }
+        public AnErrorOccurredException(string message) : base(message) { }
+        public AnErrorOccurredException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public AnErrorOccurredException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+    #endregion
+
+    #region XmlException
+    public class XmlFileWasNotFoundException : Exception
+    {
+        public XmlFileWasNotFoundException() : base() { }
+        public XmlFileWasNotFoundException(string message) : base(message) { }
+        public XmlFileWasNotFoundException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public XmlFileWasNotFoundException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+
+    public class XmlLoadException : Exception
+    {
+        public XmlLoadException() : base() { }
+        public XmlLoadException(string message) : base(message) { }
+        public XmlLoadException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public XmlLoadException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+
+    public class XmlWriteException : Exception
+    {
+        public XmlWriteException() : base() { }
+        public XmlWriteException(string message) : base(message) { }
+        public XmlWriteException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public XmlWriteException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+
+    public class XmlParametersException : Exception
+    {
+        public XmlParametersException() : base() { }
+        public XmlParametersException(string message) : base(message) { }
+        public XmlParametersException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public XmlParametersException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+    #endregion
+
     #region Bus Exceptions
     class BusDoesNotExistException : Exception
     {
