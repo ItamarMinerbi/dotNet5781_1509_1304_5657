@@ -131,7 +131,7 @@ namespace PlGui
             worker.RunWorkerAsync();
         }
 
-        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             new MainWindow().Show();
             this.Close();

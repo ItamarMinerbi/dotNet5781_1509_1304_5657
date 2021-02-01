@@ -21,15 +21,6 @@ namespace DalExceptions
     #endregion
 
     #region XmlException
-    public class XmlFileWasNotFoundException : Exception
-    {
-        public XmlFileWasNotFoundException() : base() { }
-        public XmlFileWasNotFoundException(string message) : base(message) { }
-        public XmlFileWasNotFoundException(string message, Exception innerException)
-            : base(message, innerException) { }
-        public XmlFileWasNotFoundException(SerializationInfo info, StreamingContext context)
-            : base(info, context) { }
-    }
 
     public class XmlLoadException : Exception
     {

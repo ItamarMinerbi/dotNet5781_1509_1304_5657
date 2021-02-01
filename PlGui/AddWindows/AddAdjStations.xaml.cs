@@ -104,7 +104,7 @@ namespace PlGui.AddWindows
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             if (String.IsNullOrEmpty(txtCode1.Text) || String.IsNullOrEmpty(txtCode2.Text) ||
-                String.IsNullOrEmpty(txtDistance.Text))
+                String.IsNullOrEmpty(txtDistance.Text) || !timePicker.SelectedTime.HasValue)
             {
                 CustomMessageBox messageBox = new CustomMessageBox(
                     "Some fields are null or empty.",
@@ -123,7 +123,7 @@ namespace PlGui.AddWindows
                     StationCode1 = int.Parse(txtCode1.Text),
                     StationCode2 = int.Parse(txtCode2.Text),
                     Distance = double.Parse(txtDistance.Text),
-                    Time = TimeSpan.Parse($"{cmbHours.SelectedItem}:{cmbMin.SelectedItem}:{cmbSec.SelectedItem}")
+                    Time = timePicker.SelectedTime.Value.TimeOfDay
                 };
                 worker.RunWorkerAsync(adjStations);
             }

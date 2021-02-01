@@ -20,6 +20,39 @@ namespace BlExceptions
     }
     #endregion
 
+    #region XmlException
+
+    public class XmlLoadException : Exception
+    {
+        public XmlLoadException() : base() { }
+        public XmlLoadException(string message) : base(message) { }
+        public XmlLoadException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public XmlLoadException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+
+    public class XmlWriteException : Exception
+    {
+        public XmlWriteException() : base() { }
+        public XmlWriteException(string message) : base(message) { }
+        public XmlWriteException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public XmlWriteException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+
+    public class XmlParametersException : Exception
+    {
+        public XmlParametersException() : base() { }
+        public XmlParametersException(string message) : base(message) { }
+        public XmlParametersException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public XmlParametersException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+    #endregion
+
     #region User Exceptions
     public class UserDoesNotExistException : Exception
     {

@@ -48,6 +48,7 @@ namespace PlGui
 
         private void LoadLines()
         {
+            dgrLines.IsEnabled = grdUpdate.IsEnabled = false;
             pbarLoad.Visibility = Visibility.Visible;
             pbarLoad.Value = 0;
             workerProgressChangedAction = new Action<object, ProgressChangedEventArgs>(
@@ -55,7 +56,18 @@ namespace PlGui
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
-                    if (workerResultTitle == "UnknownError")
+                    if (workerResultTitle == "XmlError")
+                    {
+                        CustomMessageBox messageBox = new CustomMessageBox(
+                            workerResultContent,
+                            "File Error",
+                            "Files error",
+                            CustomMessageBox.Buttons.OK,
+                            CustomMessageBox.Icons.FILE);
+                        this.IsEnabled = false;
+                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    }
+                    else if (workerResultTitle == "UnknownError")
                     {
                         CustomMessageBox messageBox = new CustomMessageBox(
                             workerResultContent,
@@ -67,11 +79,15 @@ namespace PlGui
                         if (messageBox.ShowDialog() == false) this.IsEnabled = true;
                     }
                     pbarLoad.Visibility = Visibility.Hidden;
+                    dgrLines.IsEnabled = grdUpdate.IsEnabled = true;
+                    workerResultTitle = "";
                 });
             workerDoWorkAction = new Action<object, DoWorkEventArgs>((object sender, DoWorkEventArgs e) =>
             {
                 Lines = new ObservableCollection<BO.Line>();
-                int i = 0, count = BL.GetLinesCount();
+                int i = 0, count = 0;
+                try { count = BL.GetLinesCount(); }
+                catch (Exception ex) { workerResultTitle = "XmlError"; workerResultContent = ex.Message; }
                 foreach (var line in BL.GetLines())
                     try { Lines.Add(line); worker.ReportProgress(++i * 100 / count); }
                     catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
@@ -271,23 +287,31 @@ namespace PlGui
             worker.RunWorkerAsync();
         }
 
+        private void grdUpdate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LoadLines();
+        }
+
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var text = (sender as TextBox).Text;
-            ICollectionView collectionView = CollectionViewSource.GetDefaultView(Lines);
-            if (collectionView != null)
+            if (!worker.IsBusy)
             {
-                dgrLines.ItemsSource = collectionView;
-                collectionView.Filter = (object o) =>
+                var text = (sender as TextBox).Text;
+                ICollectionView collectionView = CollectionViewSource.GetDefaultView(Lines);
+                if (collectionView != null)
                 {
-                    BO.Line p = o as BO.Line;
-                    if (p == null) return false;
-                    if (p.ID.ToString().Contains(text)) return true;
-                    if (p.LineNumber.ToString().Contains(text)) return true;
-                    if (p.Area.ToString().Contains(text)) return true;
-                    if (p.TotalTime.ToString(@"hh\:mm\:ss").Contains(text)) return true;
-                    return false;
-                };
+                    dgrLines.ItemsSource = collectionView;
+                    collectionView.Filter = (object o) =>
+                    {
+                        BO.Line p = o as BO.Line;
+                        if (p == null) return false;
+                        if (p.ID.ToString().Contains(text)) return true;
+                        if (p.LineNumber.ToString().Contains(text)) return true;
+                        if (p.Area.ToString().Contains(text)) return true;
+                        if (p.TotalTime.ToString(@"hh\:mm\:ss").Contains(text)) return true;
+                        return false;
+                    };
+                }
             }
         }
 

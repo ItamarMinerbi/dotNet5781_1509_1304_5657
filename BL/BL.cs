@@ -198,12 +198,14 @@ namespace BL
             // Request Station from DAL
             DO.Station stationReply;
             try { stationReply = dal.RequestStation(stationCode); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
             catch (Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); }
 
             // Request Lines in the station from DAL
             IEnumerable<DO.StationLine> linesInTheStation;
             try { linesInTheStation = dal.GetStationLinesInStation(stationCode); }
-            catch(Exception ex) { throw new AnErrorOccurredException(ex.Message, ex); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch (Exception ex) { throw new AnErrorOccurredException(ex.Message, ex); }
             
             // Build a new BO station and update the fields
             Station stationResult = stationReply.Convert<DO.Station, Station>();    // update the lon, lat, name, stationcode etc
@@ -224,7 +226,8 @@ namespace BL
             // Request Line from DAL
             DO.Line lineReplay;
             try { lineReplay = dal.RequestLine(Id); }
-            catch(Exception) { return null; }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch (Exception) { return null; }
 
             // Convert the result to BO LinesInTheStation
             LinesInTheStation linesInTheStationResult = lineReplay.Convert<DO.Line, LinesInTheStation>();
@@ -232,7 +235,8 @@ namespace BL
             // Get the name of the last station
             DO.Station station;
             try { station = dal.RequestStation(lineReplay.LastStation); }
-            catch(Exception) { return null; }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch (Exception) { return null; }
             linesInTheStationResult.LastStationName = station.Name;
 
             // Return the new BO LinesInTheStation
@@ -244,7 +248,8 @@ namespace BL
             // Request Station from DAL
             DO.Station stationReply;
             try { stationReply = dal.RequestStation(stationCode); }
-            catch(Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch (Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); }
 
             // Convert the result to BO StationLine
             StationLine stationLineResult = stationReply.Convert<DO.Station, StationLine>();
@@ -259,17 +264,20 @@ namespace BL
             // Request Line from DAL
             DO.Line lineReply;
             try { lineReply = dal.RequestLine(Id); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
             catch (Exception ex) { throw new LineDoesNotExistException(ex.Message, ex); }
 
             // Get the first station index of the line
             DO.StationLine firstStationCode;
             try { firstStationCode = dal.RequestStationLine(Id, lineReply.FirstStation); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
             catch (Exception ex) { throw new StationLineDoesNotExistException(ex.Message, ex); }
             int firstStation = firstStationCode.StationNumberInLine;
 
             // Get the last station index of the line
             DO.StationLine lastStationCode;
             try { lastStationCode = dal.RequestStationLine(Id, lineReply.LastStation); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
             catch (Exception ex) { throw new StationLineDoesNotExistException(ex.Message, ex); }
             int lastStation = lastStationCode.StationNumberInLine;
 
@@ -280,6 +288,7 @@ namespace BL
                 // Request StationLine from DAL for the station code
                 DO.StationLine stationLine;
                 try { stationLine = dal.RequestStationLineByIndex(Id, i); }
+                catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
                 catch (Exception ex) { throw new StationLineDoesNotExistException(ex.Message, ex); }
 
                 // Get the StationLine
@@ -360,12 +369,14 @@ namespace BL
             // Check if the stations exist
             DO.Station station1, station2;
             try { station1 = dal.RequestStation(stationCode1); station2 = dal.RequestStation(stationCode2); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
             catch (Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); }
 
             // Request AdjStations from DAL
             DO.AdjStations adjStationsReply;
             try { adjStationsReply = dal.RequestAdjStations(stationCode1, stationCode2); }
-            catch(Exception) { 
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch (Exception) { 
                 AddAdjStations(stationCode1, stationCode2);
                 try { adjStationsReply = dal.RequestAdjStations(stationCode1, stationCode2); }
                 catch (Exception ex) { throw new AdjStationsDoesNotExistException($"We couldn't calculate the distances between the stations Add this!", ex); }
@@ -394,7 +405,10 @@ namespace BL
                 IsActive = true
             };
             try { dal.CreateStation(stationToAdd); }
-            catch(Exception ex) { throw new StationAlreadyExistException(ex.Message, ex); }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch (DalExceptions.XmlParametersException ex) { throw new XmlParametersException(ex.Message, ex); }
+            catch (DalExceptions.XmlWriteException ex) { throw new XmlWriteException(ex.Message, ex); }
+            catch (Exception ex) { throw new StationAlreadyExistException(ex.Message, ex); }
         }
 
         public void AddLine(int lineNumber, int firstStationCode, int lastStationCode, Line.Areas area)
@@ -1041,6 +1055,7 @@ namespace BL
             foreach (var line in dal.GetLines().OrderBy(x => x.ID))
             {
                 try { Line = BuildLine(line.ID); }
+                catch (XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
                 catch (Exception) { continue; }
                 yield return Line;
             }
@@ -1052,6 +1067,7 @@ namespace BL
             foreach (var station in dal.GetStations().OrderBy(x => x.StationCode))
             {
                 try { Station = BuildStation(station.StationCode); }
+                catch (XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
                 catch (Exception) { continue; }
                 yield return Station;
             }
@@ -1063,6 +1079,7 @@ namespace BL
             foreach (var singleAdjStations in dal.GetAdjStations().OrderBy(x => x.StationCode1))
             {
                 try { adjStations = BuildAdjStation(singleAdjStations.StationCode1, singleAdjStations.StationCode2); }
+                catch (XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
                 catch (Exception) { continue; }
                 yield return adjStations;
             }

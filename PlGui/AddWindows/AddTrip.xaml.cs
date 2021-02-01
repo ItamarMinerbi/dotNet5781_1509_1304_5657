@@ -113,17 +113,27 @@ namespace PlGui.AddWindows
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            if (!timePickerStart.SelectedTime.HasValue || !timePickerEnd.SelectedTime.HasValue ||
+                !timePickerFreq.SelectedTime.HasValue)
+            {
+                CustomMessageBox messageBox = new CustomMessageBox(
+                    "Some fields are null or empty.",
+                    "Values Error",
+                    "Fields error",
+                    CustomMessageBox.Buttons.OK,
+                    CustomMessageBox.Icons.ERROR);
+                this.IsEnabled = false;
+                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                return;
+            }
             try
             {
                 BO.LineTrip trip = new BO.LineTrip
                 {
                     ID = int.Parse(txtID.Text),
-                    StartTime = TimeSpan.Parse($"{cmbHoursS.SelectedItem}:" +
-                                        $"{cmbMinS.SelectedItem}:{cmbSecS.SelectedItem}"),
-                    EndTime = TimeSpan.Parse($"{cmbHoursE.SelectedItem}:" +
-                                        $"{cmbMinE.SelectedItem}:{cmbSecE.SelectedItem}"),
-                    Frequency = TimeSpan.Parse($"{cmbHoursF.SelectedItem}:" +
-                                        $"{cmbMinF.SelectedItem}:{cmbSecF.SelectedItem}")
+                    StartTime = timePickerStart.SelectedTime.Value.TimeOfDay,
+                    EndTime = timePickerEnd.SelectedTime.Value.TimeOfDay,
+                    Frequency = timePickerFreq.SelectedTime.Value.TimeOfDay
                 };
                 worker.RunWorkerAsync(trip);
             }

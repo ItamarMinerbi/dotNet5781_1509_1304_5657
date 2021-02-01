@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
 using DO;
 using DalExceptions;
-using System.Xml.Linq;
-using System.IO;
 
 namespace DAL
 {
@@ -16,7 +16,8 @@ namespace DAL
         internal XElement LoadXml(string path)
         {
             try { return XElement.Load(path); }
-            catch(Exception ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch(Exception ex) { throw new XmlLoadException($"Could not find '{path}'" +
+                $" Please make sure that file is exist.", ex); }
         }
         internal static readonly string path = Directory.GetCurrentDirectory() 
                         + @"\XML Files\{0}.xml";

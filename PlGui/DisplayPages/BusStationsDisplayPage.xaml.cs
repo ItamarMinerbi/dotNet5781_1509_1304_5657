@@ -49,6 +49,7 @@ namespace PlGui
 
         private void LoadStations()
         {
+            dgrStations.IsEnabled = grdUpdate.IsEnabled = false;
             pbarLoad.Visibility = Visibility.Visible;
             pbarLoad.Value = 0;
             workerProgressChangedAction = new Action<object, ProgressChangedEventArgs>(
@@ -56,7 +57,18 @@ namespace PlGui
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
-                    if (workerResultTitle == "UnknownError")
+                    if (workerResultTitle == "XmlError")
+                    {
+                        CustomMessageBox messageBox = new CustomMessageBox(
+                            workerResultContent,
+                            "File Error",
+                            "Files error",
+                            CustomMessageBox.Buttons.OK,
+                            CustomMessageBox.Icons.FILE);
+                        this.IsEnabled = false;
+                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    }
+                    else if (workerResultTitle == "UnknownError")
                     {
                         CustomMessageBox messageBox = new CustomMessageBox(
                             workerResultContent,
@@ -68,11 +80,14 @@ namespace PlGui
                         if (messageBox.ShowDialog() == false) this.IsEnabled = true;
                     }
                     pbarLoad.Visibility = Visibility.Hidden;
+                    dgrStations.IsEnabled = grdUpdate.IsEnabled = true;
                 });
             workerDoWorkAction = new Action<object, DoWorkEventArgs>((object sender, DoWorkEventArgs e) =>
             {
                 Stations = new ObservableCollection<BO.Station>();
-                int i = 0, count = BL.GetStationsCount();
+                int i = 0, count = 0;
+                try { count = BL.GetStationsCount(); }
+                catch (Exception ex) { workerResultTitle = "XmlError"; workerResultContent = ex.Message; }
                 foreach (var station in BL.GetStations())
                     try { Stations.Add(station); worker.ReportProgress(++i * 100 / count); }
                     catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
@@ -158,24 +173,32 @@ namespace PlGui
             }
         }
 
+        private void grdUpdate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LoadStations();
+        }
+
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var text = (sender as TextBox).Text;
-            ICollectionView collectionView = CollectionViewSource.GetDefaultView(Stations);
-            if (collectionView != null)
+            if(!worker.IsBusy)
             {
-                dgrStations.ItemsSource = collectionView;
-                collectionView.Filter = (object o) =>
+                var text = (sender as TextBox).Text;
+                ICollectionView collectionView = CollectionViewSource.GetDefaultView(Stations);
+                if (collectionView != null)
                 {
-                    BO.Station p = o as BO.Station;
-                    if (p == null) return false;
-                    if (p.StationCode.ToString().Contains(text)) return true;
-                    if (p.Name.Contains(text)) return true;
-                    if (p.Address.ToString().Contains(text)) return true;
-                    if (p.Latitude.ToString().Contains(text)) return true;
-                    if (p.Longitude.ToString().Contains(text)) return true;
-                    return false;
-                };
+                    dgrStations.ItemsSource = collectionView;
+                    collectionView.Filter = (object o) =>
+                    {
+                        BO.Station p = o as BO.Station;
+                        if (p == null) return false;
+                        if (p.StationCode.ToString().Contains(text)) return true;
+                        if (p.Name.Contains(text)) return true;
+                        if (p.Address.ToString().Contains(text)) return true;
+                        if (p.Latitude.ToString().Contains(text)) return true;
+                        if (p.Longitude.ToString().Contains(text)) return true;
+                        return false;
+                    };
+                }
             }
         }
     }

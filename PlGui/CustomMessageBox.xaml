@@ -89,6 +89,11 @@
                 <Path Fill="#FFA20000" Data="M20.7,7C21.1,6.6 21.1,6 20.7,5.6L18.4,3.3C18,2.9 17.4,2.9 17,3.3L15.2,5.1L19,8.9M3,17.2V21H6.8L17.8,9.9L14.1,6.1L3,17.2M3.9,2.4L6,4.5L8.1,2.4L9.5,3.8L7.4,5.9L9.5,8L8.1,9.5L6,7.4L3.9,9.5L2.5,8.1L4.6,6L2.5,3.8L3.9,2.4Z" />
             </Canvas>
         </Viewbox>
+        <Viewbox x:Name="vbxFile" Visibility="Hidden">
+            <Canvas Width="24" Height="24">
+                <Path Fill="#FFA20000" Data="M14.46,15.88L15.88,14.46L18,16.59L20.12,14.46L21.54,15.88L19.41,18L21.54,20.12L20.12,21.54L18,19.41L15.88,21.54L14.46,20.12L16.59,18L14.46,15.88M12,17V15H7V17H12M17,11H7V13H14.69C13.07,14.07 12,15.91 12,18C12,19.09 12.29,20.12 12.8,21H5C3.89,21 3,20.1 3,19V5C3,3.89 3.89,3 5,3H19A2,2 0 0,1 21,5V12.8C20.12,12.29 19.09,12 18,12L17,12.08V11M17,9V7H7V9H17Z" />
+            </Canvas>
+        </Viewbox>
 
         <TextBlock x:Name="txtCaption" HorizontalAlignment="Left" VerticalAlignment="Top"
                    Margin="90,10,0,0" Width="290" FontSize="20" TextDecorations="underline"

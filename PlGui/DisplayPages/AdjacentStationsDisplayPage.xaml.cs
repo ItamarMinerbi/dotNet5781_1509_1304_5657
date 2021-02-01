@@ -49,14 +49,28 @@ namespace PlGui
 
         private void LoadAdjacentStations()
         {
+            dgrStations.IsEnabled = grdUpdate.IsEnabled = false;
             pbarLoad.Visibility = Visibility.Visible;
             pbarLoad.Value = 0;
+            
             workerProgressChangedAction = new Action<object, ProgressChangedEventArgs>(
                 (object obj, ProgressChangedEventArgs args) => pbarLoad.Value = args.ProgressPercentage);
+            
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
-                    if (workerResultTitle == "UnknownError")
+                    if (workerResultTitle == "XmlError")
+                    {
+                        CustomMessageBox messageBox = new CustomMessageBox(
+                            workerResultContent,
+                            "File Error",
+                            "Files error",
+                            CustomMessageBox.Buttons.OK,
+                            CustomMessageBox.Icons.FILE);
+                        this.IsEnabled = false;
+                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    }
+                    else if (workerResultTitle == "UnknownError")
                     {
                         CustomMessageBox messageBox = new CustomMessageBox(
                             workerResultContent,
@@ -68,11 +82,15 @@ namespace PlGui
                         if (messageBox.ShowDialog() == false) this.IsEnabled = true;
                     }
                     pbarLoad.Visibility = Visibility.Hidden;
+                    dgrStations.IsEnabled = grdUpdate.IsEnabled = true;
                 });
+            
             workerDoWorkAction = new Action<object, DoWorkEventArgs>((object sender, DoWorkEventArgs e) =>
             {
                 AdjStations = new ObservableCollection<BO.AdjStations>();
-                int i = 0, count = BL.GetStationsCount();
+                int i = 0, count = 0;
+                try { count = BL.GetStationsCount(); }
+                catch (Exception ex) { workerResultTitle = "XmlError"; workerResultContent = ex.Message; }
                 foreach (var adjStations in BL.GetAdjStations())
                     try { AdjStations.Add(adjStations); worker.ReportProgress(++i * 100 / count); }
                     catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
@@ -166,25 +184,33 @@ namespace PlGui
             }
         }
 
+        private void grdUpdate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LoadAdjacentStations();
+        }
+
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var text = (sender as TextBox).Text;
-            ICollectionView collectionView = CollectionViewSource.GetDefaultView(AdjStations);
-            if (collectionView != null)
+            if(!worker.IsBusy)
             {
-                dgrStations.ItemsSource = collectionView;
-                collectionView.Filter = (object o) =>
+                var text = (sender as TextBox).Text;
+                ICollectionView collectionView = CollectionViewSource.GetDefaultView(AdjStations);
+                if (collectionView != null)
                 {
-                    BO.AdjStations p = o as BO.AdjStations;
-                    if (p == null) return false;
-                    if (p.StationCode1.ToString().Contains(text)) return true;
-                    if (p.StationCode2.ToString().Contains(text)) return true;
-                    if (p.Station1Name.Contains(text)) return true;
-                    if (p.Station2Name.Contains(text)) return true;
-                    if (p.Distance.ToString().Contains(text)) return true;
-                    if (p.Time.ToString(@"hh\:mm\:ss").Contains(text)) return true;
-                    return false;
-                };
+                    dgrStations.ItemsSource = collectionView;
+                    collectionView.Filter = (object o) =>
+                    {
+                        BO.AdjStations p = o as BO.AdjStations;
+                        if (p == null) return false;
+                        if (p.StationCode1.ToString().Contains(text)) return true;
+                        if (p.StationCode2.ToString().Contains(text)) return true;
+                        if (p.Station1Name.Contains(text)) return true;
+                        if (p.Station2Name.Contains(text)) return true;
+                        if (p.Distance.ToString().Contains(text)) return true;
+                        if (p.Time.ToString(@"hh\:mm\:ss").Contains(text)) return true;
+                        return false;
+                    };
+                }
             }
         }
 
@@ -201,6 +227,15 @@ namespace PlGui
                 (sender as ComboBox).Text = "";
                 (sender as ComboBox).Text.Insert(0, str.Substring(0, 2));
             }
+        }
+
+        private void DoubleTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = !((e.Key >= Key.D0 && e.Key <= Key.D9) ||
+                          (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9) ||
+                           e.Key == Key.Decimal ||
+                           e.Key == Key.OemPeriod ||    // ???
+                           e.Key == Key.Back);
         }
     }
 }

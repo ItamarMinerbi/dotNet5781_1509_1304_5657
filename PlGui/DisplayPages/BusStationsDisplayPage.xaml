@@ -8,7 +8,6 @@
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="BusStationsDisplayPage">
-
     <Page.Resources>
         <Style x:Key="closeHover" TargetType="{x:Type Viewbox}">
             <Setter Property="Width" Value="30"/>
@@ -30,8 +29,20 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="pBar" TargetType="ProgressBar">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar" >
+                        <Grid>
+                            <Border Name="PART_Track" CornerRadius="10" Background="#FF2A5783" BorderThickness="0" />
+                            <Border Name="PART_Indicator" CornerRadius="10" Background="#FFB9DDF1"
+                                    BorderThickness="0" HorizontalAlignment="Left" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -44,6 +55,15 @@
                          TextChanged="txtSearch_TextChanged" />
             </Underline>
         </TextBlock>
+        <Grid x:Name="grdUpdate" Margin="215,10" Background="Transparent"
+              Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Top"
+              ToolTip="Update" MouseLeftButtonDown="grdUpdate_MouseLeftButtonDown">
+            <Viewbox Width="35" Height="35">
+                <Canvas Width="24" Height="24">
+                    <Path Fill="Black" Data="M21,10.12H14.22L16.96,7.3C14.23,4.6 9.81,4.5 7.08,7.2C4.35,9.91 4.35,14.28 7.08,17C9.81,19.7 14.23,19.7 16.96,17C18.32,15.65 19,14.08 19,12.1H21C21,14.08 20.12,16.65 18.36,18.39C14.85,21.87 9.15,21.87 5.64,18.39C2.14,14.92 2.11,9.28 5.62,5.81C9.13,2.34 14.76,2.34 18.27,5.81L21,3V10.12M12.5,8V12.25L16,14.33L15.28,15.54L11,13V8H12.5Z" />
+                </Canvas>
+            </Viewbox>
+        </Grid>
         <ProgressBar x:Name="pbarLoad" Margin="10" HorizontalAlignment="Left" Width="300" Height="50" 
                      Visibility="Hidden" Maximum="100" Minimum="0" Value="0" BorderThickness="0"
                      Style="{StaticResource pBar}"/>
@@ -184,11 +204,11 @@
                         </Button>
                         <Grid Grid.Column="1">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
@@ -207,18 +227,10 @@
                                        VerticalAlignment="Center" Margin="20" Text="קו רוחב:"/>
                             <TextBlock x:Name="txtStationCode" FlowDirection="RightToLeft" Grid.Row="0" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Margin="20" Text="{Binding StationCode}" TextAlignment="Center" />
-                            <TextBlock Grid.Row="1" Margin="20" HorizontalAlignment="Center">
-                                <Underline>
-                                    <TextBox x:Name="txtName" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
-                                       VerticalAlignment="Center" Text="{Binding Name}" TextAlignment="Center" BorderThickness="0" />
-                                </Underline>
-                            </TextBlock>
-                            <TextBlock Grid.Row="2" Margin="20" HorizontalAlignment="Center">
-                                <Underline>
-                                    <TextBox x:Name="txtAddress" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
+                            <TextBox x:Name="txtName" Grid.Row="1" Margin="20" HorizontalAlignment="Center" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
+                                     VerticalAlignment="Center" Text="{Binding Name}" TextAlignment="Center" BorderThickness="0" />
+                            <TextBox x:Name="txtAddress" Grid.Row="2" Margin="20" HorizontalAlignment="Center" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Text="{Binding Address}" TextAlignment="Center" BorderThickness="0" />
-                                </Underline>
-                            </TextBlock>
                             <TextBlock x:Name="txtLatitude" FlowDirection="RightToLeft" Grid.Row="3" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Margin="20" Text="{Binding Latitude}" TextAlignment="Center" />
                             <TextBlock x:Name="txtLongitude" FlowDirection="RightToLeft" Grid.Row="4" FontSize="20" Background="Transparent"

@@ -21,7 +21,7 @@ namespace PlGui
     {
         public string Result { get; private set; }
         public enum Buttons { OK, YESNO, IGNORE }
-        public enum Icons { Vi, ERROR, WARNING, QUESTION, INFO, USERNAME, MAIL, EDIT }
+        public enum Icons { Vi, ERROR, WARNING, QUESTION, INFO, USERNAME, MAIL, EDIT, FILE }
         public CustomMessageBox(string Text, string Caption, string Title = "Message Box", Buttons button = Buttons.OK, Icons icon = Icons.INFO)
         {
             InitializeComponent();
@@ -70,6 +70,9 @@ namespace PlGui
                     break;
                 case Icons.EDIT:
                     vbxEdit.Visibility = Visibility.Visible;
+                    break;
+                case Icons.FILE:
+                    vbxFile.Visibility = Visibility.Visible;
                     break;
                 default:
                     break;

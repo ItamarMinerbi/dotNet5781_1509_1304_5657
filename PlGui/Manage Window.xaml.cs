@@ -23,57 +23,46 @@ namespace PlGui
         {
             InitializeComponent();
 
-            lblBuses.Foreground = Brushes.Orange;
-            icoBuses.Fill = Brushes.Orange;
             lblName.Text = Username;
         }
 
-        private void busesGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
         {
-            frmDisplay.Source = new Uri("DisplayPages/BusesDisplayPage.xaml", UriKind.Relative);
-            icoBuses.Fill = lblBuses.Foreground = Brushes.Orange;
-            icoLines.Fill = lblLines.Foreground = Brushes.White;
-            icoStations.Fill = lblStations.Foreground = Brushes.White;
-            icoAdjStations.Fill = lblAdjStations.Foreground = Brushes.White;
+            ButtonCloseMenu.Visibility = Visibility.Visible;
+            ButtonOpenMenu.Visibility = Visibility.Collapsed;
         }
 
-        private void linesGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
         {
-            frmDisplay.Source = new Uri("DisplayPages/LinesDisplayPage.xaml", UriKind.Relative);
-            icoBuses.Fill = lblBuses.Foreground = Brushes.White;
-            icoLines.Fill = lblLines.Foreground = Brushes.Orange;
-            icoStations.Fill = lblStations.Foreground = Brushes.White;
-            icoAdjStations.Fill = lblAdjStations.Foreground = Brushes.White;
+            ButtonCloseMenu.Visibility = Visibility.Collapsed;
+            ButtonOpenMenu.Visibility = Visibility.Visible;
         }
 
-        private void busStationsGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            frmDisplay.Source = new Uri("DisplayPages/BusStationsDisplayPage.xaml", UriKind.Relative);
-            icoBuses.Fill = lblBuses.Foreground = Brushes.White;
-            icoLines.Fill = lblLines.Foreground = Brushes.White;
-            icoStations.Fill = lblStations.Foreground = Brushes.Orange;
-            icoAdjStations.Fill = lblAdjStations.Foreground = Brushes.White;
+            switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
+            {
+                case "Buses":
+                    frmDisplay.Source = new Uri("DisplayPages/BusesDisplayPage.xaml", UriKind.Relative);
+                    break;
+                case "Lines":
+                    frmDisplay.Source = new Uri("DisplayPages/LinesDisplayPage.xaml", UriKind.Relative);
+                    break;
+                case "Stations":
+                    frmDisplay.Source = new Uri("DisplayPages/BusStationsDisplayPage.xaml", UriKind.Relative);
+                    break;
+                case "AdjStations":
+                    frmDisplay.Source = new Uri("DisplayPages/AdjacentStationsDisplayPage.xaml", UriKind.Relative);
+                    break;
+                default:
+                    break;
+            }
         }
 
-        private void adjacentStationsGrid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            frmDisplay.Source = new Uri("DisplayPages/AdjacentStationsDisplayPage.xaml", UriKind.Relative);
-            icoBuses.Fill = lblBuses.Foreground = Brushes.White;
-            icoLines.Fill = lblLines.Foreground = Brushes.White;
-            icoStations.Fill = lblStations.Foreground = Brushes.White;
-            icoAdjStations.Fill = lblAdjStations.Foreground = Brushes.Orange;
-        }
-
-        private void imgLogout_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
             this.Close();
-        }
-
-        private void grdShowMenu_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            if (grdMenu.Visibility == Visibility.Visible) grdMenu.Visibility = Visibility.Collapsed;
-            else grdMenu.Visibility = Visibility.Visible;
         }
     }
 }
