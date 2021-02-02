@@ -15,6 +15,12 @@ namespace BlApi
         BO.UserDisplay TryLogin(string Username, string Password);
         #endregion
 
+        #region File Manager Functions
+        BO.DisplayCounts GetCounts();
+
+        IEnumerable<BO.DisplayFile> GetFiles();
+        #endregion
+
         #region Request Functions (Public Functions)
         BO.Station RequestStation(int stationCode);
         BO.Line RequestLine(int Id);

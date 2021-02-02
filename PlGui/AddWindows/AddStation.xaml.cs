@@ -42,25 +42,21 @@ namespace PlGui.AddWindows
         {
             if(workerResultTitle == "StationAlreadyExist")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Station Already Exist",
                     "Add station error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else if (workerResultTitle == "UnknownError")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Unknown Error",
                     "Unknown error",
                     CustomMessageBox.Buttons.IGNORE,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else
             {
@@ -71,8 +67,7 @@ namespace PlGui.AddWindows
                     CustomMessageBox.Buttons.OK,
                     CustomMessageBox.Icons.Vi);
                 Result = "Added";
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) { this.IsEnabled = true; this.Close(); }
+                if (messageBox.ShowDialog() == false) {  this.Close(); }
             }
             txtCode.Clear();
             txtName.Clear();
@@ -100,8 +95,8 @@ namespace PlGui.AddWindows
                     "Fields error",
                     CustomMessageBox.Buttons.OK,
                     CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                
+                if (messageBox.ShowDialog() == false) 
                 return;
             }
             try
@@ -118,14 +113,12 @@ namespace PlGui.AddWindows
             }
             catch(Exception ex)
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     ex.Message,
                     "Values Error",
                     "Fields error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
         }
 

@@ -55,7 +55,10 @@
                     <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
                 </Grid.Effect>
                 <StackPanel>
-                    <Grid Height="150" Background="#FF3581BF" RenderTransformOrigin="0.5,0.5">
+                    <Grid Height="150" RenderTransformOrigin="0.5,0.5">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="/images/background menu pic.jpg" Stretch="UniformToFill" />
+                        </Grid.Background>
                         <Grid.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -76,6 +79,12 @@
                     <ListView x:Name="ListViewMenu" Foreground="#FF5C99D6" SelectedIndex="0"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                               SelectionChanged="ListViewMenu_SelectionChanged">
+                        <ListViewItem x:Name="File" Height="60">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Folder" Height="25" Width="25" Margin="10"/>
+                                <TextBlock Text="File Manager" VerticalAlignment="Center" Margin="20 10"/>
+                            </StackPanel>
+                        </ListViewItem>
                         <ListViewItem x:Name="Buses" Height="60">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Bus" Height="25" Width="25" Margin="10"/>

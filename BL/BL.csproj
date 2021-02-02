@@ -45,6 +45,8 @@
     <Compile Include="BlFactory.cs" />
     <Compile Include="BoObjects\AdjStations.cs" />
     <Compile Include="BoObjects\Bus.cs" />
+    <Compile Include="BoObjects\DisplayCounts.cs" />
+    <Compile Include="BoObjects\DisplayFile.cs" />
     <Compile Include="BoObjects\DisplayStationLine.cs" />
     <Compile Include="BoObjects\Line.cs" />
     <Compile Include="BoObjects\LineTrip.cs" />

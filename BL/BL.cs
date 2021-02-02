@@ -7,6 +7,7 @@ using System.Net.Mail;
 using System.Text;
 using BlApi;
 using BlExceptions;
+using System.IO;
 
 namespace BL
 {
@@ -167,6 +168,71 @@ namespace BL
         public int UsersCount()
         {
             return dal.UsersCount();
+        }
+        #endregion
+
+        #region File Manager Functions
+        internal string BytesToStringSize(long size)
+        {
+            var kb = (double)size / 1024;
+            var mb = (double)kb / 1024;
+            var gb = (double)mb / 1024;
+            var tb = (double)gb / 1024;
+            string result;
+            if (tb >= 1) result = String.Format("{0:0.## TB}", tb);
+            else if (gb >= 1) result = String.Format("{0:0.## GB}", gb);
+            else if (mb >= 1) result = String.Format("{0:0.## MB}", mb);
+            else if (kb >= 1) result = String.Format("{0:0.## KB}", kb);
+            else result = String.Format("{0} Bytes", size);
+            return result;
+        }
+
+        public DisplayCounts GetCounts()
+        {
+            long size = 0;
+            foreach (var filePath in dal.GetPathes())
+                try { size += new FileInfo(filePath).Length; }
+                catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+                catch (Exception ex) { throw new AnErrorOccurredException(ex.Message, ex); }
+            string totalSize = BytesToStringSize(size);
+            try
+            {
+                return new DisplayCounts
+                {
+                    UsersCount = dal.UsersCount(),
+                    AdjStationsCount = dal.AdjStationsCount(),
+                    LinesCount = dal.LinesCount(),
+                    LineTripsCount = dal.LineTripsCount(),
+                    StationLinesCount = dal.StationsLineCount(),
+                    StationsCount = dal.StationsCount(),
+                    TotalSpace = totalSize
+                };
+            }
+            catch (DalExceptions.XmlLoadException ex) { throw new XmlLoadException(ex.Message, ex); }
+            catch(DalExceptions.XmlParametersException ex) { throw new XmlParametersException(ex.Message, ex); }
+            catch(Exception ex) { throw new AnErrorOccurredException(ex.Message, ex); }
+        }
+
+        public IEnumerable<DisplayFile> GetFiles()
+        {
+            foreach (var filePath in dal.GetPathes())
+            {
+                FileInfo file;
+                string creationTime, lastMod;
+                try
+                { file = new FileInfo(filePath); creationTime = File.GetCreationTime(filePath).ToString();
+                    lastMod = File.GetLastWriteTime(filePath).ToString(); }
+                catch(Exception ex) { throw new XmlLoadException(ex.Message, ex); }
+                yield return new DisplayFile
+                {
+                    Name = file.Name,
+                    CreationDate = creationTime,
+                    LastModifiedDate = lastMod,
+                    SizeBytes = file.Length,
+                    SizeString = BytesToStringSize(file.Length),
+                    Path = filePath
+                };
+            }
         }
         #endregion
 

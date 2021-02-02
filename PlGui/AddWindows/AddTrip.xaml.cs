@@ -44,47 +44,39 @@ namespace PlGui.AddWindows
         {
             if (workerResultTitle == "LineDoesNotExist")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Line Does Not Exist",
                     "Line error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else if (workerResultTitle == "LineTripAlreadyExist")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "This Line Already Has A Trip",
                     "Add trip error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else if (workerResultTitle == "AnErrorOccurred")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Unknown Error",
                     "Unknown error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else if (workerResultTitle == "UnknownError")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Unknown Error",
                     "Unknown error",
                     CustomMessageBox.Buttons.IGNORE,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else
             {
@@ -95,8 +87,7 @@ namespace PlGui.AddWindows
                     CustomMessageBox.Buttons.OK,
                     CustomMessageBox.Icons.Vi);
                 Result = "Added";
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) { this.IsEnabled = true; this.Close(); }
+                if (messageBox.ShowDialog() == false) this.Close();
             }
             workerResultTitle = workerResultContent = "";
         }
@@ -122,9 +113,7 @@ namespace PlGui.AddWindows
                     "Fields error",
                     CustomMessageBox.Buttons.OK,
                     CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
-                return;
+                if (messageBox.ShowDialog() == false) return;
             }
             try
             {
@@ -139,14 +128,12 @@ namespace PlGui.AddWindows
             }
             catch (Exception ex)
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     ex.Message,
                     "Values Error",
                     "Fields error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
         }
 

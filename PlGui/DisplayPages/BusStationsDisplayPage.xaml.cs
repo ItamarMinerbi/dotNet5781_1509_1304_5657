@@ -59,25 +59,21 @@ namespace PlGui
                 {
                     if (workerResultTitle == "XmlError")
                     {
-                        CustomMessageBox messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "File Error",
                             "Files error",
                             CustomMessageBox.Buttons.OK,
-                            CustomMessageBox.Icons.FILE);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.FILE).ShowDialog();
                     }
                     else if (workerResultTitle == "UnknownError")
                     {
-                        CustomMessageBox messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "Unknown Error",
                             "Unknown error",
                             CustomMessageBox.Buttons.IGNORE,
-                            CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.ERROR).ShowDialog();
                     }
                     pbarLoad.Visibility = Visibility.Hidden;
                     dgrStations.IsEnabled = grdUpdate.IsEnabled = true;
@@ -135,28 +131,25 @@ namespace PlGui
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
-                    CustomMessageBox messageBox;
                     if (workerResultTitle == "UnknownError")
                     {
-                        messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "Unknown Error",
                             "Unknown error",
                             CustomMessageBox.Buttons.IGNORE,
-                            CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.ERROR).ShowDialog();
                     }
                     else
                     {
-                        messageBox = new CustomMessageBox(
+                        CustomMessageBox messageBox = new CustomMessageBox(
                             "Station removed successfuly",
                             "Action Executed Successfuly",
                             "Action Completed",
                             CustomMessageBox.Buttons.OK,
                             CustomMessageBox.Icons.Vi);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) { this.IsEnabled = true; LoadStations(); }
+                        
+                        if (messageBox.ShowDialog() == false) LoadStations();
                     }
                 });
             worker.RunWorkerAsync();
@@ -165,12 +158,9 @@ namespace PlGui
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var addStation = new AddWindows.AddStation();
-            this.IsEnabled = false;
-            if (addStation.ShowDialog() == false)
-            {
-                this.IsEnabled = true;
-                if (addStation.Result == "Added") LoadStations();
-            }
+            
+            if (addStation.ShowDialog() == false && addStation.Result == "Added")
+                LoadStations();
         }
 
         private void grdUpdate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

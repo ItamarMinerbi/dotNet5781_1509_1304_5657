@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 using BlApi;
 
 namespace PlGui
@@ -58,25 +59,21 @@ namespace PlGui
                 {
                     if (workerResultTitle == "XmlError")
                     {
-                        CustomMessageBox messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "File Error",
                             "Files error",
                             CustomMessageBox.Buttons.OK,
-                            CustomMessageBox.Icons.FILE);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.FILE).ShowDialog();
                     }
                     else if (workerResultTitle == "UnknownError")
                     {
-                        CustomMessageBox messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "Unknown Error",
                             "Unknown error",
                             CustomMessageBox.Buttons.IGNORE,
-                            CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.ERROR).ShowDialog(); 
                     }
                     pbarLoad.Visibility = Visibility.Hidden;
                     dgrLines.IsEnabled = grdUpdate.IsEnabled = true;
@@ -128,12 +125,9 @@ namespace PlGui
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var addLine = new AddWindows.AddLine();
-            this.IsEnabled = false;
-            if (addLine.ShowDialog() == false)
-            {
-                this.IsEnabled = true;
-                if (addLine.Result == "Added") LoadLines();
-            }
+            
+            if (addLine.ShowDialog() == false && addLine.Result == "Added")
+                LoadLines();
         }
 
         private void btnRemove_Click(object sender, RoutedEventArgs e)
@@ -147,28 +141,24 @@ namespace PlGui
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
-                    CustomMessageBox messageBox;
                     if (workerResultTitle == "UnknownError")
                     {
-                        messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "Unknown Error",
                             "Unknown error",
                             CustomMessageBox.Buttons.IGNORE,
-                            CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.ERROR).ShowDialog();
                     }
                     else
                     {
-                        messageBox = new CustomMessageBox(
+                        CustomMessageBox messageBox = new CustomMessageBox(
                             "Line removed successfuly",
                             "Action Executed Successfuly",
                             "Action Completed",
                             CustomMessageBox.Buttons.OK,
                             CustomMessageBox.Icons.Vi);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) { this.IsEnabled = true; LoadLines(); }
+                        if (messageBox.ShowDialog() == false) LoadLines();
                     }
                 });
             worker.RunWorkerAsync();
@@ -177,12 +167,9 @@ namespace PlGui
         private void btnAddTrip_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var addTripLine = new AddWindows.AddTrip((dgrLines.SelectedItem as BO.Line).ID);
-            this.IsEnabled = false;
-            if (addTripLine.ShowDialog() == false)
-            {
-                this.IsEnabled = true;
-                if (addTripLine.Result == "Added") LoadLines();
-            }
+            
+            if (addTripLine.ShowDialog() == false && addTripLine.Result == "Added")
+                LoadLines();
         }
 
         private void btnRemoveTrip_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -196,28 +183,24 @@ namespace PlGui
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
-                    CustomMessageBox messageBox;
                     if (workerResultTitle == "UnknownError")
                     {
-                        messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "Unknown Error",
                             "Unknown error",
                             CustomMessageBox.Buttons.IGNORE,
-                            CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.ERROR).ShowDialog();
                     }
                     else
                     {
-                        messageBox = new CustomMessageBox(
+                        CustomMessageBox messageBox = new CustomMessageBox(
                             "Trip removed successfuly from the line",
                             "Action Executed Successfuly",
                             "Action Completed",
                             CustomMessageBox.Buttons.OK,
                             CustomMessageBox.Icons.Vi);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) { this.IsEnabled = true; LoadLines(); }
+                        if (messageBox.ShowDialog() == false) LoadLines();
                     }
                 });
             worker.RunWorkerAsync();
@@ -228,12 +211,9 @@ namespace PlGui
             var Index = ((int)(sender as MenuItem).CommandParameter) + 1;
             int Id = (dgrLines.SelectedItem as BO.Line).ID;
             var addStationLine = new AddWindows.AddStationLine(Id, Index);
-            this.IsEnabled = false;
-            if (addStationLine.ShowDialog() == false)
-            {
-                this.IsEnabled = true;
-                if (addStationLine.Result == "Added") LoadLines();
-            }
+            
+            if (addStationLine.ShowDialog() == false && addStationLine.Result == "Added")
+                LoadLines();
         }
 
         private void addStationBefore_Click(object sender, RoutedEventArgs e)
@@ -241,12 +221,8 @@ namespace PlGui
             var Index = (int)(sender as MenuItem).CommandParameter;
             int Id = (dgrLines.SelectedItem as BO.Line).ID;
             var addStationLine = new AddWindows.AddStationLine(Id, Index);
-            this.IsEnabled = false;
-            if (addStationLine.ShowDialog() == false) 
-            { 
-                this.IsEnabled = true; 
-                if (addStationLine.Result=="Added") LoadLines(); 
-            }
+            if (addStationLine.ShowDialog() == false && addStationLine.Result=="Added") 
+                LoadLines(); 
         }
 
         private void removeStation_Click(object sender, RoutedEventArgs e)
@@ -258,14 +234,12 @@ namespace PlGui
                 {
                     if (workerResultTitle == "RemoveError")
                     {
-                        CustomMessageBox messageBox = new CustomMessageBox(
+                        new CustomMessageBox(
                             workerResultContent,
                             "Remove Error",
                             "Remove error",
                             CustomMessageBox.Buttons.IGNORE,
-                            CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                            CustomMessageBox.Icons.ERROR).ShowDialog();
                     }
                     else
                     {
@@ -275,8 +249,8 @@ namespace PlGui
                             "Action Completed",
                             CustomMessageBox.Buttons.OK,
                             CustomMessageBox.Icons.Vi);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) { this.IsEnabled = true; LoadLines(); }
+                        
+                        if (messageBox.ShowDialog() == false) LoadLines();
                     }
                 });
             workerDoWorkAction = new Action<object, DoWorkEventArgs>((object obj, DoWorkEventArgs args) =>

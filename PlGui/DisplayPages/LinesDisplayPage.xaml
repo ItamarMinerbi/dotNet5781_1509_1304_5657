@@ -63,7 +63,7 @@
         <DataGrid x:Name="dgrLines" RowDetailsVisibilityMode="VisibleWhenSelected" SelectionMode="Single" 
                   Margin="0,0,10,10" ItemsSource="{Binding}" EnableRowVirtualization="True" Background="Transparent"
                   AutoGenerateColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False"
-                  AlternatingRowBackground="#FF0AF3F3" Grid.Row="1"
+                  AlternatingRowBackground="#FF0AF3F3" Grid.Row="1" SelectedItem="{x:Null}"
                   BorderThickness="0" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="areaColumn" Width="*" Header="איזור" Binding="{Binding Area}"/>
@@ -103,7 +103,7 @@
             </DataGrid.CellStyle>
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
-                    <Grid Height="400" HorizontalAlignment="Stretch" Background="#66FFFFFF">
+                    <Grid x:Name="RowDetailsGrid" Height="400" HorizontalAlignment="Stretch" Background="#66FFFFFF">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
@@ -169,8 +169,8 @@
                                 </ContextMenu>
                             </ListBox.ContextMenu>
                         </ListBox>
-                        <Button Grid.Column="1" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top">
-                            <Grid x:Name="btnClose" Cursor="Hand" Background="Transparent">
+                        <Button x:Name="btnClose" Grid.Column="1" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top">
+                            <Grid Cursor="Hand" Background="Transparent">
                                 <Viewbox>
                                     <Canvas Width="24" Height="24">
                                         <Path Fill="#FFC90505" Data="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" />
@@ -242,7 +242,7 @@
                                              TextAlignment="Center" BorderThickness="0" PreviewKeyDown="NumericTextBox_PreviewKeyDown" />
                             <TextBlock x:Name="txtTotalTime" FlowDirection="RightToLeft" Grid.Row="2" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Margin="0,0,20,0" Text="{Binding TotalTime}" TextAlignment="Center" />
-                            
+
                             <ComboBox Name="cmbStations" ItemsSource="{Binding}" Grid.Row="3" 
                                       SelectedValue="{Binding Area}" Loaded="cmbStations_Loaded"
                                       HorizontalContentAlignment="Center" VerticalContentAlignment="Top"

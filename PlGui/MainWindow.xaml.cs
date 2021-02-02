@@ -46,14 +46,12 @@ namespace PlGui
         {
             if (workerResultTitle == "UserDoesNotExist")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                         workerResultContent,
                         "Values error",
                         "Login error",
                         CustomMessageBox.Buttons.OK,
-                        CustomMessageBox.Icons.USERNAME);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                        CustomMessageBox.Icons.USERNAME).ShowDialog();
             }
             else if (userReply != null && userReply.IsAdmin)
             {
@@ -62,25 +60,21 @@ namespace PlGui
             }
             else if(userReply != null && !userReply.IsAdmin)
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     "You can not enter to this part of the system because you are not an admin!",
                     "You are not an administrator",
                     "Login error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.INFO);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.INFO).ShowDialog();
             }
             else
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                         workerResultContent,
                         "Unknown error occured",
                         "Login error",
                         CustomMessageBox.Buttons.IGNORE,
-                        CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                        CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             workerResultTitle = "";
             txtPassword.Clear();

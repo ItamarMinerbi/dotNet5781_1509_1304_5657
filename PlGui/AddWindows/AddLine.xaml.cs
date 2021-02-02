@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using BO;
 using BlApi;
 using BlExceptions;
 
@@ -44,36 +43,30 @@ namespace PlGui.AddWindows
         {
             if(workerResultTitle == "StationDoesNotExist")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Station Does Not Exist",
                     "Station error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else if(workerResultTitle == "LineAlreadyExist")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Line Already Exist",
                     "Add line error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else if (workerResultTitle == "UnknownError")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Unknown Error",
                     "Unknown error",
                     CustomMessageBox.Buttons.IGNORE,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else
             {
@@ -84,8 +77,7 @@ namespace PlGui.AddWindows
                     CustomMessageBox.Buttons.OK,
                     CustomMessageBox.Icons.Vi);
                 Result = "Added";
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) { this.IsEnabled = true; this.Close(); }
+                if (messageBox.ShowDialog() == false) this.Close();
             }
             txtNumber.Clear();
             txtFirstCode.Clear();
@@ -113,8 +105,8 @@ namespace PlGui.AddWindows
                     "Fields error",
                     CustomMessageBox.Buttons.OK,
                     CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                
+                if (messageBox.ShowDialog() == false) 
                 return;
             }
             try
@@ -127,14 +119,12 @@ namespace PlGui.AddWindows
             }
             catch (Exception ex)
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     ex.Message,
                     "Values Error",
                     "Fields error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.ERROR).ShowDialog();
             }
         }
 

@@ -17,6 +17,10 @@ namespace DalApi
         DO.User CheckUser(DO.User user);
         #endregion
 
+        #region Files (Dal Object Will Return Empty Enumerable)
+        IEnumerable<string> GetPathes();
+        #endregion
+
         #region Bus
         //IEnumerable<DO.Bus> GetBuses();
         //int BusesCount();

@@ -65,6 +65,10 @@ namespace DAL
         }
         #endregion
 
+        #region Files
+        public IEnumerable<string> GetPathes()=> new List<string>();
+        #endregion
+
         #region Bus
         public IEnumerable<Bus> GetBuses()
         {

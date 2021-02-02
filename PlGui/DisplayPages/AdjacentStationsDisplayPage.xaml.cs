@@ -67,8 +67,7 @@ namespace PlGui
                             "Files error",
                             CustomMessageBox.Buttons.OK,
                             CustomMessageBox.Icons.FILE);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                        messageBox.ShowDialog();
                     }
                     else if (workerResultTitle == "UnknownError")
                     {
@@ -78,8 +77,7 @@ namespace PlGui
                             "Unknown error",
                             CustomMessageBox.Buttons.IGNORE,
                             CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                        messageBox.ShowDialog();
                     }
                     pbarLoad.Visibility = Visibility.Hidden;
                     dgrStations.IsEnabled = grdUpdate.IsEnabled = true;
@@ -155,8 +153,7 @@ namespace PlGui
                             "Unknown error",
                             CustomMessageBox.Buttons.IGNORE,
                             CustomMessageBox.Icons.ERROR);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                        messageBox.ShowDialog();
                     }
                     else
                     {
@@ -166,8 +163,7 @@ namespace PlGui
                             "Action Completed",
                             CustomMessageBox.Buttons.OK,
                             CustomMessageBox.Icons.Vi);
-                        this.IsEnabled = false;
-                        if (messageBox.ShowDialog() == false) { this.IsEnabled = true; LoadAdjacentStations(); }
+                        if (messageBox.ShowDialog() == false) LoadAdjacentStations();
                     }
                 });
             worker.RunWorkerAsync();
@@ -176,12 +172,8 @@ namespace PlGui
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var addAdjStations = new AddWindows.AddAdjStations();
-            this.IsEnabled = false;
-            if (addAdjStations.ShowDialog() == false)
-            {
-                this.IsEnabled = true;
-                if (addAdjStations.Result == "Added") LoadAdjacentStations();
-            }
+            if (addAdjStations.ShowDialog() == false && 
+                addAdjStations.Result == "Added") LoadAdjacentStations();
         }
 
         private void grdUpdate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -45,59 +45,49 @@ namespace PlGui
         {
             if(workerResultTitle == "InvalidUsername")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Username Error",
                     "Register error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.USERNAME);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.USERNAME).ShowDialog();
             }
             else if(workerResultTitle == "InvalidPassword")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Password Error",
                     "Register error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.USERNAME);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.USERNAME).ShowDialog();
             }
             else if (workerResultTitle == "InvalidEmail")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                     workerResultContent,
                     "Email Address Error",
                     "Register error",
                     CustomMessageBox.Buttons.OK,
-                    CustomMessageBox.Icons.MAIL);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                    CustomMessageBox.Icons.MAIL).ShowDialog();
             }
             else if (workerResultTitle == "UnknownError")
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                         workerResultContent,
                         "Unknown error occured",
                         "Register error",
                         CustomMessageBox.Buttons.IGNORE,
-                        CustomMessageBox.Icons.ERROR);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                        CustomMessageBox.Icons.ERROR).ShowDialog();
             }
             else
             {
-                CustomMessageBox messageBox = new CustomMessageBox(
+                new CustomMessageBox(
                         $"Congratulations! Registration succeeded! We sent an email to this" +
                         $" address: {workerArguments[1]}, you can take a look!",
                         "You are currently registered!",
                         "Registration succeeded",
                         CustomMessageBox.Buttons.OK,
-                        CustomMessageBox.Icons.Vi);
-                this.IsEnabled = false;
-                if (messageBox.ShowDialog() == false) this.IsEnabled = true;
+                        CustomMessageBox.Icons.Vi).ShowDialog();
                 new MainWindow().Show();
                 this.Close();
             }

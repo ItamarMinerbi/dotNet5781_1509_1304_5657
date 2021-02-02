@@ -104,6 +104,19 @@ namespace DAL
         }
         #endregion
 
+        #region Files
+        public IEnumerable<string> GetPathes()
+        {
+            yield return configPath;
+            yield return usersPath;
+            yield return stationsPath;
+            yield return linesPath;
+            yield return adjStationsPath;
+            yield return stationsLinePath;
+            yield return lineTripsPath;
+        }
+        #endregion
+
         #region Station
         internal IEnumerable<Station> LoadStationsFromXML(XElement stationsRoot)
         {
@@ -261,8 +274,8 @@ namespace DAL
         {
             XElement configRoot = LoadXml(configPath);
             int Id = int.Parse(configRoot.Element("ID").Value);
-            line.ID = Id;
-            configRoot.SetElementValue("ID", ++Id);
+            line.ID = ++Id;
+            configRoot.SetElementValue("ID", Id);
             configRoot.Save(configPath);
 
             XElement linesRoot = LoadXml(linesPath);

@@ -54,6 +54,9 @@ namespace PlGui
                 case "AdjStations":
                     frmDisplay.Source = new Uri("DisplayPages/AdjacentStationsDisplayPage.xaml", UriKind.Relative);
                     break;
+                case "File":
+                    frmDisplay.Source = new Uri("DisplayPages/FileManagerPage.xaml", UriKind.Relative);
+                    break;
                 default:
                     break;
             }
