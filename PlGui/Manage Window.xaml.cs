@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,11 +21,16 @@ namespace PlGui
     /// </summary>
     public partial class ManageWindow : Window
     {
+        string strAudioPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(Directory.GetCurrentDirectory(), @"..\..\")) + @"Audio\";
+
         public ManageWindow(string Username)
         {
             InitializeComponent();
 
             lblName.Text = Username;
+
+            using (SoundPlayer spAudio = new SoundPlayer($@"{strAudioPath}LoggedIn.wav"))
+                spAudio.Play();
         }
 
         private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
@@ -66,6 +73,12 @@ namespace PlGui
         {
             new MainWindow().Show();
             this.Close();
+        }
+
+        private void frmDisplay_Unloaded(object sender, RoutedEventArgs e)
+        {
+            using (SoundPlayer spAudio = new SoundPlayer($@"{strAudioPath}LoggedOut.wav"))
+                spAudio.Play();
         }
     }
 }

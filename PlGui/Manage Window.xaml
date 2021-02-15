@@ -33,7 +33,7 @@
     <Grid Background="#FF3581BF">
         <Grid Background="Transparent">
             <Grid x:Name="GridMain" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="100,80,20,20">
-                <Frame x:Name="frmDisplay" NavigationUIVisibility="Hidden" Focusable="True" Background="Transparent"/>
+                <Frame x:Name="frmDisplay" NavigationUIVisibility="Hidden" Focusable="True" Background="Transparent" Unloaded="frmDisplay_Unloaded"/>
             </Grid>
             <Grid Height="60" VerticalAlignment="Top" Background="#FF3581BF">
 
