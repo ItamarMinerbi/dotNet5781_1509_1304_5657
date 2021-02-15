@@ -19,7 +19,9 @@ namespace DAL
             catch(Exception ex) { throw new XmlLoadException($"Could not find '{path}'" +
                 $" Please make sure that file is exist.", ex); }
         }
-        internal static readonly string path = Directory.GetCurrentDirectory() 
+
+        #region Pathes
+        internal static readonly string path = Directory.GetCurrentDirectory()
                         + @"\XML Files\{0}.xml";
         internal readonly string configPath = String.Format(path, "config");
         internal readonly string usersPath = String.Format(path, "Users");
@@ -28,6 +30,8 @@ namespace DAL
         internal readonly string adjStationsPath = String.Format(path, "Adjacent Stations");
         internal readonly string stationsLinePath = String.Format(path, "Stations Line");
         internal readonly string lineTripsPath = String.Format(path, "Line Trips");
+        internal readonly string lineTimingsPath = String.Format(path, "Line Timing");
+        #endregion
 
         #region Singleton
         static readonly DalXml instance = new DalXml();
@@ -699,6 +703,95 @@ namespace DAL
                     $"trips that start at {startTime}.");
             lineTripsList[index].IsActive = false;
             lineTripsList.SaveToXml(lineTripsPath, lineTripsRoot.Name.ToString());
+        }
+        #endregion
+
+        #region LineTiming
+        internal IEnumerable<LineTiming> LoadLineTimingsFromXML(XElement lineTimingsRoot)
+        {
+            List<LineTiming> lineTimings = new List<LineTiming>();
+            foreach (var lineTiming in lineTimingsRoot.Elements())
+            {
+                try
+                {
+                    lineTimings.Add(new LineTiming
+                    {
+                        ID = int.Parse(lineTiming.Element("ID").Value),
+                        License = int.Parse(lineTiming.Element("License").Value),
+                        LineID = int.Parse(lineTiming.Element("LineID").Value),
+                        StartTime = TimeSpan.Parse(lineTiming.Element("StartTime").Value),
+                        ActualStartTime = TimeSpan.Parse(lineTiming.Element("ActualStartTime").Value),
+                        LastStation = int.Parse(lineTiming.Element("LastStation").Value),
+                        LastStationTime = TimeSpan.Parse(lineTiming.Element("LastStationTime").Value),
+                        ArrivalTime = TimeSpan.Parse(lineTiming.Element("ArrivalTime").Value),
+                    });
+                }
+                catch (ArgumentNullException ex) { throw new XmlParametersException("Argument is null", ex); }
+                catch (ArgumentException ex) { throw new XmlParametersException("Argument is not valid!", ex); }
+                catch (FormatException ex) { throw new XmlParametersException("The format does not match!", ex); }
+                catch (OverflowException ex) { throw new XmlParametersException("Argument is not valid!", ex); }
+                catch (Exception ex) { throw new AnErrorOccurredException(ex.Message, ex); }
+            }
+            return lineTimings;
+        }
+
+        public IEnumerable<LineTiming> GetLineTimings()
+        {
+            return from lineTiming in LoadLineTimingsFromXML(LoadXml(lineTimingsPath))
+                   select lineTiming.Clone();
+        }
+
+        public int CreateLineTiming(LineTiming line)
+        {
+            XElement configRoot = LoadXml(configPath);
+            int Id = int.Parse(configRoot.Element("LineTimingID").Value);
+            line.ID = ++Id;
+            configRoot.SetElementValue("LineTimingID", Id);
+            configRoot.Save(configPath);
+
+            XElement lineTimingsRoot = LoadXml(lineTimingsPath);
+            var lineTripsList = LoadLineTimingsFromXML(lineTimingsRoot).ToList();
+            int index = lineTripsList.FindIndex(i =>
+                                                i.ID == line.ID &&
+                                                i.License == line.License &&
+                                                i.LineID == line.LineID &&
+                                                i.StartTime == line.StartTime);
+
+            if (index != -1)
+                throw new LineTimingAlreadyExistException($"A line timing with same values" +
+                    $" was found in the system.");
+            try
+            {
+                lineTimingsRoot.Add(XmlFunctions.BuildElementToXml(line.Clone()));
+                lineTimingsRoot.Save(lineTimingsPath);
+            }
+            catch (Exception ex) { throw new XmlWriteException(ex.Message, ex); }
+            return Id;
+        }
+
+        public LineTiming RequestLineTiming(int Id)
+        {
+            XElement lineTimingsRoot = LoadXml(lineTimingsPath);
+            var lineTripsList = LoadLineTimingsFromXML(lineTimingsRoot).ToList();
+            int index = lineTripsList.FindIndex(i => i.ID == Id);
+
+            if (index == -1)
+                throw new LineDoesNotExistException($"A line timing with this ID" +
+                    $" was not found in the system.");
+            return lineTripsList[index].Clone();
+        }
+
+        public void RemoveLineTiming(int Id)
+        {
+            XElement lineTimingsRoot = LoadXml(lineTimingsPath);
+            var lineTripsList = LoadLineTimingsFromXML(lineTimingsRoot).ToList();
+            int index = lineTripsList.FindIndex(i => i.ID == Id);
+
+            if (index == -1)
+                throw new LineDoesNotExistException($"A line timing with this ID" +
+                    $" was not found in the system.");
+            lineTripsList.RemoveAt(index);
+            lineTripsList.SaveToXml(lineTimingsPath, lineTimingsRoot.Name.ToString());
         }
         #endregion
     }

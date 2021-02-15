@@ -64,5 +64,11 @@ namespace BlApi
         IEnumerable<BO.AdjStations> GetAdjStations();
         IEnumerable<BO.LineTrip> GetLineTrips();
         #endregion
+
+        #region Simulator
+        void StartSimulator(TimeSpan startTime, int Rate, Action<TimeSpan> updateTime);
+        void StopSimulator();
+        void SetStationPanel(int station, Action<BO.LineTiming> updateBus);
+        #endregion
     }
 }

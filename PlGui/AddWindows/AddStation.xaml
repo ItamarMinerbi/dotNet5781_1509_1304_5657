@@ -48,6 +48,10 @@
             <TextBlock Grid.Column="1" Grid.Row="0" Text="מספר תחנה:" />
             <TextBlock Grid.Column="1" Grid.Row="1" Text="שם תחנה:" />
             <TextBlock Grid.Column="1" Grid.Row="2" Text="כתובת:" />
+            <Button x:Name="btnChooseFromMap" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1"
+                    Grid.Row="2" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Choose Location From Map" Click="btnChooseFromMap_Click">
+                <materialDesign:PackIcon Foreground="#FF9B0101" Kind="Map" />
+            </Button>
             <TextBlock Grid.Column="1" Grid.Row="3" Text="קו אורך:" />
             <TextBlock Grid.Column="1" Grid.Row="4" Text="קו רוחב:" />
 
