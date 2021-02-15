@@ -129,6 +129,17 @@ namespace PlGui.AddWindows
                            e.Key == Key.Back);
         }
 
+        private void btnChooseFromMap_Click(object sender, RoutedEventArgs e)
+        {
+            ChooseLocation chooseLocation = new ChooseLocation();
+            if(chooseLocation.ShowDialog() == false && chooseLocation.ResultX != 200)
+            {
+                txtAddress.Text = chooseLocation.ResultAddress;
+                txtLatitude.Text = "" + chooseLocation.ResultY;
+                txtLongitude.Text = "" + chooseLocation.ResultX;
+            }
+        }
+
         private void DoubleTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             e.Handled = !((e.Key >= Key.D0 && e.Key <= Key.D9) ||

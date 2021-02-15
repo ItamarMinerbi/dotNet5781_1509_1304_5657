@@ -103,7 +103,7 @@
             </DataGrid.CellStyle>
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
-                    <Grid x:Name="RowDetailsGrid" Height="400" HorizontalAlignment="Stretch" Background="#66FFFFFF">
+                    <Grid x:Name="MainGrid" Loaded="Grid_Loaded" Height="0" HorizontalAlignment="Stretch" Background="#66FFFFFF">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>

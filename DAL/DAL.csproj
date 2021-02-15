@@ -42,13 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cloning.cs" />
-    <Compile Include="DAL.cs" />
+    <Compile Include="DalObject.cs" />
     <Compile Include="DalFactory.cs" />
     <Compile Include="DalXml.cs" />
     <Compile Include="DataSource.cs" />
     <Compile Include="DoObjects\AdjStations.cs" />
     <Compile Include="DoObjects\Bus.cs" />
     <Compile Include="DoObjects\Line.cs" />
+    <Compile Include="DoObjects\LineTiming.cs" />
     <Compile Include="DoObjects\LineTrip.cs" />
     <Compile Include="DoObjects\Station.cs" />
     <Compile Include="DoObjects\StationLine.cs" />

@@ -13,6 +13,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -259,6 +260,12 @@ namespace PlGui
                 catch (Exception ex) { workerResultTitle = "RemoveError"; workerResultContent = ex.Message; }
             });
             worker.RunWorkerAsync();
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            (sender as Grid).BeginAnimation(HeightProperty,
+                new DoubleAnimation(400, TimeSpan.Parse("0:0:0.5")));
         }
 
         private void grdUpdate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

@@ -8,12 +8,14 @@ using System.Text;
 using BlApi;
 using BlExceptions;
 using System.IO;
+using System.Threading;
+using System.Diagnostics;
 
 namespace BL
 {
     sealed class BL : IBL
     {
-        private static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Xml);
+        internal static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Xml);
 
         #region Singleton
         static readonly BL instance = new BL();
@@ -1159,6 +1161,29 @@ namespace BL
                 lineTrip = singleTrip.Convert<DO.LineTrip, LineTrip>();
                 yield return lineTrip;
             }
+        }
+        #endregion
+
+        #region Simulator
+        public void StartSimulator(TimeSpan startTime, int rate, Action<TimeSpan> updateTime)
+        {
+            Simulator.TickEvent += updateTime;
+            Simulator.Start(startTime, rate);
+        }
+
+        public void StopSimulator()
+        {
+            TravelOperator.Stop();
+            Simulator.Stop();
+        }
+
+        public void SetStationPanel(int station, Action<LineTiming> updateBus)
+        {
+            TravelOperator.Stop();
+            if (station == -1) return;
+            TravelOperator.StationCode = station;
+            TravelOperator.UpdateEvent += updateBus;
+            TravelOperator.Start();
         }
         #endregion
     }

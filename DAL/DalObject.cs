@@ -7,15 +7,15 @@ using DalExceptions;
 
 namespace DAL
 {
-    sealed class DAL : DalApi.IDAL
+    sealed class DalObject : DalApi.IDAL
     {
         private static DS.DataSource ds = new DS.DataSource();
 
         #region Singleton
-        static readonly DAL instance = new DAL();
-        static DAL() { }
-        DAL() { }
-        public static DAL Instance => instance;
+        static readonly DalObject instance = new DalObject();
+        static DalObject() { }
+        DalObject() { }
+        public static DalObject Instance => instance;
         #endregion
 
         #region User
@@ -66,7 +66,7 @@ namespace DAL
         #endregion
 
         #region Files
-        public IEnumerable<string> GetPathes()=> new List<string>();
+        public IEnumerable<string> GetPathes() => new List<string>();
         #endregion
 
         #region Bus
@@ -509,6 +509,51 @@ namespace DAL
                 throw new LineTripDoesNotExistException($"The line with ID: {Id} has no " +
                     $"trips that start at {startTime}.");
             ds.LineTrips[searchIndex].IsActive = false;
+        }
+        #endregion
+
+        #region LineTiming
+        public IEnumerable<LineTiming> GetLineTimings()
+        {
+            return from line in ds.LineTimings
+                   select line.Clone();
+        }
+
+        public int CreateLineTiming(LineTiming line)
+        {
+            int Id = DS.Config.GetLineTimingID();
+            line.ID = Id;
+            int searchIndex = ds.LineTimings.FindIndex(i =>
+                              i.ID == line.ID &&
+                              i.License == line.License &&
+                              i.LineID == line.LineID &&
+                              i.StartTime == line.StartTime);
+
+            if (searchIndex != -1)
+                throw new LineTimingAlreadyExistException($"A line timing with same values" +
+                    $" was found in the system.");
+            ds.LineTimings.Add(line.Clone());
+            return Id;
+        }
+
+        public LineTiming RequestLineTiming(int Id)
+        {
+            int searchIndex = ds.LineTimings.FindIndex(i => i.ID == Id);
+
+            if (searchIndex == -1)
+                throw new LineTimingDoesNotExistException($"A line timing with this ID" +
+                    $" was not found in the system.");
+            return ds.LineTimings[searchIndex].Clone();
+        }
+
+        public void RemoveLineTiming(int Id)
+        {
+            int searchIndex = ds.LineTimings.FindIndex(i => i.ID == Id);
+
+            if (searchIndex == -1)
+                throw new LineTimingDoesNotExistException($"A line timing with this ID" +
+                    $" was not found in the system.");
+            ds.LineTimings.RemoveAt(searchIndex);
         }
         #endregion
     }

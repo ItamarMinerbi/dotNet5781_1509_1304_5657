@@ -206,4 +206,26 @@ namespace DalExceptions
             : base(info, context) { }
     }
     #endregion
+
+    #region LineTiming Exceptions
+    public class LineTimingDoesNotExistException : Exception
+    {
+        public LineTimingDoesNotExistException() : base() { }
+        public LineTimingDoesNotExistException(string message) : base(message) { }
+        public LineTimingDoesNotExistException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public LineTimingDoesNotExistException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+
+    public class LineTimingAlreadyExistException : Exception
+    {
+        public LineTimingAlreadyExistException() : base() { }
+        public LineTimingAlreadyExistException(string message) : base(message) { }
+        public LineTimingAlreadyExistException(string message, Exception innerException)
+            : base(message, innerException) { }
+        public LineTimingAlreadyExistException(SerializationInfo info, StreamingContext context)
+            : base(info, context) { }
+    }
+    #endregion
 }

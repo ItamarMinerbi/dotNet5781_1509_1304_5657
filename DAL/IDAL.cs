@@ -79,5 +79,12 @@ namespace DalApi
         DO.LineTrip RequestLineTripByPredicate(Predicate<DO.LineTrip> predicate);
         void RemoveLineTrip(int Id, TimeSpan startTime);
         #endregion
+
+        #region LineTiming
+        IEnumerable<DO.LineTiming> GetLineTimings();
+        int CreateLineTiming(DO.LineTiming line);
+        DO.LineTiming RequestLineTiming(int Id);
+        void RemoveLineTiming(int Id);
+        #endregion
     }
 }

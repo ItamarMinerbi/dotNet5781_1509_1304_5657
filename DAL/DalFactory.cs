@@ -14,7 +14,7 @@ namespace DalApi
             switch (type)
             {
                 case Options.Object:
-                    return DAL.DAL.Instance;
+                    return DAL.DalObject.Instance;
                 case Options.Xml:
                     return DAL.DalXml.Instance;
                 default:

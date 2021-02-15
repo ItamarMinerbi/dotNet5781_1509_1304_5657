@@ -9,7 +9,9 @@ namespace DS
     static class Config
     {
         private static int LineID = 12;
+        private static int LineTimingID = 0;
         public static int GetLineID() => ++LineID;
+        public static int GetLineTimingID() => ++LineTimingID;
     }
 
     class DataSource
@@ -21,6 +23,7 @@ namespace DS
         internal List<DO.AdjStations> AdjStations = new List<DO.AdjStations>();
         internal List<DO.User> Users = new List<DO.User>();
         internal List<DO.LineTrip> LineTrips = new List<DO.LineTrip>();
+        internal List<DO.LineTiming> LineTimings = new List<DO.LineTiming>();
 
         public DataSource()
         {
@@ -481,6 +484,15 @@ namespace DS
             #region LineTrip
             LineTrips.Add(new DO.LineTrip() { ID = 0, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
             LineTrips.Add(new DO.LineTrip() { ID = 1, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 2, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 3, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 4, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 5, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 6, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 7, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 8, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 9, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
+            LineTrips.Add(new DO.LineTrip() { ID = 10, StartTime = TimeSpan.Parse("05:30:00"), EndTime = TimeSpan.Parse("23:30:00"), Frequency = TimeSpan.Parse("00:30:00"), IsActive = true });
             #endregion
 
             #region StationLines
