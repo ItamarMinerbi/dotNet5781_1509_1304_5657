@@ -21,7 +21,7 @@ namespace PlGui
     /// </summary>
     public partial class ManageWindow : Window
     {
-        string strAudioPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(Directory.GetCurrentDirectory(), @"..\..\")) + @"Audio\";
+        string strAudioPath = System.IO.Path.GetFullPath(System.IO.Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\")) + @"Audio\";
 
         public ManageWindow(string Username)
         {
@@ -75,7 +75,7 @@ namespace PlGui
             this.Close();
         }
 
-        private void frmDisplay_Unloaded(object sender, RoutedEventArgs e)
+        private void Window_Unloaded(object sender, RoutedEventArgs e)
         {
             using (SoundPlayer spAudio = new SoundPlayer($@"{strAudioPath}LoggedOut.wav"))
                 spAudio.Play();

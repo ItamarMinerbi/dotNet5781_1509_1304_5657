@@ -80,7 +80,7 @@ namespace BL
                         {
                             Random rnd = new Random();
                             
-                            var line = BL.Instance.BuildLine(lineTrips[index % count].ID);
+                            BO.Line line = BL.Instance.BuildLine(lineTrips[index % count].ID);
                             
                             int lastStationCode = BL.dal.RequestLine(lineTrips[index % count].ID).LastStation;
                             string lastStationName = BL.dal.RequestStation(lastStationCode).Name;

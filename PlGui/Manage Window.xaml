@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:PlGui"
         mc:Ignorable="d"
         MinHeight="700" MinWidth="1400"
-        Title="Manager Window" Height="700" Width="1400">
+        Title="Manager Window" Height="700" Width="1400" Unloaded="Window_Unloaded">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -33,7 +33,7 @@
     <Grid Background="#FF3581BF">
         <Grid Background="Transparent">
             <Grid x:Name="GridMain" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="100,80,20,20">
-                <Frame x:Name="frmDisplay" NavigationUIVisibility="Hidden" Focusable="True" Background="Transparent" Unloaded="frmDisplay_Unloaded"/>
+                <Frame x:Name="frmDisplay" NavigationUIVisibility="Hidden" Focusable="True" Background="Transparent"/>
             </Grid>
             <Grid Height="60" VerticalAlignment="Top" Background="#FF3581BF">
 
