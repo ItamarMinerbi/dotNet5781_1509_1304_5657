@@ -64,6 +64,9 @@ namespace PlGui
                 case "File":
                     frmDisplay.Source = new Uri("DisplayPages/FileManagerPage.xaml", UriKind.Relative);
                     break;
+                case "lviSimulator":
+                    new Simulator().ShowDialog();
+                    break;
                 default:
                     break;
             }

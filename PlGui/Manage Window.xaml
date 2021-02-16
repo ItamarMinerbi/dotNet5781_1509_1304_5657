@@ -109,6 +109,12 @@
                                 <TextBlock Text="Adjacent Stations" VerticalAlignment="Center"  Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>
+                        <ListViewItem x:Name="lviSimulator" Height="60">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="DesktopClassic" Height="25" Width="25" Margin="10"/>
+                                <TextBlock Text="Simulation" VerticalAlignment="Center"  Margin="20 10"/>
+                            </StackPanel>
+                        </ListViewItem>
                     </ListView>
                 </StackPanel>
             </Grid>
