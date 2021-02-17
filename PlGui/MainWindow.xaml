@@ -111,11 +111,11 @@
             </Button>
         </Grid>
         <TextBlock Text="Don't have an Account ? " HorizontalAlignment="Center" VerticalAlignment="Bottom"
-                   Foreground="White" FontSize="20" Margin="44,0,136,47" Width="264"
+                   Foreground="White" FontSize="20" Margin="38,0,142,47" Width="264"
                    TextAlignment="Center"/>
         <TextBlock Text="Sign Up" HorizontalAlignment="Center" VerticalAlignment="Bottom"
                    FontWeight="Bold" Foreground="White" Cursor="Hand" FontSize="20"
-                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Margin="288,0,72,47" Width="84"
+                   MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" Margin="276,0,84,47" Width="84"
                    TextAlignment="Center"/>
     </Grid>
 </Window>
