@@ -15,7 +15,7 @@ namespace BL
 {
     sealed class BL : IBL
     {
-        internal static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Object);
+        internal static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Xml);
 
         #region Singleton
         static readonly BL instance = new BL();
