@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:PlGui"
         mc:Ignorable="d"
         MinHeight="700" MinWidth="1400"
-        Title="Manager Window" Height="700" Width="1400" Unloaded="Window_Unloaded">
+        Title="Manager Window" Height="700" Width="1400">
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -140,12 +140,6 @@
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="BusClock" Height="25" Width="25" Margin="10"/>
                                 <TextBlock Text="Adjacent Stations" VerticalAlignment="Center"  Margin="20 10"/>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem x:Name="lviSimulator" Height="60">
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="DesktopClassic" Height="25" Width="25" Margin="10"/>
-                                <TextBlock Text="Simulation" VerticalAlignment="Center"  Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>
                     </ListView>
