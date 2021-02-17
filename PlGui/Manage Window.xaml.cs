@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace PlGui
 {
-    /// <summary>
-    /// Interaction logic for Manage_Window.xaml
-    /// </summary>
     public partial class ManageWindow : Window
     {
         public ManageWindow(string Username)
@@ -42,8 +39,8 @@ namespace PlGui
         {
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
-                case "Buses":
-                    frmDisplay.Source = new Uri("DisplayPages/BusesDisplayPage.xaml", UriKind.Relative);
+                case "Users":
+                    frmDisplay.Source = new Uri("DisplayPages/UsersDisplayPage.xaml", UriKind.Relative);
                     break;
                 case "Lines":
                     frmDisplay.Source = new Uri("DisplayPages/LinesDisplayPage.xaml", UriKind.Relative);
@@ -66,6 +63,21 @@ namespace PlGui
         {
             new MainWindow().Show();
             this.Close();
+        }
+
+        private void SimulatorButton_Click(object sender, RoutedEventArgs e)
+        {
+            new Simulator().ShowDialog();
+        }
+
+        private void ratingBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<int> e)
+        {
+            // some code to send the rating
+        }
+
+        private void btnStartSimulator_Click(object sender, RoutedEventArgs e)
+        {
+            new Simulator().ShowDialog();
         }
     }
 }

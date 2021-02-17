@@ -15,7 +15,7 @@ namespace BL
 {
     sealed class BL : IBL
     {
-        internal static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Xml);
+        internal static DalApi.IDAL dal = DalApi.DalFactory.GetDal(DalApi.Options.Object);
 
         #region Singleton
         static readonly BL instance = new BL();
@@ -235,6 +235,12 @@ namespace BL
                     Path = filePath
                 };
             }
+        }
+
+        public void RemoveFile(string path)
+        {
+            try { File.Delete(path); }
+            catch (Exception ex) { throw new XmlLoadException(ex.Message, ex); }
         }
         #endregion
 
@@ -766,159 +772,29 @@ namespace BL
             catch (Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); }
         }
 
-        public void UpdateLine(int Id, int lineNumber, int newFirstStationCode, int newLastStationCode, Line.Areas area)
+        public void UpdateLine(int Id, int lineNumber, Line.Areas area)
         {
-            /* Request all data from DAL; line, stationLines, first and last station, 
-                                          the new first/last Station*/
-
             DO.Line line;
-            DO.StationLine firstStation;
-            DO.StationLine lastStation;
-            List<DO.StationLine> stationLines = new List<DO.StationLine>();
-            List<int> stationLineToRemove = new List<int>();
-            List<DO.StationLine> stationLineWithUpdatedIndexes = new List<DO.StationLine>();
-            List<DO.AdjStations> adjStationsToAdd = new List<DO.AdjStations>();
 
-            #region Get All Info From DAL
             try { line = dal.RequestLine(Id); }
-            catch(Exception ex) { throw new LineDoesNotExistException(ex.Message, ex); } // Resources Error!
+            catch (Exception ex) { throw new LineDoesNotExistException(ex.Message, ex); }
 
-            try { firstStation = dal.RequestStationLine(Id, line.FirstStation); lastStation = dal.RequestStationLine(Id, line.LastStation); }
-            catch (Exception ex) { throw new StationLineDoesNotExistException(ex.Message, ex); } // Resources Error!
+            DO.Line.Areas doArea = DO.Line.Areas.General;
+            Enum.TryParse(area.ToString(), out doArea);
 
-            try { dal.RequestStation(newFirstStationCode); dal.RequestStation(newLastStationCode); }   // Check if the new first station exist
-            catch (Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); } // Resources Error!
-
-            for (int i = firstStation.StationNumberInLine; i <= lastStation.StationNumberInLine; i++)
-            {
-                DO.StationLine stationLine;
-                try { stationLine = dal.RequestStationLineByIndex(Id, i); }
-                catch (Exception ex) { throw new StationLineDoesNotExistException(ex.Message, ex); } // Resources Error!
-                stationLines.Add(stationLine);
-            }
-            #endregion
-
-            #region Update the new first/last station
-            // Get the newFirstStation and update it
-            DO.StationLine newFirstStation;
             try
             {
-                newFirstStation = dal.RequestStationLine(Id, newFirstStationCode);
-                for (int i = firstStation.StationNumberInLine; i < newFirstStation.StationNumberInLine; i++)
-                    stationLineToRemove.Add(stationLines[i - firstStation.StationNumberInLine].StationCode);
-                for (int i = newFirstStation.StationNumberInLine, j = 0; i <= lastStation.StationNumberInLine; i++, j++)
-                {
-                    stationLineWithUpdatedIndexes.Add(new DO.StationLine()
-                    {
-                        ID = Id,
-                        StationCode = stationLines[i - firstStation.StationNumberInLine].StationCode,
-                        StationNumberInLine = j,
-                        IsActive = true
-                    });
-                }
-            }
-            catch(Exception)    // The newFirstStation was not found in the system. Add new one
-            {
-                stationLineWithUpdatedIndexes.Add(new DO.StationLine()
+                dal.UpdateLine(new DO.Line
                 {
                     ID = Id,
-                    StationCode = newFirstStationCode,
-                    StationNumberInLine = firstStation.StationNumberInLine,
-                    IsActive = true
-                });
-                for (int i = firstStation.StationNumberInLine; i <= lastStation.StationNumberInLine; i++)
-                {
-                    DO.StationLine currentStationLine = stationLines[i - firstStation.StationNumberInLine];
-                    stationLineWithUpdatedIndexes.Add(new DO.StationLine()
-                    {
-                        ID = Id,
-                        StationCode = currentStationLine.StationCode,
-                        StationNumberInLine = currentStationLine.StationNumberInLine + 1,
-                        IsActive = true
-                    });
-                }
-            }
-
-            // Get the newLastStation and update it
-            DO.StationLine newLastStation;
-            try
-            {
-                newLastStation = dal.RequestStationLine(Id, newLastStationCode);
-                for (int i = newLastStation.StationNumberInLine + 1; i <= lastStation.StationNumberInLine; i++)
-                    stationLineToRemove.Add(stationLines[i - firstStation.StationNumberInLine].StationNumberInLine);
-            }
-            catch(Exception)    // The newLastStation was not found in the system. Add new one
-            {
-                stationLineWithUpdatedIndexes.Add(new DO.StationLine()
-                {
-                    ID = Id,
-                    StationCode = newLastStationCode,
-                    StationNumberInLine = lastStation.StationNumberInLine + 1,
+                    LineNumber = lineNumber,
+                    FirstStation = line.FirstStation,
+                    LastStation = line.LastStation,
+                    Area = doArea,
                     IsActive = true
                 });
             }
-            #endregion
-
-            #region AdjStations
-            // Convert each 2 stations to AdjStations
-            for (int i = 0; i <= stationLineWithUpdatedIndexes.Count - 1; i++)
-            {
-                DO.Station station1, station2;
-                // Get the both stations
-                try {
-                    station1 = dal.RequestStation(stationLineWithUpdatedIndexes[i].StationCode);
-                    station2 = dal.RequestStation(stationLineWithUpdatedIndexes[i + 1].StationCode); 
-                }
-                catch(Exception ex) { throw new StationDoesNotExistException(ex.Message, ex); } // A station does not exist
-                try {
-                    double distance = CalculateDistance(station1, station2);
-                    TimeSpan time = TimeSpan.FromHours(distance / 60);
-                    adjStationsToAdd.Add(new DO.AdjStations()
-                    {
-                        StationCode1 = station1.StationCode,
-                        StationCode2 = station2.StationCode,
-                        Distance = distance,
-                        Time = time
-                    });
-                }
-                catch (Exception) { continue; }     // Already exist... It's fine...
-            }
-            #endregion
-
-            #region Update and remove the values in DAL
-            // Send the updated StationLines to DAL
-            foreach (var updatedStationLine in stationLineWithUpdatedIndexes)
-            {
-                try { dal.UpdateStationLine(updatedStationLine); }
-                catch(Exception) { continue; }
-            }
-            // Remove the unnecessary StationLines from DAL
-            foreach (var unnecessaryStationLine in stationLineToRemove)
-            {
-                try { dal.RemoveStationLine(Id, unnecessaryStationLine); }
-                catch (Exception) { continue; }
-            }
-            // Add the AdjStations (if does not exist...)
-            foreach (var adjStations in adjStationsToAdd)
-            {
-                try { dal.CreateAdjStations(adjStations); }
-                catch(Exception) { continue; } // If we are here that means the adjStations is already exist
-            }
-
-            DO.Line.Areas DoArea;
-            if (!Enum.TryParse(area.ToString(), true, out DoArea)) DoArea = DO.Line.Areas.General;
-            DO.Line updatedLine = new DO.Line() 
-            { 
-                ID = Id,
-                LineNumber = lineNumber,
-                FirstStation = newFirstStationCode,
-                LastStation = newLastStationCode,
-                Area = DoArea,
-                IsActive = true
-            };
-            try { dal.UpdateLine(updatedLine); }
-            catch(Exception ex) { throw new LineDoesNotExistException(ex.Message, ex); }
-            #endregion
+            catch (Exception ex) { throw new LineDoesNotExistException(ex.Message, ex); }
         }
 
         public void UpdateAdjStations(int stationCode1, int stationCode2, double distance, TimeSpan time)
@@ -1162,6 +1038,16 @@ namespace BL
                 yield return lineTrip;
             }
         }
+
+        public IEnumerable<User> GetUsers()
+        {
+            User user;
+            foreach (var singleUser in dal.GetUsers().OrderBy(x => x.Username))
+            {
+                user = singleUser.Convert<DO.User, User>();
+                yield return user;
+            }
+        }
         #endregion
 
         #region Simulator
@@ -1169,21 +1055,20 @@ namespace BL
         {
             Simulator.TickEvent += updateTime;
             Simulator.Start(startTime, rate);
+            TravelOperator.Start();
         }
 
         public void StopSimulator()
         {
             TravelOperator.Stop();
+            Trips.StopAllTrips();
             Simulator.Stop();
         }
 
-        public void SetStationPanel(int station, Action<LineTiming> updateBus)
+        public void SetStationPanel(int station, Action<LineTiming> updateBus, int mode = 1)
         {
-            TravelOperator.Stop();
-            if (station == -1) return;
-            TravelOperator.StationCode = station;
-            TravelOperator.UpdateEvent += updateBus;
-            TravelOperator.Start();
+            if (mode == -1) Trips.RemoveStationPanel(station);
+            else Trips.AddStationPanel(station, updateBus);
         }
         #endregion
     }

@@ -36,16 +36,49 @@
                 <Frame x:Name="frmDisplay" NavigationUIVisibility="Hidden" Focusable="True" Background="Transparent"/>
             </Grid>
             <Grid Height="60" VerticalAlignment="Top" Background="#FF3581BF">
-
+                <materialDesign:RatingBar x:Name="ratingBar" Value="3" Margin="80 20"
+                                          ValueChanged="ratingBar_ValueChanged"
+                                          Foreground="Gold" Width="130" HorizontalAlignment="Left"/>
+                <Button x:Name="btnStartSimulator" Style="{StaticResource MaterialDesignIconButton}" ToolTip="Start Simulator"
+                        Background="{DynamicResource MaterialDesignTextFieldBoxBackground}"
+                        Width="40" Height="40" HorizontalAlignment="Left" Margin="210 0" Click="btnStartSimulator_Click">
+                    <materialDesign:PackIcon Kind="Tune" Width="20" Height="20" Foreground="Black" />
+                </Button>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <TextBlock x:Name="lblName" VerticalAlignment="Center" FontSize="16"/>
                     <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
                         <StackPanel Width="150">
-                            <Button Content="Settings"/>
-                            <Button Content="Account"/>
-                            <Button Content="Help"/>
+                            <Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Cog" Width="20" Height="20"/>
+                                    <TextBlock Text="   Settings" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Account" Width="20" Height="20"/>
+                                    <TextBlock Text="   Account" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Help" Width="20" Height="20"/>
+                                    <TextBlock Text="   Help" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                            <Button Click="SimulatorButton_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Tune" Width="20" Height="20"/>
+                                    <TextBlock Text="   Simulator" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
                             <Separator/>
-                            <Button Content="Logout" Click="LogoutButton_Click"/>
+                            <Button Click="LogoutButton_Click">
+                                <StackPanel Orientation="Horizontal">
+                                    <materialDesign:PackIcon Kind="Power" Width="20" Height="20"/>
+                                    <TextBlock Text="   Logout" TextAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
                         </StackPanel>
                     </materialDesign:PopupBox>
                 </StackPanel>
@@ -85,10 +118,10 @@
                                 <TextBlock Text="File Manager" VerticalAlignment="Center" Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>
-                        <ListViewItem x:Name="Buses" Height="60">
+                        <ListViewItem x:Name="Users" Height="60">
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Bus" Height="25" Width="25" Margin="10"/>
-                                <TextBlock Text="Buses" VerticalAlignment="Center" Margin="20 10"/>
+                                <materialDesign:PackIcon Kind="AccountMultiple" Height="25" Width="25" Margin="10"/>
+                                <TextBlock Text="Users" VerticalAlignment="Center" Margin="20 10"/>
                             </StackPanel>
                         </ListViewItem>
                         <ListViewItem x:Name="Lines" Height="60">

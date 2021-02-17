@@ -184,7 +184,10 @@
                 <TextBlock Grid.Row="3" Margin="16 0 0 0" FontSize="20" Text="{Binding SizeString}" HorizontalAlignment="Left" VerticalAlignment="Center" />
                 <TextBlock Grid.Row="4" Margin="16 0 0 0" TextWrapping="Wrap" FontSize="10" Text="{Binding Path}" HorizontalAlignment="Left" VerticalAlignment="Center" />
             </Grid>
-            <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#CAD30505" Margin="0 0 10 10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Delete file">
+            <Button VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                    Background="#CAD30505" Margin="0 0 10 10" Click="Button_Click"
+                    Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                    ToolTip="Delete file">
                 <materialDesign:PackIcon Width="30" Height="30" Kind="Delete"/>
             </Button>
         </Grid>

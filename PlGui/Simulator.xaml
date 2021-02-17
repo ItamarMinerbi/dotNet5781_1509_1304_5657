@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PlGui"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PlGui.Simulator"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="Simulator" Height="700" Width="1200"
+        Title="Simulator" Height="646" Width="431"
         Closed="Window_Closed" Background="#FF258FE8" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
@@ -14,134 +14,50 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Border BorderBrush="#D1514E4E" BorderThickness="0 0 3 3">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <materialDesign:TimePicker x:Name="startTime" FontSize="25" Is24Hours="True"
-                                           HorizontalContentAlignment="Center" WithSeconds="True"
-                                           VerticalContentAlignment="Bottom" materialDesign:HintAssist.Hint="Select Start Time"
-                                           materialDesign:HintAssist.IsFloating="True" Margin="20"
-                                           VerticalAlignment="Center" HorizontalAlignment="Stretch" />
-                    <TextBox x:Name="txtRate" Grid.Row="1" Margin="20" PreviewKeyDown="NumericTextBox_PreviewKeyDown"
-                         VerticalContentAlignment="Bottom" materialDesign:HintAssist.Hint="Clock Rate"
-                         materialDesign:HintAssist.IsFloating="True" FontSize="25" />
-                    <Button x:Name="btnStartStop" Content="Start" FontSize="25" Height="70"
-                        Width="200" VerticalAlignment="Center" HorizontalAlignment="Right"
-                        Click="btnStartStop_Click" Grid.Row="2" Margin="20" FontWeight="Black"
-                            Background="#FF6382B8"/>
-                </Grid>
-            </Border>
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Label x:Name="lblTime" FontSize="30" FontWeight="Bold" Content="00:00:00" 
-                       HorizontalAlignment="Center" VerticalAlignment="Center"
-                       HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                <TextBlock x:Name="lblLastStation" Width="250" Height="60" FontWeight="Bold"
-                           FontSize="25" TextAlignment="Center" Padding="0 12.5"
-                           TextDecorations="underline" Grid.Row="1" />
-            </Grid>
-            <Border x:Name="yellowSign" Visibility="Hidden" BorderBrush="Black" BorderThickness="3" Grid.Column="2" Margin="60 20">
-                <Grid Background="#FFDBAF14">
-                    <Grid Height="70" Background="WhiteSmoke" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lblTime" FontSize="30" FontWeight="Bold" Content="00:00:00" 
+                   HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" Grid.Row="2"
+                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+            <materialDesign:TimePicker x:Name="startTime" FontSize="25" Is24Hours="True"
+                                       HorizontalContentAlignment="Center" WithSeconds="True"
+                                       VerticalContentAlignment="Bottom" materialDesign:HintAssist.Hint="Select Start Time"
+                                       materialDesign:HintAssist.IsFloating="True" Margin="20"
+                                       VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+            <TextBox x:Name="txtRate" Grid.Row="1" Margin="20" PreviewKeyDown="NumericTextBox_PreviewKeyDown"
+                     VerticalContentAlignment="Bottom" materialDesign:HintAssist.Hint="Clock Rate"
+                     materialDesign:HintAssist.IsFloating="True" FontSize="25" />
+            <Button x:Name="btnStartStop" Content="Start" FontSize="25" Height="70"
+                    Width="200" VerticalAlignment="Center" HorizontalAlignment="Right"
+                    Click="btnStartStop_Click" Grid.Row="2" Margin="20" FontWeight="Black"
+                    Background="#FF6382B8"/>
+        </Grid>
+
+        <TextBox x:Name="txtSearch" Grid.Row="1" Width="200" Height="30" FlowDirection="LeftToRight" FontSize="20"
+                 VerticalAlignment="Top" BorderThickness="0" Margin="20 10"
+                 materialDesign:HintAssist.Hint="Search..." materialDesign:TextFieldAssist.HasClearButton="True"
+                 TextChanged="txtSearch_TextChanged" HorizontalAlignment="Left" />
+        <ListBox x:Name="lstStations" Grid.Row="1" Margin="30 50 30 10" MouseDoubleClick="lstStations_MouseDoubleClick" >
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
-                        <materialDesign:PackIcon Grid.Column="0" Foreground="White" Width="100" Height="70" Kind="BusSide" Background="#FF204A8E"  />
-                        <TextBlock Grid.Column="1" TextWrapping="Wrap" MaxHeight="70" VerticalAlignment="Top"
-                                   FlowDirection="RightToLeft" Padding="7.5" FontSize="15"
-                                   HorizontalAlignment="Right" Text="{Binding Name}" />
-                        <TextBlock Grid.Column="1" Text="{Binding StationCode}"
-                                   HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                                   Margin="10" />
+                        <TextBlock Text="{Binding StationCode}" FontSize="15" />
+                        <TextBlock Text="{Binding Name}" FontSize="15" Grid.Column="1" FlowDirection="RightToLeft" />
                     </Grid>
-                    <ListBox x:Name="lstLines" Margin="0 70 0 0" VerticalAlignment="Stretch"
-                         HorizontalAlignment="Stretch" ItemsSource="{Binding Lines}">
-                        <ListBox.ItemContainerStyle>
-                            <Style TargetType="ListBoxItem">
-                                <Setter Property="IsEnabled" Value="False"/>
-                                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                            </Style>
-                        </ListBox.ItemContainerStyle>
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="{Binding LineNumber}" FontSize="20" TextWrapping="NoWrap" TextAlignment="Center" />
-                                    <TextBlock Text="{Binding LastStationName}" FlowDirection="RightToLeft"  FontSize="20" Grid.Column="1" TextWrapping="Wrap" />
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </Grid>
-            </Border>
-        </Grid>
-        <Grid x:Name="grdRow1" Visibility="Hidden" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <ListBox x:Name="lstStations" Grid.Column="1" Margin="30 10" SelectionChanged="lstStations_SelectionChanged">
-                <ListBox.ItemContainerStyle>
-                    <Style TargetType="ListBoxItem">
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                    </Style>
-                </ListBox.ItemContainerStyle>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="3*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding StationCode}" FontSize="15" />
-                            <TextBlock Text="{Binding Name}" FontSize="15" Grid.Column="1" FlowDirection="RightToLeft" />
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            <ListBox x:Name="lstLineTimings" Margin="50 20" Background="Aqua">
-                <ListBox.ItemContainerStyle>
-                    <Style TargetType="ListBoxItem">
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                    </Style>
-                </ListBox.ItemContainerStyle>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="3*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding LineNumber}" FontSize="20" 
-                                       TextWrapping="NoWrap" TextAlignment="Center"
-                                       Foreground="#FFE48B0C" />
-                            <TextBlock Text="{Binding LastStationName}" FlowDirection="RightToLeft"
-                                       FontSize="20" Grid.Column="1" TextWrapping="Wrap"
-                                       TextAlignment="Center" Foreground="#FFE48B0C" />
-                            <TextBlock Text="{Binding ArrivalTime}" FontSize="20"
-                                       Grid.Column="2" TextWrapping="NoWrap"
-                                       TextAlignment="Center" Foreground="#FFE48B0C" />
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-        </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

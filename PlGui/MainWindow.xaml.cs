@@ -83,7 +83,7 @@ namespace PlGui
         private void Worker_DoWork(object sender, DoWorkEventArgs e)
         {
             User user = e.Argument as User;
-            try { userReply = BL.TryLogin(user.Name, user.Password); }
+            try { userReply = BL.TryLogin(user.Username, user.Password); }
             catch (UserDoesNotExistException ex) { workerResultTitle = "UserDoesNotExist"; workerResultContent = ex.Message; }
             catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
         }
@@ -91,7 +91,7 @@ namespace PlGui
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             User user = new User() { 
-                Name = txtUsername.Text,
+                Username = txtUsername.Text,
                 Password = txtPassword.Password.CreateMD5()
             };
             worker.RunWorkerAsync(user);

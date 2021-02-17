@@ -19,9 +19,6 @@ using BlApi;
 
 namespace PlGui
 {
-    /// <summary>
-    /// Interaction logic for Simulator.xaml
-    /// </summary>
     public partial class Simulator : Window
     {
         private class Args
@@ -32,18 +29,16 @@ namespace PlGui
 
         static IBL BL = BlFactory.GetBL();
 
-        ObservableCollection<BO.LineTiming> lineTimings = new ObservableCollection<BO.LineTiming>();
         BackgroundWorker blStationsWorker = new BackgroundWorker();
         BackgroundWorker clockWorker = new BackgroundWorker();
         Thread clockBackgroundThread = null;
-        BackgroundWorker travelOperatorWorker = new BackgroundWorker();
-        Thread travelOperatorBackgroundThread = null;
+        List<StationPanel> panels = new List<StationPanel>();
+        ObservableCollection<BO.Station> stations = new ObservableCollection<BO.Station>();
 
         public Simulator()
         {
             InitializeComponent();
 
-            ObservableCollection<BO.Station> stations = new ObservableCollection<BO.Station>(); 
             blStationsWorker.DoWork += (sender, e) =>
             {
                 foreach (var station in BL.GetStations())
@@ -55,40 +50,10 @@ namespace PlGui
             blStationsWorker.RunWorkerCompleted += (sender, e) => lstStations.ItemsSource = stations;
             blStationsWorker.RunWorkerAsync();
 
-
             clockWorker.WorkerReportsProgress = true;
             clockWorker.WorkerSupportsCancellation = true;
             clockWorker.DoWork += ClockWorker_DoWork;
             clockWorker.ProgressChanged += ClockWorker_ProgressChanged;
-
-            travelOperatorWorker.WorkerReportsProgress = true;
-            travelOperatorWorker.WorkerSupportsCancellation = true;
-            travelOperatorWorker.DoWork += TravelOperatorWorker_DoWork;
-            travelOperatorWorker.ProgressChanged += TravelOperatorWorker_ProgressChanged;
-        }
-
-        private void TravelOperatorWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            var line = (BO.LineTiming)e.UserState;
-            int index = lineTimings.ToList().FindIndex(i => i.ID == line.ID);
-            if (index != -1)
-            {
-                if (line.ArrivalTime == TimeSpan.Zero) lineTimings.RemoveAt(index);
-                else lineTimings[index] = line;
-            }
-            else lineTimings.Add(line);
-            lstLineTimings.ItemsSource = lineTimings;
-        }
-
-        private void TravelOperatorWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            int stationCode = 63111;
-            travelOperatorBackgroundThread = Thread.CurrentThread;
-            BL.SetStationPanel(stationCode, (line) => travelOperatorWorker.ReportProgress(1, line));
-            while (!travelOperatorWorker.CancellationPending)
-                try { Thread.Sleep(Timeout.Infinite); }
-                catch (ThreadInterruptedException) { }
-            BL.SetStationPanel(-1, (line) => { });
         }
 
         private void ClockWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -116,34 +81,34 @@ namespace PlGui
             lstStations.SelectedItem = null;
             if ((string)btnStartStop.Content == "Start")
             {
-                clockWorker.RunWorkerAsync(new Args
+                clockWorker?.RunWorkerAsync(new Args
                 { Rate = rate, StartTime = startTime.SelectedTime.Value.TimeOfDay });
-                travelOperatorWorker.RunWorkerAsync();
                 btnStartStop.Content = "Stop";
                 txtRate.IsEnabled = startTime.IsEnabled = false;
-                yellowSign.Visibility = grdRow1.Visibility = Visibility.Visible;
             }
             else
             {
-                travelOperatorWorker.CancelAsync();
-                clockWorker.CancelAsync();
-                travelOperatorBackgroundThread?.Interrupt();
+                clockWorker?.CancelAsync();
                 clockBackgroundThread?.Interrupt();
                 btnStartStop.Content = "Start";
                 txtRate.IsEnabled = startTime.IsEnabled = true;
-                yellowSign.Visibility = grdRow1.Visibility = Visibility.Hidden;
+                lblTime.Content = "00:00:00";
+                ClosePanels();
             }
+        }
+
+        private void ClosePanels()
+        {
+            foreach (var panel in panels)
+                if (panel.IsOpened)
+                    panel.Close();
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            clockWorker.CancelAsync();
+            clockWorker?.CancelAsync();
             clockBackgroundThread?.Interrupt();
-        }
-
-        private void lstStations_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            yellowSign.DataContext = lstStations?.SelectedItem as BO.Station;
+            ClosePanels();
         }
 
         private void NumericTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -151,6 +116,56 @@ namespace PlGui
             e.Handled = !((e.Key >= Key.D0 && e.Key <= Key.D9) ||
                           (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9) ||
                            e.Key == Key.Back);
+        }
+
+        private void lstStations_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectedStation = lstStations.SelectedItem as BO.Station;
+            if (clockWorker.IsBusy)
+            {
+                if (selectedStation != null)
+                {
+                    StationPanel stationPanel = new StationPanel(selectedStation);
+                    panels.Add(stationPanel);
+                    stationPanel.Show();
+                }
+                else
+                    new CustomMessageBox(
+                        "Selected item is null.",
+                        "Selected error.",
+                        "Null Error",
+                        CustomMessageBox.Buttons.IGNORE,
+                        CustomMessageBox.Icons.ERROR).ShowDialog();
+            }
+            else
+                new CustomMessageBox(
+                        "The simulator clock is not working.\n" +
+                            "Please turn on the simulator for follow this station.",
+                        "Simulator error.",
+                        "Simulator Error",
+                        CustomMessageBox.Buttons.OK,
+                        CustomMessageBox.Icons.SETTINGS).ShowDialog();
+        }
+
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!blStationsWorker.IsBusy)
+            {
+                var text = (sender as TextBox).Text;
+                ICollectionView collectionView = CollectionViewSource.GetDefaultView(stations);
+                if (collectionView != null)
+                {
+                    lstStations.ItemsSource = collectionView;
+                    collectionView.Filter = (object o) =>
+                    {
+                        BO.Station p = o as BO.Station;
+                        if (p == null) return false;
+                        if (p.StationCode.ToString().Contains(text)) return true;
+                        if (p.Name.Contains(text)) return true;
+                        return false;
+                    };
+                }
+            }
         }
     }
 }

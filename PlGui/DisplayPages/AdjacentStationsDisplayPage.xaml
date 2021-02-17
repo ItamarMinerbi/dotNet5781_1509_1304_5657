@@ -74,7 +74,8 @@
                   Margin="0,0,10,10" ItemsSource="{Binding}" EnableRowVirtualization="True" Background="Transparent"
                   AutoGenerateColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False"
                   AlternatingRowBackground="#FF0AF3F3" Grid.Row="1"
-                  BorderThickness="0" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+                  BorderThickness="0" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"
+                  RowDetailsVisibilityChanged="dgrStations_RowDetailsVisibilityChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="timeColumn" Width="*" Header="זמן" Binding="{Binding Time}"/>
                 <DataGridTextColumn x:Name="distanceColumn" Width="*" Header="מרחק" Binding="{Binding Distance, StringFormat={}{0} (Km)}" />
@@ -115,7 +116,7 @@
             </DataGrid.CellStyle>
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
-                    <Grid x:Name="MainGrid" Loaded="Grid_Loaded" Height="0" HorizontalAlignment="Stretch" Background="#66FFFFFF">
+                    <Grid x:Name="MainGrid" Height="0" HorizontalAlignment="Stretch" Background="#66FFFFFF">
                         <Button Grid.Column="1" Click="Button_Click" HorizontalAlignment="Right" VerticalAlignment="Top">
                             <Grid x:Name="btnClose" Cursor="Hand" Background="Transparent">
                                 <Viewbox>
@@ -182,13 +183,20 @@
                             <TextBlock FlowDirection="RightToLeft" Grid.Row="1" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Margin="20" Text="{Binding StationCode2}" TextAlignment="Center" />
                             
-                            <TextBox x:Name="txtDistance" Grid.Row="2" Margin="20" HorizontalAlignment="Center" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
-                                     VerticalAlignment="Center" Text="{Binding Distance}" TextAlignment="Center" BorderThickness="0" PreviewKeyDown="DoubleTextBox_PreviewKeyDown" />
-                            
-                            <materialDesign:TimePicker Width="250" materialDesign:HintAssist.Hint="{Binding Time}"
-                                Grid.Row="3" Margin="20" FontSize="20" FontWeight="Bold"
+                            <TextBox x:Name="txtDistance" Grid.Row="2" Margin="20"
+                                     HorizontalAlignment="Center" FlowDirection="RightToLeft"
+                                     FontSize="20" Background="Transparent"
+                                     VerticalAlignment="Center"
+                                     Text="{Binding Distance, Mode=OneTime}"
+                                     TextAlignment="Center" BorderThickness="0"
+                                     PreviewKeyDown="DoubleTextBox_PreviewKeyDown"
+                                     TextChanged="txtDistance_TextChanged"
+                                     Loaded="txtDistance_Loaded"/>
+
+                            <materialDesign:TimePicker Width="250" materialDesign:HintAssist.Hint="{Binding Time, Mode=OneTime}"
+                                Grid.Row="3" Margin="20" FontSize="20" FontWeight="Bold" Loaded="TimePicker_Loaded"
                                 HorizontalAlignment="Center" WithSeconds="True" Is24Hours="True"
-                                HorizontalContentAlignment="Center" />
+                                HorizontalContentAlignment="Center" SelectedTimeChanged="TimePicker_SelectedTimeChanged" />
                         </Grid>
                         <Button x:Name="btnUpdate" Content="Update" Background="LightGreen" Width="100" Height="50" Grid.Column="1" 
                                 HorizontalAlignment="Left" VerticalAlignment="Bottom" BorderThickness="0" Margin="10"

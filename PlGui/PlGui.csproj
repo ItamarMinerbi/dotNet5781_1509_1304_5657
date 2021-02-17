@@ -112,6 +112,9 @@
     <Compile Include="Simulator.xaml.cs">
       <DependentUpon>Simulator.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StationPanel.xaml.cs">
+      <DependentUpon>StationPanel.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddWindows\AddTrip.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -144,7 +147,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DisplayPages\BusesDisplayPage.xaml">
+    <Page Include="DisplayPages\UsersDisplayPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,8 +171,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DisplayPages\BusesDisplayPage.xaml.cs">
-      <DependentUpon>BusesDisplayPage.xaml</DependentUpon>
+    <Compile Include="DisplayPages\UsersDisplayPage.xaml.cs">
+      <DependentUpon>UsersDisplayPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="DisplayPages\BusStationsDisplayPage.xaml.cs">
       <DependentUpon>BusStationsDisplayPage.xaml</DependentUpon>
@@ -190,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Simulator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StationPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

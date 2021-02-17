@@ -64,6 +64,19 @@ namespace DAL
             return users;
         }
 
+        public IEnumerable<User> GetUsers()
+        {
+            return from user in LoadUsersFromXML(LoadXml(usersPath))
+                   where user.IsActive
+                   select new User            // select the user without the password
+                   {
+                       Username = user.Username,
+                       Email = user.Email,
+                       IsAdmin = user.IsAdmin,
+                       IsActive = user.IsActive
+                   };
+        }
+
         public int UsersCount()
         {
             return (from user in LoadUsersFromXML(LoadXml(usersPath))
@@ -89,7 +102,16 @@ namespace DAL
 
         public void RemoveUser(User user)
         {
-
+            XElement usersRoot = LoadXml(usersPath);
+            var usersList = LoadUsersFromXML(usersRoot).ToList();
+            int index = usersList.FindIndex(i => (i.Username == user.Username ||
+                                                  i.Email == user.Email) &&
+                                                  i.Password == user.Password &&
+                                                  i.IsActive);
+            if (index == -1)
+                throw new UserDoesNotExistException($"Incorrect username or password.");
+            usersList[index].IsActive = false;
+            usersList.SaveToXml(usersPath, usersRoot.Name.ToString());
         }
 
         public User CheckUser(User user)

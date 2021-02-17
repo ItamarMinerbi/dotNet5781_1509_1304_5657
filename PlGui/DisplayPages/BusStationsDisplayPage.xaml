@@ -75,7 +75,8 @@
                   AutoGenerateColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False"
                   AlternatingRowBackground="#FF0AF3F3" Grid.Row="1"
                   BorderThickness="0" CanUserAddRows="False"
-                  CanUserDeleteRows="False" IsReadOnly="True">
+                  CanUserDeleteRows="False" IsReadOnly="True"
+                  RowDetailsVisibilityChanged="dgrStations_RowDetailsVisibilityChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="latitudeColumn" Width="*" Header="Latitude" Binding="{Binding Latitude}"/>
                 <DataGridTextColumn x:Name="longitudeColumn" Width="*" Header="Longitude" Binding="{Binding Longitude}"/>
@@ -115,7 +116,7 @@
             </DataGrid.CellStyle>
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
-                    <Grid x:Name="MainGrid" Loaded="Grid_Loaded" Height="0" HorizontalAlignment="Stretch" Background="#66FFFFFF">
+                    <Grid x:Name="MainGrid" Height="0" HorizontalAlignment="Stretch" Background="#66FFFFFF">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
@@ -228,9 +229,11 @@
                             <TextBlock x:Name="txtStationCode" FlowDirection="RightToLeft" Grid.Row="0" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Margin="20" Text="{Binding StationCode}" TextAlignment="Center" />
                             <TextBox x:Name="txtName" Grid.Row="1" Margin="20" HorizontalAlignment="Center" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
-                                     VerticalAlignment="Center" Text="{Binding Name}" TextAlignment="Center" BorderThickness="0" />
+                                     VerticalAlignment="Center" Text="{Binding Name}" TextAlignment="Center" BorderThickness="0"
+                                     Loaded="txtName_Loaded" TextChanged="txtName_TextChanged"/>
                             <TextBox x:Name="txtAddress" Grid.Row="2" Margin="20" HorizontalAlignment="Center" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
-                                       VerticalAlignment="Center" Text="{Binding Address}" TextAlignment="Center" BorderThickness="0" />
+                                       VerticalAlignment="Center" Text="{Binding Address}" TextAlignment="Center" BorderThickness="0"
+                                     Loaded="txtAddress_Loaded" TextChanged="txtAddress_TextChanged"/>
                             <TextBlock x:Name="txtLatitude" FlowDirection="RightToLeft" Grid.Row="3" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Margin="20" Text="{Binding Latitude}" TextAlignment="Center" />
                             <TextBlock x:Name="txtLongitude" FlowDirection="RightToLeft" Grid.Row="4" FontSize="20" Background="Transparent"

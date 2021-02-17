@@ -11,6 +11,7 @@ namespace DalApi
     public interface IDAL
     {
         #region User
+        IEnumerable<DO.User> GetUsers();
         int UsersCount();
         void CreateUser(DO.User user);
         void RemoveUser(DO.User user);

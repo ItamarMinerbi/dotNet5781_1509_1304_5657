@@ -30,11 +30,14 @@ namespace PlGui
         static IBL BL = BlFactory.GetBL();
         ObservableCollection<BO.AdjStations> AdjStations;
 
-        string workerResultTitle, workerResultContent;
+        string workerResultTitle, workerResultContent, txtDistance = "";
+        DateTime timePickerValue = new DateTime();
         BackgroundWorker worker = new BackgroundWorker();
         Action<object, DoWorkEventArgs> workerDoWorkAction;
         Action<object, RunWorkerCompletedEventArgs> workerCompletedAction;
         Action<object, ProgressChangedEventArgs> workerProgressChangedAction;
+        FrameworkElement dataGridRowDetails;
+        bool IsRowDetailsOpen = true;
 
         public AdjacentStationsDisplayPage()
         {
@@ -50,13 +53,18 @@ namespace PlGui
 
         private void LoadAdjacentStations()
         {
+            dgrStations.ItemsSource = new ObservableCollection<BO.AdjStations>();
             dgrStations.IsEnabled = grdUpdate.IsEnabled = false;
             pbarLoad.Visibility = Visibility.Visible;
             pbarLoad.Value = 0;
-            
+
             workerProgressChangedAction = new Action<object, ProgressChangedEventArgs>(
-                (object obj, ProgressChangedEventArgs args) => pbarLoad.Value = args.ProgressPercentage);
-            
+                (object obj, ProgressChangedEventArgs args) =>
+                {
+                    pbarLoad.Value = args.ProgressPercentage;
+                    AdjStations.Add((BO.AdjStations)args.UserState);
+                });
+
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
@@ -83,7 +91,7 @@ namespace PlGui
                     pbarLoad.Visibility = Visibility.Hidden;
                     dgrStations.IsEnabled = grdUpdate.IsEnabled = true;
                 });
-            
+
             workerDoWorkAction = new Action<object, DoWorkEventArgs>((object sender, DoWorkEventArgs e) =>
             {
                 AdjStations = new ObservableCollection<BO.AdjStations>();
@@ -91,7 +99,7 @@ namespace PlGui
                 try { count = BL.GetStationsCount(); }
                 catch (Exception ex) { workerResultTitle = "XmlError"; workerResultContent = ex.Message; }
                 foreach (var adjStations in BL.GetAdjStations())
-                    try { AdjStations.Add(adjStations); worker.ReportProgress(++i * 100 / count); }
+                    try { worker.ReportProgress(++i * 100 / count, adjStations); }
                     catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
             });
             worker.RunWorkerAsync();
@@ -115,18 +123,57 @@ namespace PlGui
             workerResultTitle = workerResultContent = "";
         }
 
-        private void ComboBoxLoaded(object sender, RoutedEventArgs e)
-        {
-            var cmb = sender as ComboBox;
-            for (int i = 0; i <= 59; i++)
-                cmb.Items.Add(String.Format("{0:00}", i));
-        }
-
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            var Station = dgrStations.SelectedItem as BO.AdjStations;
+            double distance = 0;
+            if (!double.TryParse(txtDistance, out distance) || distance <= 0 ||
+                timePickerValue == null)
+            {
+                new CustomMessageBox("Some fields are illegal.",
+                      "Invalid Values",
+                      "Fields Error",
+                      CustomMessageBox.Buttons.IGNORE,
+                      CustomMessageBox.Icons.EDIT).ShowDialog();
+                return;
+            }
+            TimeSpan time = timePickerValue.TimeOfDay;
 
-            dgrStations.UnselectAll();
+            var Station = dgrStations.SelectedItem as BO.AdjStations;
+            workerDoWorkAction = new Action<object, DoWorkEventArgs>((object obj, DoWorkEventArgs args) =>
+            {
+                try
+                {
+                    BL.UpdateAdjStations(Station.StationCode1, Station.StationCode2,
+                                          distance, time);
+                }
+                catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
+            });
+            workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
+                (object obj, RunWorkerCompletedEventArgs args) =>
+                {
+                    CustomMessageBox messageBox;
+                    if (workerResultTitle == "UnknownError")
+                    {
+                        messageBox = new CustomMessageBox(
+                            workerResultContent,
+                            "Unknown Error",
+                            "Unknown error",
+                            CustomMessageBox.Buttons.IGNORE,
+                            CustomMessageBox.Icons.ERROR);
+                        messageBox.ShowDialog();
+                    }
+                    else
+                    {
+                        messageBox = new CustomMessageBox(
+                            "Adjacent station updated successfuly",
+                            "Action Executed Successfuly",
+                            "Action Completed",
+                            CustomMessageBox.Buttons.OK,
+                            CustomMessageBox.Icons.Vi);
+                        if (messageBox.ShowDialog() == false) LoadAdjacentStations();
+                    }
+                });
+            worker.RunWorkerAsync();
         }
 
         private void btnRemove_Click(object sender, RoutedEventArgs e)
@@ -168,7 +215,7 @@ namespace PlGui
         private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             var addAdjStations = new AddWindows.AddAdjStations();
-            if (addAdjStations.ShowDialog() == false && 
+            if (addAdjStations.ShowDialog() == false &&
                 addAdjStations.Result == "Added") LoadAdjacentStations();
         }
 
@@ -179,18 +226,53 @@ namespace PlGui
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            dgrStations.UnselectAll();
+            IsRowDetailsOpen = false;
+            dataGridRowDetails?.BeginAnimation(HeightProperty,
+                                new DoubleAnimation(0, TimeSpan.Parse("0:0:0.5")));
+            BackgroundWorker wait = new BackgroundWorker();
+            wait.DoWork += (s, args) => Thread.Sleep(500);
+            wait.RunWorkerCompleted += (s, args) => dgrStations.UnselectAll();
+            wait.RunWorkerAsync();
         }
 
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        private void dgrStations_RowDetailsVisibilityChanged(object sender, DataGridRowDetailsEventArgs e)
         {
-            (sender as Grid).BeginAnimation(HeightProperty,
-                new DoubleAnimation(400, TimeSpan.Parse("0:0:0.5")));
+            dataGridRowDetails = (Grid)e.DetailsElement;
+            if (IsRowDetailsOpen)
+                dataGridRowDetails?.BeginAnimation(HeightProperty,
+                    new DoubleAnimation(400, TimeSpan.Parse("0:0:0.5")));
+            IsRowDetailsOpen = true;
+        }
+
+        private void txtDistance_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtDistance = (sender as TextBox)?.Text;
+        }
+
+        private void txtDistance_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtDistance = (dgrStations.SelectedItem as BO.AdjStations)?.Distance.ToString();
+        }
+
+        private void TimePicker_SelectedTimeChanged(object sender, RoutedPropertyChangedEventArgs<DateTime?> e)
+        {
+            if ((sender as MaterialDesignThemes.Wpf.TimePicker).SelectedTime.HasValue)
+                timePickerValue = (sender as MaterialDesignThemes.Wpf.TimePicker).SelectedTime.Value;
+            else if ((dgrStations.SelectedItem as BO.AdjStations) != null)
+                timePickerValue = new DateTime().Add((dgrStations.SelectedItem as BO.AdjStations).Time);
+            else timePickerValue = new DateTime();
+        }
+
+        private void TimePicker_Loaded(object sender, RoutedEventArgs e)
+        {
+            if ((dgrStations.SelectedItem as BO.AdjStations) != null)
+                timePickerValue = new DateTime().Add((dgrStations.SelectedItem as BO.AdjStations).Time);
+            else timePickerValue = new DateTime();
         }
 
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(!worker.IsBusy)
+            if (!worker.IsBusy)
             {
                 var text = (sender as TextBox).Text;
                 ICollectionView collectionView = CollectionViewSource.GetDefaultView(AdjStations);

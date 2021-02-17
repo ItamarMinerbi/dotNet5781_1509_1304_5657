@@ -19,6 +19,19 @@ namespace DAL
         #endregion
 
         #region User
+        public IEnumerable<User> GetUsers()
+        {
+            return from user in ds.Users
+                   where user.IsActive
+                   select new User            // select the user without the password
+                   {
+                       Username = user.Username,
+                       Email = user.Email,
+                       IsAdmin = user.IsAdmin,
+                       IsActive = user.IsActive
+                   };
+        }
+
         public int UsersCount()
         {
             return (from user in ds.Users

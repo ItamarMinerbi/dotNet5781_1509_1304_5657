@@ -64,7 +64,8 @@
                   Margin="0,0,10,10" ItemsSource="{Binding}" EnableRowVirtualization="True" Background="Transparent"
                   AutoGenerateColumns="False" CanUserResizeRows="False" CanUserResizeColumns="False"
                   AlternatingRowBackground="#FF0AF3F3" Grid.Row="1" SelectedItem="{x:Null}"
-                  BorderThickness="0" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+                  BorderThickness="0" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"
+                  RowDetailsVisibilityChanged="dgrLines_RowDetailsVisibilityChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="areaColumn" Width="*" Header="איזור" Binding="{Binding Area}"/>
                 <DataGridTextColumn x:Name="totalTimeCodeColumn" Width="*" Header="זמן כולל" Binding="{Binding TotalTime}"/>
@@ -103,7 +104,7 @@
             </DataGrid.CellStyle>
             <DataGrid.RowDetailsTemplate>
                 <DataTemplate>
-                    <Grid x:Name="MainGrid" Loaded="Grid_Loaded" Height="0" HorizontalAlignment="Stretch" Background="#66FFFFFF">
+                    <Grid x:Name="MainGrid" Height="0" HorizontalAlignment="Stretch" Background="#66FFFFFF">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
@@ -238,17 +239,18 @@
                                        VerticalAlignment="Center" Margin="0,0,20,0" Text="{Binding ID}" TextAlignment="Center" />
 
                             <TextBox Grid.Row="1" Margin="0,0,20,0" HorizontalAlignment="Center" FlowDirection="RightToLeft" FontSize="20" Background="Transparent"
-                                             VerticalAlignment="Center" Text="{Binding LineNumber}"
-                                             TextAlignment="Center" BorderThickness="0" PreviewKeyDown="NumericTextBox_PreviewKeyDown" />
+                                     VerticalAlignment="Center" Text="{Binding LineNumber, Mode=OneTime}" TextChanged="TextBox_TextChanged" Loaded="TextBox_Loaded"
+                                     TextAlignment="Center" BorderThickness="0" PreviewKeyDown="NumericTextBox_PreviewKeyDown" />
                             <TextBlock x:Name="txtTotalTime" FlowDirection="RightToLeft" Grid.Row="2" FontSize="20" Background="Transparent"
                                        VerticalAlignment="Center" Margin="0,0,20,0" Text="{Binding TotalTime}" TextAlignment="Center" />
 
                             <ComboBox Name="cmbStations" ItemsSource="{Binding}" Grid.Row="3" 
-                                      SelectedValue="{Binding Area}" Loaded="cmbStations_Loaded"
+                                      SelectedValue="{Binding Area, Mode=OneTime}" Loaded="cmbStations_Loaded"
                                       HorizontalContentAlignment="Center" VerticalContentAlignment="Top"
                                       Width="250" FontSize="15" FontWeight="Bold"
                                       Style="{StaticResource MaterialDesignFilledComboBox}"
-                                      materialDesign:HintAssist.Hint="Area"/>
+                                      materialDesign:HintAssist.Hint="Area"
+                                      SelectionChanged="cmbStations_SelectionChanged"/>
                             <ComboBox x:Name="cmbTrips" ItemsSource="{Binding Trips}" Grid.Row="4" SelectedIndex="0"
                                       HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
                                       Width="250" Height="50" FontSize="13" FontWeight="Bold">

@@ -30,11 +30,14 @@ namespace PlGui
         static IBL BL = BlFactory.GetBL();
         ObservableCollection<BO.Line> Lines;
 
-        string workerResultTitle, workerResultContent;
+        string workerResultTitle, workerResultContent, txtLineNumber = "";
+        BO.Line.Areas selectedArea;
         BackgroundWorker worker = new BackgroundWorker();
         Action<object, DoWorkEventArgs> workerDoWorkAction;
         Action<object, RunWorkerCompletedEventArgs> workerCompletedAction;
         Action<object, ProgressChangedEventArgs> workerProgressChangedAction;
+        FrameworkElement dataGridRowDetails;
+        bool IsRowDetailsOpen = true;
 
         public LinesDisplayPage()
         {
@@ -50,11 +53,16 @@ namespace PlGui
 
         private void LoadLines()
         {
+            dgrLines.ItemsSource = new ObservableCollection<BO.Line>();
             dgrLines.IsEnabled = grdUpdate.IsEnabled = false;
             pbarLoad.Visibility = Visibility.Visible;
             pbarLoad.Value = 0;
             workerProgressChangedAction = new Action<object, ProgressChangedEventArgs>(
-                (object obj, ProgressChangedEventArgs args) => pbarLoad.Value = args.ProgressPercentage);
+                (object obj, ProgressChangedEventArgs args) =>
+                {
+                    pbarLoad.Value = args.ProgressPercentage;
+                    Lines.Add((BO.Line)args.UserState);
+                });
             workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
                 (object obj, RunWorkerCompletedEventArgs args) =>
                 {
@@ -87,7 +95,7 @@ namespace PlGui
                 try { count = BL.GetLinesCount(); }
                 catch (Exception ex) { workerResultTitle = "XmlError"; workerResultContent = ex.Message; }
                 foreach (var line in BL.GetLines())
-                    try { Lines.Add(line); worker.ReportProgress(++i * 100 / count); }
+                    try { worker.ReportProgress(++i * 100 / count, line); }
                     catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
             });
             worker.RunWorkerAsync();
@@ -113,13 +121,69 @@ namespace PlGui
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            dgrLines.UnselectAll();
+            IsRowDetailsOpen = false;
+            dataGridRowDetails?.BeginAnimation(HeightProperty,
+                                new DoubleAnimation(0, TimeSpan.Parse("0:0:0.5")));
+            BackgroundWorker wait = new BackgroundWorker();
+            wait.DoWork += (s, args) => Thread.Sleep(500);
+            wait.RunWorkerCompleted += (s, args) => dgrLines.UnselectAll();
+            wait.RunWorkerAsync();
+        }
+
+        private void dgrLines_RowDetailsVisibilityChanged(object sender, DataGridRowDetailsEventArgs e)
+        {
+            dataGridRowDetails = (Grid)e.DetailsElement;
+            if(IsRowDetailsOpen)
+                dataGridRowDetails?.BeginAnimation(HeightProperty,
+                    new DoubleAnimation(400, TimeSpan.Parse("0:0:0.5")));
+            IsRowDetailsOpen = true;
         }
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            int lineNumber = 0;
+            if (!int.TryParse(txtLineNumber, out lineNumber))
+            {
+                new CustomMessageBox("Some fields are illegal.",
+                      "Invalid Values",
+                      "Fields Error",
+                      CustomMessageBox.Buttons.IGNORE,
+                      CustomMessageBox.Icons.EDIT).ShowDialog();
+                return;
+            }
+
             var Line = dgrLines.SelectedItem as BO.Line;
-            
+            workerDoWorkAction = new Action<object, DoWorkEventArgs>((object obj, DoWorkEventArgs args) =>
+            {
+                try { BL.UpdateLine(Line.ID, lineNumber, selectedArea); }
+                catch (Exception ex) { workerResultTitle = "UnknownError"; workerResultContent = ex.Message; }
+            });
+            workerCompletedAction = new Action<object, RunWorkerCompletedEventArgs>(
+                (object obj, RunWorkerCompletedEventArgs args) =>
+                {
+                    CustomMessageBox messageBox;
+                    if (workerResultTitle == "UnknownError")
+                    {
+                        messageBox = new CustomMessageBox(
+                            workerResultContent,
+                            "Unknown Error",
+                            "Unknown error",
+                            CustomMessageBox.Buttons.IGNORE,
+                            CustomMessageBox.Icons.ERROR);
+                        messageBox.ShowDialog();
+                    }
+                    else
+                    {
+                        messageBox = new CustomMessageBox(
+                            "Adjacent station updated successfuly",
+                            "Action Executed Successfuly",
+                            "Action Completed",
+                            CustomMessageBox.Buttons.OK,
+                            CustomMessageBox.Icons.Vi);
+                        if (messageBox.ShowDialog() == false) LoadLines();
+                    }
+                });
+            worker.RunWorkerAsync();
             dgrLines.UnselectAll();
         }
 
@@ -262,15 +326,33 @@ namespace PlGui
             worker.RunWorkerAsync();
         }
 
-        private void Grid_Loaded(object sender, RoutedEventArgs e)
-        {
-            (sender as Grid).BeginAnimation(HeightProperty,
-                new DoubleAnimation(400, TimeSpan.Parse("0:0:0.5")));
-        }
-
         private void grdUpdate_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             LoadLines();
+        }
+
+        private void cmbStations_Loaded(object sender, RoutedEventArgs e)
+        {
+            (sender as ComboBox).ItemsSource = Enum.GetValues(typeof(BO.Line.Areas));
+            if ((dgrLines.SelectedItem as BO.Line) != null)
+                selectedArea = (dgrLines.SelectedItem as BO.Line).Area;
+            else selectedArea = BO.Line.Areas.General;
+        }
+
+        private void cmbStations_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Enum.TryParse((sender as ComboBox).SelectedValue.ToString(), out selectedArea);
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            txtLineNumber = (sender as TextBox)?.Text;
+        }
+
+        private void TextBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            if ((dgrLines.SelectedItem as BO.Line) != null)
+                txtLineNumber = (dgrLines.SelectedItem as BO.Line).LineNumber.ToString();
         }
 
         private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
@@ -301,11 +383,6 @@ namespace PlGui
             e.Handled = !((e.Key >= Key.D0 && e.Key <= Key.D9) ||
                           (e.Key >= Key.NumPad0 && e.Key <= Key.NumPad9) ||
                            e.Key == Key.Back);
-        }
-
-        private void cmbStations_Loaded(object sender, RoutedEventArgs e)
-        {
-            (sender as ComboBox).ItemsSource = Enum.GetValues(typeof(BO.Line.Areas));
         }
     }
 }

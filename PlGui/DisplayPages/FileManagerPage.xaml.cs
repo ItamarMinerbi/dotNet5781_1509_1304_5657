@@ -66,5 +66,34 @@ namespace PlGui.DisplayPages
             foreach (var file in BL.GetFiles()) files.Add(file);
             counts = BL.GetCounts();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BackgroundWorker workerFile = new BackgroundWorker();
+            string resultExceptionMessage = "";
+            workerFile.DoWork += (s, args) =>
+            {
+                try { BL.RemoveFile((dgrFiles.SelectedItem as BO.DisplayFile).Path); }
+                catch (Exception ex) { resultExceptionMessage = ex.Message; }
+            };
+            workerFile.RunWorkerCompleted += (s, args) =>
+            {
+                if (resultExceptionMessage != "")
+                    new CustomMessageBox(
+                        resultExceptionMessage,
+                        "File error",
+                        "File Error",
+                        CustomMessageBox.Buttons.IGNORE,
+                        CustomMessageBox.Icons.FILE).ShowDialog();
+                else
+                    new CustomMessageBox(
+                        "File deleted successfuly",
+                        "File deleted",
+                        "File",
+                        CustomMessageBox.Buttons.OK,
+                        CustomMessageBox.Icons.Vi).ShowDialog();
+            };
+            workerFile.RunWorkerAsync();
+        }
     }
 }

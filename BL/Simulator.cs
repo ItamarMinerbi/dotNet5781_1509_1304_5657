@@ -11,7 +11,9 @@ namespace BL
 {
     static class Simulator
     {
-        static volatile bool Cancel;
+        static volatile bool cancel;
+        public static bool Cancel { get => cancel; }
+
         static Thread clockThread = null;
         static event Action<TimeSpan> tickEvent = null;
         public static event Action<TimeSpan> TickEvent
@@ -24,14 +26,14 @@ namespace BL
 
         public static void Start(TimeSpan startTime, int rate)
         {
-            Cancel = false;
+            cancel = false;
             clockThread = new Thread(() =>
             {
                 Rate = rate;
                 Time = startTime;
                 Stopwatch stopwatch = new Stopwatch();
                 stopwatch.Start();
-                while (!Cancel)
+                while (!cancel)
                 {
                     Time = startTime + TimeSpan.FromTicks(stopwatch.ElapsedTicks * rate);
                     tickEvent?.Invoke(startTime + TimeSpan.FromTicks(stopwatch.ElapsedTicks * rate));
@@ -45,7 +47,7 @@ namespace BL
 
         public static void Stop()
         {
-            Cancel = true;
+            cancel = true;
             clockThread?.Interrupt();
             clockThread = null;
             tickEvent = null;
