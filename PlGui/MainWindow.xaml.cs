@@ -58,7 +58,7 @@ namespace PlGui
                 new ManageWindow(userReply.Username).Show();
                 this.Close();
             }
-            else if(userReply != null && !userReply.IsAdmin)
+            else if (userReply != null && !userReply.IsAdmin)
             {
                 new CustomMessageBox(
                     "You can not enter to this part of the system because you are not an admin!",
@@ -90,7 +90,8 @@ namespace PlGui
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User() { 
+            User user = new User()
+            {
                 Username = txtUsername.Text,
                 Password = txtPassword.Password.CreateMD5()
             };

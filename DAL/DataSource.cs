@@ -47,6 +47,40 @@ namespace DS
             #endregion
 
             #region Stations
+            Stations.Add(new DO.Station() { Name = "ת. רכבת רעננה מערב/איסוף", StationCode = 20197, Address = @" רחוב: עיר: רעננה רציף:   קומה:  ", Latitude = 32.1807028, Longitude = 34.8512579, IsActive = true });
+            Stations.Add(new DO.Station() { Name = "מרכז מסחרי/דרך ירושלים", StationCode = 36598, Address = @" רחוב:דרך ירושלים 3 עיר: רעננה רציף:   קומה:  ", Latitude = 32.1833099, Longitude = 34.8522866, IsActive = true });
+            Stations.Add(new DO.Station() { Name = "דרך ירושלים/כביש 531", StationCode = 20282, Address = @" רחוב:דרך ירושלים עיר: רעננה רציף:   קומה:  ", Latitude = 32.1815494, Longitude = 34.852224, IsActive = true });
+            Stations.Add(new DO.Station() { Name = "דרך ירושלים/הבריגדה היהודית", StationCode = 26912, Address = @" רחוב:דרך ירושלים עיר: הרצליה רציף:   קומה:  ", Latitude = 32.1749868, Longitude = 34.8518562, IsActive = true });
+            Stations.Add(new DO.Station() { StationCode = 26910, Name = "ירושלים/הר סיני", Latitude = 32.1723334, Longitude = 34.8523808, IsActive = true, Address = @" רחוב:דרך ירושלים עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 26908, Name = "דרך ירושלים/ברל כצנלסון", Latitude = 32.1699247, Longitude = 34.8521411, IsActive = true, Address = @" רחוב:דרך ירושלים עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20222, Name = "ביתר/ההסתדרות", Latitude = 32.1596852, Longitude = 34.850308, IsActive = true, Address = @" רחוב:בית''ר 6 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20225, Name = "דוד רזיאל/ביתר", Latitude = 32.1579023, Longitude = 34.8498634, IsActive = true, Address = @" רחוב:דוד רזיאל 55 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20228, Name = "יהודה הנשיא/דוד רזיאל", Latitude = 32.1571844, Longitude = 34.8487463, IsActive = true, Address = @" רחוב:יהודה הנשיא 33 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 28514, Name = "יהודה הנשיא/כלנית", Latitude = 32.1527131, Longitude = 34.8477637, IsActive = true, Address = @" רחוב:יהודה הנשיא 89 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20231, Name = "רא''ל אמנון ליפקין שחק/יערה", Latitude = 32.1503313, Longitude = 34.8475063, IsActive = true, Address = @" רחוב:רא''ל אמנון ליפקין שחק עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20232, Name = "רא''ל אמנון ליפקין שחק/צמרות", Latitude = 32.1512672, Longitude = 34.8443714, IsActive = true, Address = @" רחוב:רא''ל אמנון ליפקין שחק עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20230, Name = "בן גוריון/יבנה", Latitude = 32.150603, Longitude = 34.8418091, IsActive = true, Address = @" רחוב:בן גוריון 123 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20243, Name = "מרכז אמירים/בן גוריון", Latitude = 32.1531813, Longitude = 34.841039, IsActive = true, Address = @" רחוב:בן גוריון 105 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 27135, Name = "בר כוכבא/הצנחנים", Latitude = 32.1557927, Longitude = 34.8406313, IsActive = true, Address = @" רחוב:בר כוכבא 103 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 27137, Name = "בר כוכבא/סעדיה גאון", Latitude = 32.1564151, Longitude = 34.8359458, IsActive = true, Address = @" רחוב:בר כוכבא 88 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 27139, Name = "בר כוכבא/רוחמה", Latitude = 32.1582278, Longitude = 34.8340507, IsActive = true, Address = @" רחוב:בר כוכבא 49 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 27141, Name = "בר כוכבא/התבור", Latitude = 32.1607135, Longitude = 34.83467, IsActive = true, Address = @" רחוב:בר כוכבא 9 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 26881, Name = "בית ספר תיכון ראשונים/הרב קוק", Latitude = 32.1618157, Longitude = 34.837559, IsActive = true, Address = @" רחוב:הרב קוק 23 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 21337, Name = "בית משפט/בן גוריון", Latitude = 32.1620764, Longitude = 34.8409243, IsActive = true, Address = @" רחוב:בן גוריון 24 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 26902, Name = "בן גוריון/העצמאות", Latitude = 32.1620855, Longitude = 34.8409136, IsActive = true, Address = @" רחוב:בן גוריון 16 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 26905, Name = "סוקולוב/בן גוריון", Latitude = 32.1672675, Longitude = 34.839942, IsActive = true, Address = @" רחוב:סוקולוב 33 עיר: הרצליה רציף:   קומה:  " }); 
+            Stations.Add(new DO.Station() { StationCode = 26900, Name = "סוקולוב/הניצנים", Latitude = 32.1666716, Longitude = 34.8378466, IsActive = true, Address = @" רחוב:סוקולוב 7 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20213, Name = "פינסקר/אבן עזרא", Latitude = 32.168226, Longitude = 34.8298491, IsActive = true, Address = @" רחוב:פיסקר 8 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 28644, Name = "היכל אומנויות הבמה/ז'בוטינסקי", Latitude = 32.1682468, Longitude = 34.8273396, IsActive = true, Address = @" רחוב:ז'בוטינסקי 24 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20595, Name = "קאנטרי קלאב/ז'בוטינסקי", Latitude = 32.1662067, Longitude = 34.8261156, IsActive = true, Address = @" רחוב:ז'בוטינסקי 11 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 27126, Name = "שד. שבעת הכוכבים/בן ציון מיכאלי", Latitude = 32.1636775, Longitude = 34.824405, IsActive = true, Address = @" רחוב:שד. שבעת הכוכבים 2 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20171, Name = "קניון שבעת הכוכבים/בן ציון מיכאלי", Latitude = 32.1640325, Longitude = 34.821479, IsActive = true, Address = @" רחוב:שד. מיכאל בן ציון 8 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 27102, Name = "ת. רכבת הרצליה", Latitude = 32.1638797, Longitude = 34.8187608, IsActive = true, Address = @" רחוב:הרכבת עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 26751, Name = "שדרות אבא אבן/אריה שנקר", Latitude = 32.1610075, Longitude = 34.808315, IsActive = true, Address = @" רחוב:שד. אבא אבן 3 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 27110, Name = "יהושע בן נון/שד. אבא אבן", Latitude = 32.1636745, Longitude = 34.802413, IsActive = true, Address = @" רחוב:שד. אבא אבן 23 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 26666, Name = "קניון ארנה", Latitude = 32.1631515, Longitude = 34.795097, IsActive = true, Address = @" רחוב:השונית 2 עיר: הרצליה רציף:   קומה:  " });
+            Stations.Add(new DO.Station() { StationCode = 20373, Name = "השונית/יורדי ים", Latitude = 32.1616985, Longitude = 34.794872, IsActive = true, Address = @" רחוב:השונית עיר: הרצליה רציף:   קומה:  " });
+
             Stations.Add(new DO.Station() { Name = @"הרצל/עולי הגרדום", StationCode = 39247, Address = @" רחוב:הרצל 91 עיר: נתניה רציף:   קומה:  ", Latitude = 32.325694, Longitude = 34.864841, IsActive = true });
             Stations.Add(new DO.Station() { Name = @"צומת הדסים", StationCode = 39374, Address = @" רחוב:4  עיר: אבן יהודה רציף:   קומה:  ", Latitude = 32.28275, Longitude = 34.896439, IsActive = true });
             Stations.Add(new DO.Station() { Name = @"ת. מרכזית נתניה/הורדה", StationCode = 39522, Address = @" רחוב:פינסקר  עיר: נתניה רציף:   קומה:  ", Latitude = 32.327128, Longitude = 34.85839, IsActive = true });
@@ -479,6 +513,7 @@ namespace DS
             Lines.Add(new DO.Line() { ID = 10, LineNumber = 20, FirstStation = 26643, LastStation = 36667, Area = DO.Line.Areas.Center, IsActive = true });
             Lines.Add(new DO.Line() { ID = 11, LineNumber = 82, FirstStation = 36667, LastStation = 26956, Area = DO.Line.Areas.Center, IsActive = true });
             Lines.Add(new DO.Line() { ID = 12, LineNumber = 82, FirstStation = 26959, LastStation = 36667, Area = DO.Line.Areas.Center, IsActive = true });
+            Lines.Add(new DO.Line() { ID = 13, LineNumber = 3, FirstStation = 20197, LastStation = 20373, Area = DO.Line.Areas.Center, IsActive = true });
             #endregion
 
             #region LineTrip
@@ -1034,10 +1069,76 @@ namespace DS
             StationLines.Add(new DO.StationLine() { ID = 12, StationCode = 32557, StationNumberInLine = 40, IsActive = true });
             StationLines.Add(new DO.StationLine() { ID = 12, StationCode = 32555, StationNumberInLine = 41, IsActive = true });
             StationLines.Add(new DO.StationLine() { ID = 12, StationCode = 36667, StationNumberInLine = 42, IsActive = true });
-
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20197, StationNumberInLine = 0, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 36598, StationNumberInLine = 1, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20282, StationNumberInLine = 2, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26912, StationNumberInLine = 3, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26910, StationNumberInLine = 4, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26908, StationNumberInLine = 5, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20222, StationNumberInLine = 6, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20225, StationNumberInLine = 7, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20228, StationNumberInLine = 8, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 28514, StationNumberInLine = 9, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20231, StationNumberInLine = 10, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20232, StationNumberInLine = 11, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20230, StationNumberInLine = 12, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20243, StationNumberInLine = 13, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 27135, StationNumberInLine = 14, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 27137, StationNumberInLine = 15, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 27139, StationNumberInLine = 16, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 27141, StationNumberInLine = 17, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26881, StationNumberInLine = 18, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 21337, StationNumberInLine = 19, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26902, StationNumberInLine = 20, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26905, StationNumberInLine = 21, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26900, StationNumberInLine = 22, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20213, StationNumberInLine = 23, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 28644, StationNumberInLine = 24, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20595, StationNumberInLine = 25, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 27126, StationNumberInLine = 26, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20171, StationNumberInLine = 27, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 27102, StationNumberInLine = 28, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26751, StationNumberInLine = 29, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 27110, StationNumberInLine = 30, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 26666, StationNumberInLine = 31, IsActive = true });
+            StationLines.Add(new DO.StationLine() { ID = 13, StationCode = 20373, StationNumberInLine = 32, IsActive = true });
             #endregion
 
             #region AdjStations
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220197, StationCode2 = 236598, Distance = 0.8,  Time = new TimeSpan(0, 2, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 236598, StationCode2 = 220282, Distance = 0.4,  Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220282, StationCode2 = 226912, Distance = 0.6,  Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226912, StationCode2 = 226910, Distance = 0.35, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226910, StationCode2 = 226908, Distance = 0.45, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226908, StationCode2 = 220222, Distance = 1.4,  Time = new TimeSpan(0, 4, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220222, StationCode2 = 220225, Distance = 0.27, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220225, StationCode2 = 220228, Distance = 0.45, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220228, StationCode2 = 228514, Distance = 0.5,  Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 228514, StationCode2 = 220231, Distance = 0.5,  Time = new TimeSpan(0, 2, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220231, StationCode2 = 220232, Distance = 0.35, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220232, StationCode2 = 220230, Distance = 0.24, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220230, StationCode2 = 220243, Distance = 0.27, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220243, StationCode2 = 227135, Distance = 0.65, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 227135, StationCode2 = 227137, Distance = 0.2,  Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 227137, StationCode2 = 227139, Distance = 0.28, Time = new TimeSpan(0, 0, 30), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 227139, StationCode2 = 227141, Distance = 0.27, Time = new TimeSpan(0, 0, 30), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 227141, StationCode2 = 226881, Distance = 0.4,  Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226881, StationCode2 = 221337, Distance = 0.4,  Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 221337, StationCode2 = 226902, Distance = 0.25, Time = new TimeSpan(0, 0, 30), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226902, StationCode2 = 226905, Distance = 0.4,  Time = new TimeSpan(0, 0, 30), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226905, StationCode2 = 226900, Distance = 0.29, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226900, StationCode2 = 220213, Distance = 0.9,  Time = new TimeSpan(0, 2, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220213, StationCode2 = 228644, Distance = 0.26, Time = new TimeSpan(0, 1, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 228644, StationCode2 = 220595, Distance = 0.24, Time = new TimeSpan(0, 1, 0) , IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220595, StationCode2 = 227126, Distance = 0.35, Time = new TimeSpan(0, 1, 0) , IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 227126, StationCode2 = 220171, Distance = 0.28, Time = new TimeSpan(0, 0, 30), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 220171, StationCode2 = 227102, Distance = 0.5,  Time = new TimeSpan(0, 1, 30), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 227102, StationCode2 = 226751, Distance = 1.2,  Time = new TimeSpan(0, 3, 0) , IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226751, StationCode2 = 227110, Distance = 0.65, Time = new TimeSpan(0, 2, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 227110, StationCode2 = 226666, Distance = 0.75, Time = new TimeSpan(0, 2, 0), IsActive = true });
+            AdjStations.Add(new DO.AdjStations() { StationCode1 = 226666, StationCode2 = 220373, Distance = 0.28, Time = new TimeSpan(0, 1, 0), IsActive = true });
+
+
             AdjStations.Add(new DO.AdjStations() { StationCode1 = 63946, StationCode2 = 63273, Distance = 0.13, Time = TimeSpan.Parse("00:00:07"), IsActive = true });
             AdjStations.Add(new DO.AdjStations() { StationCode1 = 63273, StationCode2 = 63271, Distance = 0.44, Time = TimeSpan.Parse("00:00:26"), IsActive = true });
             AdjStations.Add(new DO.AdjStations() { StationCode1 = 63271, StationCode2 = 63254, Distance = 0.84, Time = TimeSpan.Parse("00:00:50"), IsActive = true });
