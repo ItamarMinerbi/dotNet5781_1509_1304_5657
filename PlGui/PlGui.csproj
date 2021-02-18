@@ -223,6 +223,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="projects info.docx" />
     <None Include="Properties\DataSources\BO.Line+Areas.datasource" />
     <None Include="Properties\DataSources\BO.Line.datasource" />
     <None Include="Properties\DataSources\BO.Station.datasource" />
