@@ -262,15 +262,15 @@ namespace PlGui
                 if (collectionView != null)
                 {
                     dgrStations.ItemsSource = collectionView;
-                    collectionView.Filter = (object o) =>
+                    collectionView.Filter = (object obj) =>
                     {
-                        BO.Station p = o as BO.Station;
-                        if (p == null) return false;
-                        if (p.StationCode.ToString().Contains(text)) return true;
-                        if (p.Name.Contains(text)) return true;
-                        if (p.Address.ToString().Contains(text)) return true;
-                        if (p.Latitude.ToString().Contains(text)) return true;
-                        if (p.Longitude.ToString().Contains(text)) return true;
+                        BO.Station station = obj as BO.Station;
+                        if (station == null) return false;
+                        if (station.StationCode.ToString().Contains(text)) return true;
+                        if (station.Name.Contains(text)) return true;
+                        if (station.Address.Contains(text)) return true;
+                        if (station.Latitude.ToString().Contains(text)) return true;
+                        if (station.Longitude.ToString().Contains(text)) return true;
                         return false;
                     };
                 }

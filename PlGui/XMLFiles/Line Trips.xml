@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LineTrips>
+  <LineTrip>
+    <ID>0</ID>
+    <StartTime>05:30:00</StartTime>
+    <EndTime>23:30:00</EndTime>
+    <Frequency>00:30:00</Frequency>
+    <IsActive>True</IsActive>
+  </LineTrip>
+  <LineTrip>
+    <ID>1</ID>
+    <StartTime>05:30:00</StartTime>
+    <EndTime>23:30:00</EndTime>
+    <Frequency>00:30:00</Frequency>
+    <IsActive>True</IsActive>
+  </LineTrip>
+</LineTrips>

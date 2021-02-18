@@ -1,0 +1,3331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Stations>
+  <Station>
+    <Address> רחוב:הרצל 91 עיר: נתניה רציף:   קומה:  </Address>
+    <Name>הרצל/עולי הגרדום</Name>
+    <Longitude>34.864841</Longitude>
+    <Latitude>32.325694</Latitude>
+    <StationCode>39247</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: אבן יהודה רציף:   קומה:  </Address>
+    <Name>צומת הדסים</Name>
+    <Longitude>34.896439</Longitude>
+    <Latitude>32.28275</Latitude>
+    <StationCode>39374</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:פינסקר  עיר: נתניה רציף:   קומה:  </Address>
+    <Name>ת. מרכזית נתניה/הורדה</Name>
+    <Longitude>34.85839</Longitude>
+    <Latitude>32.327128</Latitude>
+    <StationCode>39522</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הירדן  עיר: נתניה רציף:   קומה:  </Address>
+    <Name>צומת נווה איתמר</Name>
+    <Longitude>34.874173</Longitude>
+    <Latitude>32.324396</Latitude>
+    <StationCode>39524</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי 87 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>בית ספר רמב''ם/הרב שלום שבזי</Name>
+    <Longitude>34.948825</Longitude>
+    <Latitude>32.090333</Latitude>
+    <StationCode>39650</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה מכביש 5 לראש העין  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>פארק סיבל/יציאה מכביש 5</Name>
+    <Longitude>34.961352</Longitude>
+    <Latitude>32.10624</Latitude>
+    <StationCode>39660</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מחלף ראש העין מזרח</Name>
+    <Longitude>34.961855</Longitude>
+    <Latitude>32.107139</Latitude>
+    <StationCode>39661</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה למחלף ראש העין מזרח  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מחלף ראש העין מזרח</Name>
+    <Longitude>34.962074</Longitude>
+    <Latitude>32.107606</Latitude>
+    <StationCode>39662</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קיבוץ גלויות  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>קיבוץ גלויות/דרך בגין</Name>
+    <Longitude>34.97054</Longitude>
+    <Latitude>32.096941</Latitude>
+    <StationCode>39670</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף ירקון</Name>
+    <Longitude>34.903229</Longitude>
+    <Latitude>32.119907</Latitude>
+    <StationCode>39684</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 5  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף ירקון</Name>
+    <Longitude>34.904657</Longitude>
+    <Latitude>32.120694</Latitude>
+    <StationCode>39685</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף ירקון</Name>
+    <Longitude>34.903897</Longitude>
+    <Latitude>32.12281</Latitude>
+    <StationCode>39686</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 5  עיר: דרום השרון רציף:   קומה:  </Address>
+    <Name>מחלף קסם</Name>
+    <Longitude>34.93836</Longitude>
+    <Latitude>32.119458</Latitude>
+    <StationCode>39705</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 5  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מחלף קסם</Name>
+    <Longitude>34.941641</Longitude>
+    <Latitude>32.114882</Latitude>
+    <StationCode>39709</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 5  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף ירקון</Name>
+    <Longitude>34.901871</Longitude>
+    <Latitude>32.122017</Latitude>
+    <StationCode>39751</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:2  עיר: חדרה רציף:   קומה:  </Address>
+    <Name>צומת אולגה</Name>
+    <Longitude>34.891072</Longitude>
+    <Latitude>32.438755</Latitude>
+    <StationCode>40752</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:2  עיר: חדרה רציף:   קומה:  </Address>
+    <Name>צומת אולגה</Name>
+    <Longitude>34.89125</Longitude>
+    <Latitude>32.438568</Latitude>
+    <StationCode>41694</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ח'ורי 39 עיר: חיפה רציף:   קומה:  </Address>
+    <Name>חורי/ואדי</Name>
+    <Longitude>34.994114</Longitude>
+    <Latitude>32.817528</Latitude>
+    <StationCode>41700</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אנדרי סחרוב 3 עיר: חיפה רציף:   קומה:  </Address>
+    <Name>מת''מ</Name>
+    <Longitude>34.96134</Longitude>
+    <Latitude>32.790385</Latitude>
+    <StationCode>42656</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: חיפה רציף:   קומה:  </Address>
+    <Name>ת. מרכזית חוף הכרמל/הורדה</Name>
+    <Longitude>34.959587</Longitude>
+    <Latitude>32.793368</Latitude>
+    <StationCode>42657</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: חיפה רציף:   קומה:  </Address>
+    <Name>ת. מרכזית חוף הכרמל/רציפים בינעירוני</Name>
+    <Longitude>34.958985</Longitude>
+    <Latitude>32.793372</Latitude>
+    <StationCode>42658</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: עתלית רציף:   קומה:  </Address>
+    <Name>מסעף עתלית</Name>
+    <Longitude>34.954266</Longitude>
+    <Latitude>32.710886</Latitude>
+    <StationCode>42683</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 2  עיר: עתלית רציף:   קומה:  </Address>
+    <Name>מסעף עתלית</Name>
+    <Longitude>34.950357</Longitude>
+    <Latitude>32.710025</Latitude>
+    <StationCode>42684</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 2  עיר: אור עקיבא רציף:   קומה:  </Address>
+    <Name>מחלף אור עקיבא</Name>
+    <Longitude>34.91377</Longitude>
+    <Latitude>32.506687</Latitude>
+    <StationCode>42932</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 2  עיר: קיסריה רציף:   קומה:  </Address>
+    <Name>מחלף אור עקיבא</Name>
+    <Longitude>34.913587</Longitude>
+    <Latitude>32.504071</Latitude>
+    <StationCode>42933</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: מגדל העמק רציף:   קומה:  </Address>
+    <Name>מסוף מגדל העמק/רציפים</Name>
+    <Longitude>35.239338</Longitude>
+    <Latitude>32.679059</Latitude>
+    <StationCode>55231</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות יצחק רבין  עיר: עפולה רציף:   קומה:  </Address>
+    <Name>שד. יצחק רבין/דרך בן גוריון</Name>
+    <Longitude>35.300638</Longitude>
+    <Latitude>32.615535</Latitude>
+    <StationCode>55240</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שער הגיא  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>שער הגיא/דרך הציונות</Name>
+    <Longitude>35.197745</Longitude>
+    <Latitude>32.104572</Latitude>
+    <StationCode>60945</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חרובית 52 עיר: מעלה אדומים רציף:   קומה:  </Address>
+    <Name>עצמונה/שדות</Name>
+    <Longitude>35.341606</Longitude>
+    <Latitude>31.786798</Latitude>
+    <StationCode>61090</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:443  עיר: מטה בנימין רציף:   קומה:  </Address>
+    <Name>מחסום מכבים</Name>
+    <Longitude>35.041689</Longitude>
+    <Latitude>31.897462</Latitude>
+    <StationCode>64003</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות שאול המלך 2 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>לונדון מיניסטור/שד' שאול המלך</Name>
+    <Longitude>34.782271</Longitude>
+    <Latitude>32.07545</Latitude>
+    <StationCode>21100</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:על פרשת דרכים  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ת. רכבת ת''א מרכז/על פרשת דרכים</Name>
+    <Longitude>34.795351</Longitude>
+    <Latitude>32.08224</Latitude>
+    <StationCode>21140</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות שאול המלך 9 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>לונדון מיניסטור/שד' שאול המלך</Name>
+    <Longitude>34.782893</Longitude>
+    <Latitude>32.075664</Latitude>
+    <StationCode>21150</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 174 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/אהרונוביץ</Name>
+    <Longitude>34.840305</Longitude>
+    <Latitude>32.092564</Latitude>
+    <StationCode>21161</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:איינשטיין 77 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>אינשטיין/חיים לבנון</Name>
+    <Longitude>34.80098</Longitude>
+    <Latitude>32.113434</Latitude>
+    <StationCode>21172</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 15 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>הבורסה/דרך ז'בוטינסקי</Name>
+    <Longitude>34.804764</Longitude>
+    <Latitude>32.083245</Latitude>
+    <StationCode>21189</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 44 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/החשמונאים</Name>
+    <Longitude>34.809622</Longitude>
+    <Latitude>32.084534</Latitude>
+    <StationCode>21195</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>גשר קלקא/דרך מנחם בגין</Name>
+    <Longitude>34.789434</Longitude>
+    <Latitude>32.071059</Latitude>
+    <StationCode>21221</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 111 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/שיינקין</Name>
+    <Longitude>34.779432</Longitude>
+    <Latitude>32.067083</Latitude>
+    <StationCode>21226</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: גבעת שמואל רציף:   קומה:  </Address>
+    <Name>מחלף גבעת שמואל/כביש 4</Name>
+    <Longitude>34.844303</Longitude>
+    <Latitude>32.076767</Latitude>
+    <StationCode>21257</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: גבעת שמואל רציף:   קומה:  </Address>
+    <Name>גבעת שמואל/גשר הולכי רגל</Name>
+    <Longitude>34.845457</Longitude>
+    <Latitude>32.082795</Latitude>
+    <StationCode>21280</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות שאול המלך  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>בית הדר דפנה/שד' שאול המלך</Name>
+    <Longitude>34.791101</Longitude>
+    <Latitude>32.077609</Latitude>
+    <StationCode>21303</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרכבת 54 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>הרכבת/בני ברק</Name>
+    <Longitude>34.781999</Longitude>
+    <Latitude>32.060522</Latitude>
+    <StationCode>21342</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ראול ולנברג/הנחושת</Name>
+    <Longitude>34.837899</Longitude>
+    <Latitude>32.110701</Latitude>
+    <StationCode>21356</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ראול ולנברג/הארד</Name>
+    <Longitude>34.839616</Longitude>
+    <Latitude>32.113159</Latitude>
+    <StationCode>21357</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 23 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/דב גרונר</Name>
+    <Longitude>34.828052</Longitude>
+    <Latitude>32.091763</Latitude>
+    <StationCode>21365</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות מסריק 17 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>כיכר מסריק/פרישמן</Name>
+    <Longitude>34.778823</Longitude>
+    <Latitude>32.079068</Latitude>
+    <StationCode>21367</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 90 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/אבן עזרא</Name>
+    <Longitude>34.831208</Longitude>
+    <Latitude>32.091484</Latitude>
+    <StationCode>21370</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים לבנון 83 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>חיים לבנון/קלצ'קין</Name>
+    <Longitude>34.801382</Longitude>
+    <Latitude>32.117801</Latitude>
+    <StationCode>21389</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מבצע קדש  עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>ת. רכבת בני ברק/מבצע קדש</Name>
+    <Longitude>34.827642</Longitude>
+    <Latitude>32.103618</Latitude>
+    <StationCode>21390</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים לבנון 84 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>חיים לבנון/קלצ'קין</Name>
+    <Longitude>34.801869</Longitude>
+    <Latitude>32.119043</Latitude>
+    <StationCode>21394</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 131 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/החשמונאים</Name>
+    <Longitude>34.780756</Longitude>
+    <Latitude>32.069303</Latitude>
+    <StationCode>21413</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 83 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/נחמני</Name>
+    <Longitude>34.777217</Longitude>
+    <Latitude>32.064609</Latitude>
+    <StationCode>21414</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מבצע קדש  עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>ת. רכבת בני ברק/מבצע קדש</Name>
+    <Longitude>34.827868</Longitude>
+    <Latitude>32.103514</Latitude>
+    <StationCode>21450</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אחד העם 22 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>מגדל שלום/אחד העם</Name>
+    <Longitude>34.770359</Longitude>
+    <Latitude>32.063639</Latitude>
+    <StationCode>21451</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 125 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/רש''י</Name>
+    <Longitude>34.818457</Longitude>
+    <Latitude>32.089649</Latitude>
+    <StationCode>21470</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>קניון עזריאלי/דרך בגין</Name>
+    <Longitude>34.790734</Longitude>
+    <Latitude>32.074914</Latitude>
+    <StationCode>21472</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אלנבי 97 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>בית הכנסת הגדול/אלנבי</Name>
+    <Longitude>34.772553</Longitude>
+    <Latitude>32.064694</Latitude>
+    <StationCode>21491</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 41 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/החשמונאים</Name>
+    <Longitude>34.808446</Longitude>
+    <Latitude>32.084227</Latitude>
+    <StationCode>21503</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אבן גבירול 63 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>כיכר רבין/אבן גבירול</Name>
+    <Longitude>34.781162</Longitude>
+    <Latitude>32.078796</Latitude>
+    <StationCode>21516</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מלכי ישראל  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>כיכר רבין/מלכי ישראל</Name>
+    <Longitude>34.780657</Longitude>
+    <Latitude>32.0796</Latitude>
+    <StationCode>21520</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 114 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/רש''י</Name>
+    <Longitude>34.818381</Longitude>
+    <Latitude>32.089386</Latitude>
+    <StationCode>21540</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המלך ג'ורג' 42 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>'בית ז'בוטינסקי/המלך ג'ורג</Name>
+    <Longitude>34.775094</Longitude>
+    <Latitude>32.073374</Latitude>
+    <StationCode>21541</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המלך ג'ורג' 41 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>'בית ז'בוטינסקי/המלך ג'ורג</Name>
+    <Longitude>34.774835</Longitude>
+    <Latitude>32.07329</Latitude>
+    <StationCode>21543</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות שאול המלך 29 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>בית המשפט/שד' שאול המלך</Name>
+    <Longitude>34.787868</Longitude>
+    <Latitude>32.076736</Latitude>
+    <StationCode>21544</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 95 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/ראול ולנברג</Name>
+    <Longitude>34.840063</Longitude>
+    <Latitude>32.115126</Latitude>
+    <StationCode>21626</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 4 צפון  עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>גשר בר אילן/כביש 4</Name>
+    <Longitude>34.840021</Longitude>
+    <Latitude>32.067115</Latitude>
+    <StationCode>21627</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לדרך ז'בוטינסקי מערב  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף גהה</Name>
+    <Longitude>34.847163</Longitude>
+    <Latitude>32.092033</Latitude>
+    <StationCode>21631</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 14 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/גלעד</Name>
+    <Longitude>34.805056</Longitude>
+    <Latitude>32.0831</Latitude>
+    <StationCode>21644</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 51 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/ביאליק</Name>
+    <Longitude>34.810136</Longitude>
+    <Latitude>32.085293</Latitude>
+    <StationCode>21654</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מרדכי מקלף 5 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>גשר קלקא/דרך בגין</Name>
+    <Longitude>34.789291</Longitude>
+    <Latitude>32.07189</Latitude>
+    <StationCode>21675</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין 157 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דרך בגין/על פרשת דרכים</Name>
+    <Longitude>34.794882</Longitude>
+    <Latitude>32.079838</Latitude>
+    <StationCode>21705</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 59 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/ אבו חצירא</Name>
+    <Longitude>34.832382</Longitude>
+    <Latitude>32.092113</Latitude>
+    <StationCode>21730</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות קרן קיימת לישראל 167 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' קק''ל/בני אפרים</Name>
+    <Longitude>34.817443</Longitude>
+    <Latitude>32.118763</Latitude>
+    <StationCode>21761</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דרך מנחם בגין/על פרשת דרכים</Name>
+    <Longitude>34.7951</Longitude>
+    <Latitude>32.07972</Latitude>
+    <StationCode>21764</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג 2 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ראול ולנברג/הברזל</Name>
+    <Longitude>34.833789</Longitude>
+    <Latitude>32.107031</Latitude>
+    <StationCode>21827</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג 6 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>מטה מרחב ירקון/ראול ולנברג</Name>
+    <Longitude>34.835243</Longitude>
+    <Latitude>32.108001</Latitude>
+    <StationCode>21828</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג 20 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ראול ולנברג/הנחושת</Name>
+    <Longitude>34.837675</Longitude>
+    <Latitude>32.110144</Latitude>
+    <StationCode>21829</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג 28 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ראול ולנברג/הארד</Name>
+    <Longitude>34.839688</Longitude>
+    <Latitude>32.112816</Latitude>
+    <StationCode>21830</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>מטה מרחב ירקון/ראול ולנברג</Name>
+    <Longitude>34.835807</Longitude>
+    <Latitude>32.108777</Latitude>
+    <StationCode>21831</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המסגר 7 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המסגר/יד חרוצים</Name>
+    <Longitude>34.78463</Longitude>
+    <Latitude>32.061357</Latitude>
+    <StationCode>22947</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:תחנה מרכזית קומה 7  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ת.מרכזית ת''א ק.7/רציפים</Name>
+    <Longitude>34.779452</Longitude>
+    <Latitude>32.056413</Latitude>
+    <StationCode>22955</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 22 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/רבי עקיבא</Name>
+    <Longitude>34.825758</Longitude>
+    <Latitude>32.091435</Latitude>
+    <StationCode>22980</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אלנבי 100 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>אלנבי/מונטיפיורי</Name>
+    <Longitude>34.772033</Longitude>
+    <Latitude>32.065619</Latitude>
+    <StationCode>22988</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:תחנה מרכזית קומה 7  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ת. מרכזית ת''א ק. 7/הורדה</Name>
+    <Longitude>34.780466</Longitude>
+    <Latitude>32.055636</Latitude>
+    <StationCode>23013</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין 132 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>קניון עזריאלי/דרך בגין</Name>
+    <Longitude>34.791025</Longitude>
+    <Latitude>32.074292</Latitude>
+    <StationCode>23014</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המסגר 2 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המסגר/לה גוורדיה</Name>
+    <Longitude>34.784515</Longitude>
+    <Latitude>32.059809</Latitude>
+    <StationCode>23016</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המסגר 56 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המסגר/בן אביגדור</Name>
+    <Longitude>34.786817</Longitude>
+    <Latitude>32.066502</Latitude>
+    <StationCode>23017</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אלנבי 65 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>אלנבי/בלפור</Name>
+    <Longitude>34.771031</Longitude>
+    <Latitude>32.068112</Latitude>
+    <StationCode>23018</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות שאול המלך  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>בית המשפט/שד' שאול המלך</Name>
+    <Longitude>34.788446</Longitude>
+    <Latitude>32.076734</Latitude>
+    <StationCode>23025</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 90 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/הרצל</Name>
+    <Longitude>34.815172</Longitude>
+    <Latitude>32.088541</Latitude>
+    <StationCode>23026</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 35 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/גלעד</Name>
+    <Longitude>34.806421</Longitude>
+    <Latitude>32.083677</Latitude>
+    <StationCode>23034</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 124 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/קריניצי</Name>
+    <Longitude>34.820649</Longitude>
+    <Latitude>32.090278</Latitude>
+    <StationCode>23038</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יצחק אלחנן 2 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>יצחק אלחנן/הכרמל</Name>
+    <Longitude>34.765682</Longitude>
+    <Latitude>32.065425</Latitude>
+    <StationCode>25346</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרכבת 22 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>הרכבת/דרך בגין</Name>
+    <Longitude>34.778495</Longitude>
+    <Latitude>32.063377</Latitude>
+    <StationCode>25454</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מונטיפיורי 1 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>מגדל שלום/מונטיפיורי</Name>
+    <Longitude>34.769228</Longitude>
+    <Latitude>32.064693</Latitude>
+    <StationCode>25485</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אלנבי 82 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>אלנבי/מזא''ה</Name>
+    <Longitude>34.771253</Longitude>
+    <Latitude>32.067357</Latitude>
+    <StationCode>25512</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המלך ג'ורג' 31 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המלך ג'ורג'/רש''י</Name>
+    <Longitude>34.773361</Longitude>
+    <Latitude>32.071897</Latitude>
+    <StationCode>25556</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המלך ג'ורג' 24 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המלך גורג/החשמונאים</Name>
+    <Longitude>34.773474</Longitude>
+    <Latitude>32.071863</Latitude>
+    <StationCode>25557</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המלך ג'ורג' 93 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המלך ג'ורג'/זמנהוף</Name>
+    <Longitude>34.777315</Longitude>
+    <Latitude>32.076897</Latitude>
+    <StationCode>25617</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המלך ג'ורג' 82 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המלך ג'ורג'/זמנהוף</Name>
+    <Longitude>34.777593</Longitude>
+    <Latitude>32.07709</Latitude>
+    <StationCode>25618</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אבן גבירול 15 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>אבן גבירול/דיזנגוף</Name>
+    <Longitude>34.781706</Longitude>
+    <Latitude>32.072576</Latitude>
+    <StationCode>25624</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות שאול המלך  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>האופרה/שד' שאול המלך</Name>
+    <Longitude>34.784789</Longitude>
+    <Latitude>32.075623</Latitude>
+    <StationCode>25722</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות שאול המלך 41 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>בית הדר דפנה/שד' שאול המלך</Name>
+    <Longitude>34.791077</Longitude>
+    <Latitude>32.077809</Latitude>
+    <StationCode>25732</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:איינשטיין 22 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>אינשטיין/שד' לוי אשכול</Name>
+    <Longitude>34.790528</Longitude>
+    <Latitude>32.112259</Latitude>
+    <StationCode>25963</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 1 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>הבורסה/דרך ז'בוטינסקי</Name>
+    <Longitude>34.800225</Longitude>
+    <Latitude>32.082614</Latitude>
+    <StationCode>26241</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 62 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/ביאליק</Name>
+    <Longitude>34.811475</Longitude>
+    <Latitude>32.086205</Latitude>
+    <StationCode>26271</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 72 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/דב גרונר</Name>
+    <Longitude>34.829253</Longitude>
+    <Latitude>32.091396</Latitude>
+    <StationCode>26416</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 124 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/סוקולוב</Name>
+    <Longitude>34.834218</Longitude>
+    <Latitude>32.092321</Latitude>
+    <StationCode>26544</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>מחלף גהה/דרך ז'בוטינסקי</Name>
+    <Longitude>34.844178</Longitude>
+    <Latitude>32.092582</Latitude>
+    <StationCode>26583</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ראול ולנברג  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ראול ולנברג/הברזל</Name>
+    <Longitude>34.833509</Longitude>
+    <Latitude>32.107129</Latitude>
+    <StationCode>26595</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות לוי אשכול 59 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' לוי אשכול/זריצקי</Name>
+    <Longitude>34.789734</Longitude>
+    <Latitude>32.114288</Latitude>
+    <StationCode>26618</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות לוי אשכול  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' לוי אשכול/זריצקי</Name>
+    <Longitude>34.790256</Longitude>
+    <Latitude>32.115447</Latitude>
+    <StationCode>26619</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות לוי אשכול 79 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' לוי אשכול/רודנסקי</Name>
+    <Longitude>34.790886</Longitude>
+    <Latitude>32.120267</Latitude>
+    <StationCode>26620</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות לוי אשכול  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' לוי אשכול/רודנסקי</Name>
+    <Longitude>34.791321</Longitude>
+    <Latitude>32.121124</Latitude>
+    <StationCode>26621</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:איינשטיין 54 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>קניון רמת אביב/אינשטיין</Name>
+    <Longitude>34.797161</Longitude>
+    <Latitude>32.112891</Latitude>
+    <StationCode>26631</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:איינשטיין 43 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>קניון רמת אביב/אינשטיין</Name>
+    <Longitude>34.79716</Longitude>
+    <Latitude>32.113103</Latitude>
+    <StationCode>26632</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קדושי השואה  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>קדושי השואה/צבי פרופס</Name>
+    <Longitude>34.791779</Longitude>
+    <Latitude>32.124652</Latitude>
+    <StationCode>26639</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קדושי השואה 12 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>קדושי השואה/צבי פרופס</Name>
+    <Longitude>34.792227</Longitude>
+    <Latitude>32.125722</Latitude>
+    <StationCode>26642</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>מרכז אזורי חן</Name>
+    <Longitude>34.792217</Longitude>
+    <Latitude>32.128509</Latitude>
+    <StationCode>26643</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אברהם שלונסקי 6 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שלונסקי/בני אפרים</Name>
+    <Longitude>34.819701</Longitude>
+    <Latitude>32.117654</Latitude>
+    <StationCode>26708</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אברהם שלונסקי 7 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שלונסקי/בני אפרים</Name>
+    <Longitude>34.819709</Longitude>
+    <Latitude>32.117871</Latitude>
+    <StationCode>26709</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אברהם שלונסקי 36 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שלונסקי/קהילת ונציה</Name>
+    <Longitude>34.822833</Longitude>
+    <Latitude>32.116311</Latitude>
+    <StationCode>26712</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אברהם שלונסקי 43 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שלונסקי/קהילת ונציה</Name>
+    <Longitude>34.824143</Longitude>
+    <Latitude>32.116082</Latitude>
+    <StationCode>26713</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 4 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/משה סנה</Name>
+    <Longitude>34.825926</Longitude>
+    <Latitude>32.118728</Latitude>
+    <StationCode>26724</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 31 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/מתתיהו שוהם</Name>
+    <Longitude>34.828782</Longitude>
+    <Latitude>32.118917</Latitude>
+    <StationCode>26727</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 44 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/משמר הירדן</Name>
+    <Longitude>34.832636</Longitude>
+    <Latitude>32.118677</Latitude>
+    <StationCode>26781</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 59 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/משמר הירדן</Name>
+    <Longitude>34.834075</Longitude>
+    <Latitude>32.11891</Latitude>
+    <StationCode>26784</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 78 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/צה''ל</Name>
+    <Longitude>34.836378</Longitude>
+    <Latitude>32.11866</Latitude>
+    <StationCode>26785</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/ראול ולנברג</Name>
+    <Longitude>34.839416</Longitude>
+    <Latitude>32.115365</Latitude>
+    <StationCode>26790</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 71 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/צה''ל</Name>
+    <Longitude>34.836676</Longitude>
+    <Latitude>32.118723</Latitude>
+    <StationCode>26795</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דבורה הנביאה 106 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>דבורה הנביאה/בית אל</Name>
+    <Longitude>34.837791</Longitude>
+    <Latitude>32.117441</Latitude>
+    <StationCode>26797</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>כרמלית</Name>
+    <Longitude>34.765823</Longitude>
+    <Latitude>32.067287</Latitude>
+    <StationCode>26956</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>כרמלית</Name>
+    <Longitude>34.765253</Longitude>
+    <Latitude>32.067544</Latitude>
+    <StationCode>26959</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ת. רכבת ת''א מרכז/על פרשת דרכים</Name>
+    <Longitude>34.797682</Longitude>
+    <Latitude>32.081153</Latitude>
+    <StationCode>27010</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 95 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/דב הוז</Name>
+    <Longitude>34.836946</Longitude>
+    <Latitude>32.092866</Latitude>
+    <StationCode>27059</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>מחלף גהה/דרך ז'בוטינסקי</Name>
+    <Longitude>34.844941</Longitude>
+    <Latitude>32.092314</Latitude>
+    <StationCode>27063</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים לבנון 66 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>האוניברסיטה/חיים לבנון</Name>
+    <Longitude>34.801548</Longitude>
+    <Latitude>32.113879</Latitude>
+    <StationCode>27065</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות קרן קיימת לישראל 35 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' קק''ל/חיים לבנון</Name>
+    <Longitude>34.803432</Longitude>
+    <Latitude>32.121331</Latitude>
+    <StationCode>27069</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות קרן קיימת לישראל 36 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' קק''ל/אופקים</Name>
+    <Longitude>34.804433</Longitude>
+    <Latitude>32.120921</Latitude>
+    <StationCode>27070</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות קרן קיימת לישראל 134 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>שד' קק''ל/בני אפרים</Name>
+    <Longitude>34.816732</Longitude>
+    <Latitude>32.11866</Latitude>
+    <StationCode>27072</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: רמת השרון רציף:   קומה:  </Address>
+    <Name>מחלף מורשה</Name>
+    <Longitude>34.854708</Longitude>
+    <Latitude>32.123726</Latitude>
+    <StationCode>27084</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 153 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך ז'בוטינסקי/דרך בן גוריון</Name>
+    <Longitude>34.821915</Longitude>
+    <Latitude>32.090742</Latitude>
+    <StationCode>28500</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:פינסקר  עיר: נתניה רציף:   קומה:  </Address>
+    <Name>ת. מרכזית נתניה/רציפים</Name>
+    <Longitude>34.85874</Longitude>
+    <Latitude>32.326889</Latitude>
+    <StationCode>30136</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:57  עיר: נתניה רציף:   קומה:  </Address>
+    <Name>צומת נווה איתמר</Name>
+    <Longitude>34.875854</Longitude>
+    <Latitude>32.324013</Latitude>
+    <StationCode>30254</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: קדימה צורן רציף:   קומה:  </Address>
+    <Name>צומת הדסים</Name>
+    <Longitude>34.896962</Longitude>
+    <Latitude>32.284144</Latitude>
+    <StationCode>30316</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: לב השרון רציף:   קומה:  </Address>
+    <Name>צומת פרדסיה</Name>
+    <Longitude>34.900468</Longitude>
+    <Latitude>32.304107</Latitude>
+    <StationCode>30341</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: פרדסיה רציף:   קומה:  </Address>
+    <Name>צומת פרדסיה</Name>
+    <Longitude>34.900931</Longitude>
+    <Latitude>32.305138</Latitude>
+    <StationCode>30345</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:57  עיר: עמק חפר רציף:   קומה:  </Address>
+    <Name>צומת השרון</Name>
+    <Longitude>34.902989</Longitude>
+    <Latitude>32.323644</Latitude>
+    <StationCode>30357</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4  עיר: כפר יונה רציף:   קומה:  </Address>
+    <Name>צומת השרון</Name>
+    <Longitude>34.903693</Longitude>
+    <Latitude>32.321146</Latitude>
+    <StationCode>30361</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רוטשילד 158 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>רוטשילד/יהוד</Name>
+    <Longitude>34.884582</Longitude>
+    <Latitude>32.078656</Latitude>
+    <StationCode>31211</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 61 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>דרך זאב ז'בוטינסקי/שחם</Name>
+    <Longitude>34.860008</Longitude>
+    <Latitude>32.091872</Latitude>
+    <StationCode>31366</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רוטשילד 172 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>רוטשילד/פיארברג</Name>
+    <Longitude>34.885077</Longitude>
+    <Latitude>32.077219</Latitude>
+    <StationCode>31496</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רוטשילד 92 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>רוטשילד / פרנקפורטר</Name>
+    <Longitude>34.882211</Longitude>
+    <Latitude>32.085236</Latitude>
+    <StationCode>31582</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:עמל 7 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>עמל/שלמה מיכאליס</Name>
+    <Longitude>34.854206</Longitude>
+    <Latitude>32.094936</Latitude>
+    <StationCode>31599</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יחיאל מיכל פינס 9 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>יחיאל מיכל פינס/רוטשילד</Name>
+    <Longitude>34.886651</Longitude>
+    <Latitude>32.076273</Latitude>
+    <StationCode>31606</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: חבל מודיעין רציף:   קומה:  </Address>
+    <Name>צומת הטייסים</Name>
+    <Longitude>34.907995</Longitude>
+    <Latitude>32.025435</Latitude>
+    <StationCode>31626</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ירושלים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת סירקין</Name>
+    <Longitude>34.902558</Longitude>
+    <Latitude>32.081557</Latitude>
+    <StationCode>31643</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ירושלים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת עמישב</Name>
+    <Longitude>34.903676</Longitude>
+    <Latitude>32.078029</Latitude>
+    <StationCode>31645</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רוטשילד 117 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>רוטשילד/בלפור</Name>
+    <Longitude>34.883458</Longitude>
+    <Latitude>32.082086</Latitude>
+    <StationCode>31658</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רוטשילד 135 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>רוטשילד/קק''ל</Name>
+    <Longitude>34.884194</Longitude>
+    <Latitude>32.080041</Latitude>
+    <StationCode>31674</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רוטשילד 132 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>רוטשילד/חיים כהן</Name>
+    <Longitude>34.883612</Longitude>
+    <Latitude>32.081332</Latitude>
+    <StationCode>31692</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רוטשילד 171 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>רוטשילד/גד מכנס</Name>
+    <Longitude>34.88532</Longitude>
+    <Latitude>32.076819</Latitude>
+    <StationCode>31693</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ירושלים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ירושלים/שלמה</Name>
+    <Longitude>34.903479</Longitude>
+    <Latitude>32.076551</Latitude>
+    <StationCode>31741</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ירושלים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת שערייה</Name>
+    <Longitude>34.903718</Longitude>
+    <Latitude>32.06892</Latitude>
+    <StationCode>31743</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף שערייה</Name>
+    <Longitude>34.903209</Longitude>
+    <Latitude>32.06792</Latitude>
+    <StationCode>31745</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות אהרון קציר  עיר: קרית אונו רציף:   קומה:  </Address>
+    <Name>שדרות אהרון קציר/שמחה הולצברג</Name>
+    <Longitude>34.846183</Longitude>
+    <Latitude>32.062569</Latitude>
+    <StationCode>31900</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות אהרון קציר  עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>שד' אהרון קציר/מנדס</Name>
+    <Longitude>34.847663</Longitude>
+    <Latitude>32.054581</Latitude>
+    <StationCode>31902</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 46 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>צה''ל/אבן עזרא</Name>
+    <Longitude>34.94814</Longitude>
+    <Latitude>32.100029</Latitude>
+    <StationCode>32007</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דגל ראובן 67 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>חטיבת ביניים עלומים/דגל ראובן</Name>
+    <Longitude>34.869173</Longitude>
+    <Latitude>32.081612</Latitude>
+    <StationCode>32241</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דגל ראובן 60 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>חטיבת ביניים עלומים/דגל ראובן</Name>
+    <Longitude>34.869115</Longitude>
+    <Latitude>32.081769</Latitude>
+    <StationCode>32243</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 43 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/הסיבים</Name>
+    <Longitude>34.857247</Longitude>
+    <Latitude>32.092482</Latitude>
+    <StationCode>32259</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/שנקר</Name>
+    <Longitude>34.852187</Longitude>
+    <Latitude>32.092852</Latitude>
+    <StationCode>32260</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 31 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/צה''ל</Name>
+    <Longitude>34.871536</Longitude>
+    <Latitude>32.090802</Latitude>
+    <StationCode>32266</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 71 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>דרך זאב ז'בוטינסקי/הסיבים</Name>
+    <Longitude>34.857857</Longitude>
+    <Latitude>32.092094</Latitude>
+    <StationCode>32267</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 43 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בי''ח בלינסון/ז'בוטינסקי</Name>
+    <Longitude>34.867399</Longitude>
+    <Latitude>32.091208</Latitude>
+    <StationCode>32269</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 45 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/אלברט איינשטיין</Name>
+    <Longitude>34.854627</Longitude>
+    <Latitude>32.092397</Latitude>
+    <StationCode>32270</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 32 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>דרך זאב ז'בוטינסקי/מאיר דנקנר</Name>
+    <Longitude>34.872488</Longitude>
+    <Latitude>32.091101</Latitude>
+    <StationCode>32271</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>דרך זאב ז'בוטינסקי/היצירה</Name>
+    <Longitude>34.850598</Longitude>
+    <Latitude>32.092462</Latitude>
+    <StationCode>32274</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף גהה/ז'בוטינסקי</Name>
+    <Longitude>34.847907</Longitude>
+    <Latitude>32.092361</Latitude>
+    <StationCode>32276</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 92 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>דרך זאב ז'בוטינסקי/שחם</Name>
+    <Longitude>34.859125</Longitude>
+    <Latitude>32.092317</Latitude>
+    <StationCode>32277</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:החמישה 4 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בית חולים בית רבקה</Name>
+    <Longitude>34.894333</Longitude>
+    <Latitude>32.072021</Latitude>
+    <StationCode>32296</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 18 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>העצמאות/מרכז פיס</Name>
+    <Longitude>34.880469</Longitude>
+    <Latitude>32.074614</Latitude>
+    <StationCode>32328</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 44 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>העצמאות/דיקר</Name>
+    <Longitude>34.878091</Longitude>
+    <Latitude>32.074666</Latitude>
+    <StationCode>32329</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 47 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>כיכר קובלנץ</Name>
+    <Longitude>34.876438</Longitude>
+    <Latitude>32.074519</Latitude>
+    <StationCode>32330</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 6 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>העצמאות/משעול ד''ר נפתלי קבנצל</Name>
+    <Longitude>34.882833</Longitude>
+    <Latitude>32.074573</Latitude>
+    <StationCode>32331</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 61 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>העצמאות/הרב חביב ביטון</Name>
+    <Longitude>34.871811</Longitude>
+    <Latitude>32.074656</Latitude>
+    <StationCode>32332</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>העצמאות/ויצמן</Name>
+    <Longitude>34.872474</Longitude>
+    <Latitude>32.074819</Latitude>
+    <StationCode>32333</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 55 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>העצמאות / וייצמן</Name>
+    <Longitude>34.873635</Longitude>
+    <Latitude>32.074604</Latitude>
+    <StationCode>32334</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 17 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>העצמאות/לובטקין</Name>
+    <Longitude>34.880662</Longitude>
+    <Latitude>32.07452</Latitude>
+    <StationCode>32335</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים ארלוזורוב 14 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>דב הוז/חיים ארלוזורוב</Name>
+    <Longitude>34.876493</Longitude>
+    <Latitude>32.085071</Latitude>
+    <StationCode>32372</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים ארלוזורוב 30 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>יד לבנים/ארלוזורוב</Name>
+    <Longitude>34.872455</Longitude>
+    <Latitude>32.084704</Latitude>
+    <StationCode>32373</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים ארלוזורוב 42 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>חיים ארלוזורוב/צה''ל</Name>
+    <Longitude>34.86983</Longitude>
+    <Latitude>32.085572</Latitude>
+    <StationCode>32375</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים ארלוזורוב 51 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ארלוזורוב/צה''ל</Name>
+    <Longitude>34.869311</Longitude>
+    <Latitude>32.085554</Latitude>
+    <StationCode>32376</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהושע שטמפפר 18 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>שטמפפר/חיים עוזר</Name>
+    <Longitude>34.886549</Longitude>
+    <Latitude>32.090481</Latitude>
+    <StationCode>32399</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהושע שטמפפר 72 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>שטמפפר/אברבנל</Name>
+    <Longitude>34.89133</Longitude>
+    <Latitude>32.094107</Latitude>
+    <StationCode>32403</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יוסף ספיר  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>יוסף ספיר/הירקונים</Name>
+    <Longitude>34.895905</Longitude>
+    <Latitude>32.09914</Latitude>
+    <StationCode>32409</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יחיאל מיכל פינס 4 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מיכל פינס / רוטשילד</Name>
+    <Longitude>34.886288</Longitude>
+    <Latitude>32.075781</Latitude>
+    <StationCode>32411</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ירושלים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת סירקין</Name>
+    <Longitude>34.902272</Longitude>
+    <Latitude>32.083232</Latitude>
+    <StationCode>32422</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:משה דובדבני 4 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בריגדיר קיש/משה דובדבני</Name>
+    <Longitude>34.895556</Longitude>
+    <Latitude>32.07532</Latitude>
+    <StationCode>32456</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנח''ל 23 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת סגולה</Name>
+    <Longitude>34.898336</Longitude>
+    <Latitude>32.101212</Latitude>
+    <StationCode>32465</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:עמל 8 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>עמל/שלמה מיכאליס</Name>
+    <Longitude>34.854151</Longitude>
+    <Latitude>32.095074</Latitude>
+    <StationCode>32488</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דוד פרנקפורטר 21 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>פרנקפורטר/טרומפלדור</Name>
+    <Longitude>34.879155</Longitude>
+    <Latitude>32.085354</Latitude>
+    <StationCode>32494</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דוד פרנקפורטר 6 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>פרנקפורטר/רוטשילד</Name>
+    <Longitude>34.881376</Longitude>
+    <Latitude>32.085701</Latitude>
+    <StationCode>32495</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יוסף שפרינצק 19 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>תיכון תלם/שפרינצק</Name>
+    <Longitude>34.891776</Longitude>
+    <Latitude>32.075451</Latitude>
+    <StationCode>32554</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יוסף שפרינצק 24 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>תיכון תלם/שפרינצק</Name>
+    <Longitude>34.891574</Longitude>
+    <Latitude>32.075134</Latitude>
+    <StationCode>32555</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יוסף שפרינצק 3 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>שפרינצק / פינס</Name>
+    <Longitude>34.890628</Longitude>
+    <Latitude>32.077923</Latitude>
+    <StationCode>32556</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יוסף שפרינצק  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>שפרינצק / פינס</Name>
+    <Longitude>34.890874</Longitude>
+    <Latitude>32.077502</Latitude>
+    <StationCode>32557</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יוסף שפרינצק 34 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>שפרינצק/החמישה</Name>
+    <Longitude>34.891907</Longitude>
+    <Latitude>32.073133</Latitude>
+    <StationCode>32558</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מבצע בזק 6 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מכללת ראש העין/מבצע בזק</Name>
+    <Longitude>34.973436</Longitude>
+    <Latitude>32.094253</Latitude>
+    <StationCode>32573</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מבצע בזק  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מכללת ראש העין/מבצע בזק</Name>
+    <Longitude>34.973739</Longitude>
+    <Latitude>32.094237</Latitude>
+    <StationCode>32574</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ברקן 3 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>בזק/ברקן</Name>
+    <Longitude>34.974677</Longitude>
+    <Latitude>32.093703</Latitude>
+    <StationCode>32577</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ברקן  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>בית הקשת / ברקן</Name>
+    <Longitude>34.979602</Longitude>
+    <Latitude>32.094059</Latitude>
+    <StationCode>32578</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ברקן 18 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ברקן/ארבל</Name>
+    <Longitude>34.9761</Longitude>
+    <Latitude>32.094166</Latitude>
+    <StationCode>32579</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>דרך הציונות / הדרור</Name>
+    <Longitude>34.962434</Longitude>
+    <Latitude>32.100413</Latitude>
+    <StationCode>32582</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>דרך מנחם בגין/הפרחים</Name>
+    <Longitude>34.965021</Longitude>
+    <Latitude>32.096958</Latitude>
+    <StationCode>32591</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>דרך בגין/דן</Name>
+    <Longitude>34.967958</Longitude>
+    <Latitude>32.096427</Latitude>
+    <StationCode>32592</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>דרך מנחם בגין/הפרחים</Name>
+    <Longitude>34.964913</Longitude>
+    <Latitude>32.09713</Latitude>
+    <StationCode>32593</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ה' באייר 46 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>שכונת נווה אפק/ה' באייר</Name>
+    <Longitude>34.976638</Longitude>
+    <Latitude>32.096447</Latitude>
+    <StationCode>32595</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ה' באייר 64 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>גינת מבצע דני/ה' באייר</Name>
+    <Longitude>34.975084</Longitude>
+    <Latitude>32.099021</Latitude>
+    <StationCode>32596</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ה' באייר 80 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ה' באייר / מבצע דני</Name>
+    <Longitude>34.974123</Longitude>
+    <Latitude>32.096624</Latitude>
+    <StationCode>32597</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ה' באייר 16 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ה' באייר/בזק</Name>
+    <Longitude>34.972173</Longitude>
+    <Latitude>32.094644</Latitude>
+    <StationCode>32598</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ה' באייר 104 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ה' באייר/מבצע חירם</Name>
+    <Longitude>34.97138</Longitude>
+    <Latitude>32.096859</Latitude>
+    <StationCode>32599</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי 111 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>הרב שלום שבזי/בעל מלאכת שלמה</Name>
+    <Longitude>34.950899</Longitude>
+    <Latitude>32.088918</Latitude>
+    <StationCode>32612</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מצפה אפק/הרב שלום שבזי</Name>
+    <Longitude>34.958364</Longitude>
+    <Latitude>32.087166</Latitude>
+    <StationCode>32618</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי 23 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>הרב שלום שבזי / צה''ל</Name>
+    <Longitude>34.943007</Longitude>
+    <Latitude>32.097449</Latitude>
+    <StationCode>32619</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מצפה אפק/הרב שלום שבזי</Name>
+    <Longitude>34.958442</Longitude>
+    <Latitude>32.087046</Latitude>
+    <StationCode>32621</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ככר המשוררים</Name>
+    <Longitude>34.954011</Longitude>
+    <Latitude>32.087423</Latitude>
+    <StationCode>32622</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>הרב שלום שבזי / רמת הגולן</Name>
+    <Longitude>34.955635</Longitude>
+    <Latitude>32.086917</Latitude>
+    <StationCode>32623</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>הרב שלום שבזי / רמת הגולן</Name>
+    <Longitude>34.955516</Longitude>
+    <Latitude>32.086795</Latitude>
+    <StationCode>32624</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי 6 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/שילה</Name>
+    <Longitude>34.96056</Longitude>
+    <Latitude>32.089013</Latitude>
+    <StationCode>32635</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי / כרמל</Name>
+    <Longitude>34.961416</Longitude>
+    <Latitude>32.09038</Latitude>
+    <StationCode>32636</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי / כרמל</Name>
+    <Longitude>34.961325</Longitude>
+    <Latitude>32.0901</Latitude>
+    <StationCode>32637</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>צומת כרמל</Name>
+    <Longitude>34.963853</Longitude>
+    <Latitude>32.093691</Latitude>
+    <StationCode>32638</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מרכז מסחרי/ז'בוטינסקי</Name>
+    <Longitude>34.965935</Longitude>
+    <Latitude>32.092294</Latitude>
+    <StationCode>32639</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/משה דיין</Name>
+    <Longitude>34.964991</Longitude>
+    <Latitude>32.092963</Latitude>
+    <StationCode>32640</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/זית</Name>
+    <Longitude>34.961371</Longitude>
+    <Latitude>32.093088</Latitude>
+    <StationCode>32641</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 22 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/הנביאים</Name>
+    <Longitude>34.954695</Longitude>
+    <Latitude>32.098964</Latitude>
+    <StationCode>32648</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 4 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/צה''ל</Name>
+    <Longitude>34.954574</Longitude>
+    <Latitude>32.101608</Latitude>
+    <StationCode>32649</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 108 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/מלכי ישראל</Name>
+    <Longitude>34.953967</Longitude>
+    <Latitude>32.091845</Latitude>
+    <StationCode>32652</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 120 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/תיכון בגין</Name>
+    <Longitude>34.95384</Longitude>
+    <Latitude>32.090619</Latitude>
+    <StationCode>32653</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 5  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>פארק סיבל/יציאה לכביש 5</Name>
+    <Longitude>34.961605</Longitude>
+    <Latitude>32.108854</Latitude>
+    <StationCode>32664</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מנור/נווה אפיקים</Name>
+    <Longitude>34.975106</Longitude>
+    <Latitude>32.09133</Latitude>
+    <StationCode>32681</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מכללת ראש העין/נווה אפיקים</Name>
+    <Longitude>34.972441</Longitude>
+    <Latitude>32.092921</Latitude>
+    <StationCode>32682</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נווה אפיקים/בשן</Name>
+    <Longitude>34.977773</Longitude>
+    <Latitude>32.092185</Latitude>
+    <StationCode>32683</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>בית הקשת/נווה אפיקים</Name>
+    <Longitude>34.979395</Longitude>
+    <Latitude>32.09337</Latitude>
+    <StationCode>32684</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מכללת ראש העין/נווה אפיקים</Name>
+    <Longitude>34.972736</Longitude>
+    <Latitude>32.092838</Latitude>
+    <StationCode>32685</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נווה אפיקים/מתנ''ס לב אפק</Name>
+    <Longitude>34.970968</Longitude>
+    <Latitude>32.093115</Latitude>
+    <StationCode>32686</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>מנור/נווה אפיקים</Name>
+    <Longitude>34.975099</Longitude>
+    <Latitude>32.09142</Latitude>
+    <StationCode>32688</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נווה אפיקים/מתנ''ס לב אפק</Name>
+    <Longitude>34.970582</Longitude>
+    <Latitude>32.092862</Latitude>
+    <StationCode>32689</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נחל רבה  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נחל רבה/חט''ב גוונים</Name>
+    <Longitude>34.963262</Longitude>
+    <Latitude>32.098953</Latitude>
+    <StationCode>32690</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נחל רבה  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נחל רבה/דרך הציונות</Name>
+    <Longitude>34.964129</Longitude>
+    <Latitude>32.099615</Latitude>
+    <StationCode>32691</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נחל רבה  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נחל רבה/חט''ב גוונים</Name>
+    <Longitude>34.963342</Longitude>
+    <Latitude>32.098018</Latitude>
+    <StationCode>32692</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נתן שאול 8 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נתן שאול/יהודה הלוי</Name>
+    <Longitude>34.955338</Longitude>
+    <Latitude>32.102112</Latitude>
+    <StationCode>32693</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>בית העלמין</Name>
+    <Longitude>34.958089</Longitude>
+    <Latitude>32.103306</Latitude>
+    <StationCode>32695</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 22 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>צה''ל/זכריה משה</Name>
+    <Longitude>34.945597</Longitude>
+    <Latitude>32.099058</Latitude>
+    <StationCode>32699</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 10 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>צה''ל/חזון אי''ש</Name>
+    <Longitude>34.944139</Longitude>
+    <Latitude>32.098412</Latitude>
+    <StationCode>32702</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 56 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>צה''ל/הרש''ש</Name>
+    <Longitude>34.9492</Longitude>
+    <Latitude>32.100402</Latitude>
+    <StationCode>32706</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 86 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>צה''ל/מודיעין</Name>
+    <Longitude>34.952374</Longitude>
+    <Latitude>32.101389</Latitude>
+    <StationCode>32709</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רמתיים  עיר: הוד השרון רציף:   קומה:  </Address>
+    <Name>קניון מרגלית השרון/דרך רמתיים</Name>
+    <Longitude>34.894369</Longitude>
+    <Latitude>32.14303</Latitude>
+    <StationCode>32734</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בכור שטרית 4 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בכור שטרית/הנרייטה סולד</Name>
+    <Longitude>34.893453</Longitude>
+    <Latitude>32.076344</Latitude>
+    <StationCode>32777</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:אסף שמחוני 11 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>אסף שמחוני/זמנהוף</Name>
+    <Longitude>34.892332</Longitude>
+    <Latitude>32.074808</Latitude>
+    <StationCode>32778</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בר כוכבא 31 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בר כוכבא/תל חי</Name>
+    <Longitude>34.885424</Longitude>
+    <Latitude>32.093535</Latitude>
+    <StationCode>32800</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:זאב אורלוב  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ת. מרכזית פ''ת</Name>
+    <Longitude>34.887489</Longitude>
+    <Latitude>32.09496</Latitude>
+    <StationCode>32868</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנביאים 24 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הנביאים/קהילת פינסק</Name>
+    <Longitude>34.898339</Longitude>
+    <Latitude>32.074182</Latitude>
+    <StationCode>32966</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנביאים 42 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הנביאים//רזיאל</Name>
+    <Longitude>34.898295</Longitude>
+    <Latitude>32.072389</Latitude>
+    <StationCode>32967</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:חיים ארלוזורוב 28 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>חיים ארלוזורוב/הרצפלד</Name>
+    <Longitude>34.873652</Longitude>
+    <Latitude>32.084529</Latitude>
+    <StationCode>33553</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 4  עיר: כפר סבא רציף:   קומה:  </Address>
+    <Name>צומת כפר סבא רעננה צפון</Name>
+    <Longitude>34.888841</Longitude>
+    <Latitude>32.192382</Latitude>
+    <StationCode>33711</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: נמל תעופה בן גוריון רציף:   קומה:  </Address>
+    <Name>צומת תעשייה אווירית</Name>
+    <Longitude>34.90686</Longitude>
+    <Latitude>32.005385</Latitude>
+    <StationCode>34047</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: חבל מודיעין רציף:   קומה:  </Address>
+    <Name>צומת בדק</Name>
+    <Longitude>34.906064</Longitude>
+    <Latitude>32.018573</Latitude>
+    <StationCode>34049</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 74 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בלינסון קניון אבנת/מסוף יותם ויואב</Name>
+    <Longitude>34.865101</Longitude>
+    <Latitude>32.091798</Latitude>
+    <StationCode>34063</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רמתיים  עיר: הוד השרון רציף:   קומה:  </Address>
+    <Name>דרך רמתיים/החרש</Name>
+    <Longitude>34.899511</Longitude>
+    <Latitude>32.13343</Latitude>
+    <StationCode>34144</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: חוף השרון רציף:   קומה:  </Address>
+    <Name>מחלף הדרים</Name>
+    <Longitude>34.886062</Longitude>
+    <Latitude>32.239492</Latitude>
+    <StationCode>34238</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 4  עיר: תל מונד רציף:   קומה:  </Address>
+    <Name>מחלף הדרים</Name>
+    <Longitude>34.885989</Longitude>
+    <Latitude>32.235422</Latitude>
+    <StationCode>34255</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:החרש 8 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>החרש/עמל</Name>
+    <Longitude>34.852768</Longitude>
+    <Latitude>32.096057</Latitude>
+    <StationCode>34934</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: חבל מודיעין רציף:   קומה:  </Address>
+    <Name>צומת בדק</Name>
+    <Longitude>34.906001</Longitude>
+    <Latitude>32.017147</Latitude>
+    <StationCode>35126</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: נמל תעופה בן גוריון רציף:   קומה:  </Address>
+    <Name>צומת תעשייה אווירית</Name>
+    <Longitude>34.906612</Longitude>
+    <Latitude>32.00483</Latitude>
+    <StationCode>35128</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:י''ד הבנים 9 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>יד הבנים/זרובבל</Name>
+    <Longitude>34.884844</Longitude>
+    <Latitude>32.074781</Latitude>
+    <StationCode>35338</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:משה דובדבני 22 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הנביאים/משה דובדבני</Name>
+    <Longitude>34.897799</Longitude>
+    <Latitude>32.075283</Latitude>
+    <StationCode>35355</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:החמישה 25 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>החמישה/משעול ראובן</Name>
+    <Longitude>34.896278</Longitude>
+    <Latitude>32.0721</Latitude>
+    <StationCode>35358</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ז'בוטינסקי  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ז'בוטינסקי/מרכז מסחרי</Name>
+    <Longitude>34.966915</Longitude>
+    <Latitude>32.091469</Latitude>
+    <StationCode>35367</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נתן שאול 11 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>בית עלמין</Name>
+    <Longitude>34.956924</Longitude>
+    <Latitude>32.10331</Latitude>
+    <StationCode>35368</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך מנחם בגין  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>דרך בגין/דן</Name>
+    <Longitude>34.968198</Longitude>
+    <Latitude>32.09635</Latitude>
+    <StationCode>35370</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:זאב אורלוב 5 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>זאב אורלוב/יעקב קרול</Name>
+    <Longitude>34.877525</Longitude>
+    <Latitude>32.092051</Latitude>
+    <StationCode>35373</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בריגדיר קיש 31 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בריגדיר קיש/דוד רזיאל</Name>
+    <Longitude>34.895076</Longitude>
+    <Latitude>32.073134</Latitude>
+    <StationCode>35446</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יהודה הלוי 58 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>יהודה הלוי/הרב כלף</Name>
+    <Longitude>34.9544</Longitude>
+    <Latitude>32.095966</Latitude>
+    <StationCode>36365</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף גהה/ז'בוטינסקי</Name>
+    <Longitude>34.848903</Longitude>
+    <Latitude>32.092391</Latitude>
+    <StationCode>36553</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בית רבקה</Name>
+    <Longitude>34.892393</Longitude>
+    <Latitude>32.072294</Latitude>
+    <StationCode>36667</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:זאב אורלוב 8 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>אורלוב/קרול</Name>
+    <Longitude>34.877315</Longitude>
+    <Latitude>32.091631</Latitude>
+    <StationCode>36899</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ברקן 2 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ברקן/בזק</Name>
+    <Longitude>34.974684</Longitude>
+    <Latitude>32.093606</Latitude>
+    <StationCode>36983</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ברקן 25 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>ברקן/ארבל</Name>
+    <Longitude>34.976028</Longitude>
+    <Latitude>32.094237</Latitude>
+    <StationCode>36985</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:נווה אפיקים  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>נווה אפיקים/בשן</Name>
+    <Longitude>34.977734</Longitude>
+    <Latitude>32.092269</Latitude>
+    <StationCode>36986</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מרכז מסחרי ירקונים/40</Name>
+    <Longitude>34.903217</Longitude>
+    <Latitude>32.11646</Latitude>
+    <StationCode>37168</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רמתיים  עיר: הוד השרון רציף:   קומה:  </Address>
+    <Name>דרך רמתיים/ז'בוטינסקי</Name>
+    <Longitude>34.894652</Longitude>
+    <Latitude>32.14435</Latitude>
+    <StationCode>37170</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רמתיים 75 עיר: הוד השרון רציף:   קומה:  </Address>
+    <Name>הוד השרון מרכז/דרך רמתיים</Name>
+    <Longitude>34.89475</Longitude>
+    <Latitude>32.154365</Latitude>
+    <StationCode>37178</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רמתיים 90 עיר: הוד השרון רציף:   קומה:  </Address>
+    <Name>הוד השרון מרכז/דרך רמתיים</Name>
+    <Longitude>34.894483</Longitude>
+    <Latitude>32.155104</Latitude>
+    <StationCode>37206</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רמתיים  עיר: הוד השרון רציף:   קומה:  </Address>
+    <Name>קניון שרונים</Name>
+    <Longitude>34.89996</Longitude>
+    <Latitude>32.132375</Latitude>
+    <StationCode>37254</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: רעננה רציף:   קומה:  </Address>
+    <Name>מסוף רעננה</Name>
+    <Longitude>34.890501</Longitude>
+    <Latitude>32.175366</Latitude>
+    <StationCode>37269</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הירקונים 12 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הירקונים/יונה</Name>
+    <Longitude>34.896471</Longitude>
+    <Latitude>32.098181</Latitude>
+    <StationCode>37545</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב שלום שבזי 53 עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>הרב שלום שבזי/שלמה מעודה</Name>
+    <Longitude>34.945996</Longitude>
+    <Latitude>32.093631</Latitude>
+    <StationCode>37553</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מחלף גהה/ז'בוטינסקי</Name>
+    <Longitude>34.847935</Longitude>
+    <Latitude>32.092807</Latitude>
+    <StationCode>37655</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: נמל תעופה בן גוריון רציף:   קומה:  </Address>
+    <Name>צומת אל על</Name>
+    <Longitude>34.905973</Longitude>
+    <Latitude>31.990055</Latitude>
+    <StationCode>37668</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: חבל מודיעין רציף:   קומה:  </Address>
+    <Name>צומת אל על</Name>
+    <Longitude>34.90619</Longitude>
+    <Latitude>31.988746</Latitude>
+    <StationCode>37785</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 5  עיר: רמת השרון רציף:   קומה:  </Address>
+    <Name>מחלף מורשה</Name>
+    <Longitude>34.857475</Longitude>
+    <Latitude>32.123342</Latitude>
+    <StationCode>37789</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 4  עיר: רעננה רציף:   קומה:  </Address>
+    <Name>וייצמן/כביש 4</Name>
+    <Longitude>34.887242</Longitude>
+    <Latitude>32.190754</Latitude>
+    <StationCode>37865</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:40  עיר: חבל מודיעין רציף:   קומה:  </Address>
+    <Name>צומת טייסים</Name>
+    <Longitude>34.90787</Longitude>
+    <Latitude>32.024122</Latitude>
+    <StationCode>38134</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שדרות אהרון קציר  עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>בקו''ם/שדרות אהרון קציר</Name>
+    <Longitude>34.849424</Longitude>
+    <Latitude>32.050925</Latitude>
+    <StationCode>38160</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יחיאל מיכל פינס 12 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בית ספר מרחביה</Name>
+    <Longitude>34.888057</Longitude>
+    <Latitude>32.077036</Latitude>
+    <StationCode>38163</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הירקונים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>מרכז מסחרי ירקונים/40</Name>
+    <Longitude>34.902807</Longitude>
+    <Latitude>32.115215</Latitude>
+    <StationCode>38242</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הירקונים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת סגולה</Name>
+    <Longitude>34.898214</Longitude>
+    <Latitude>32.102404</Latitude>
+    <StationCode>38243</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנביאים 23 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הנביאים/הנרייטה סולד</Name>
+    <Longitude>34.89848</Longitude>
+    <Latitude>32.076062</Latitude>
+    <StationCode>38284</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנביאים 51 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הנביאים/הושע</Name>
+    <Longitude>34.898421</Longitude>
+    <Latitude>32.073094</Latitude>
+    <StationCode>38287</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנח''ל  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הנח''ל/הרב אונטרמן</Name>
+    <Longitude>34.899729</Longitude>
+    <Latitude>32.099605</Latitude>
+    <StationCode>38288</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנח''ל 10 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת גנים</Name>
+    <Longitude>34.901218</Longitude>
+    <Latitude>32.097552</Latitude>
+    <StationCode>38289</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנרייטה סולד 33 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>הנרייטה סולד/השופטים</Name>
+    <Longitude>34.896007</Longitude>
+    <Latitude>32.076611</Latitude>
+    <StationCode>38291</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 60 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>כיכר קובלנץ/העצמאות</Name>
+    <Longitude>34.874669</Longitude>
+    <Latitude>32.074777</Latitude>
+    <StationCode>38297</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ירושלים 2 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת גנים</Name>
+    <Longitude>34.901577</Longitude>
+    <Latitude>32.096031</Latitude>
+    <StationCode>38302</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הירקונים 45 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>צומת סגולה</Name>
+    <Longitude>34.89757</Longitude>
+    <Latitude>32.101597</Latitude>
+    <StationCode>38303</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קפלן 13 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בי''ח שניידר/קפלן</Name>
+    <Longitude>34.868818</Longitude>
+    <Latitude>32.088723</Latitude>
+    <StationCode>38310</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קפלן 25 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>קפלן/ארלוזורוב</Name>
+    <Longitude>34.868377</Longitude>
+    <Latitude>32.086123</Latitude>
+    <StationCode>38311</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קפלן 39 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>חווה חקלאית/קפלן</Name>
+    <Longitude>34.867936</Longitude>
+    <Latitude>32.083908</Latitude>
+    <StationCode>38312</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קפלן 40 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>קפלן / הנרקיסים</Name>
+    <Longitude>34.867655</Longitude>
+    <Latitude>32.082906</Latitude>
+    <StationCode>38313</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קפלן 53 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>קפלן/דגל ראובן</Name>
+    <Longitude>34.867615</Longitude>
+    <Latitude>32.081925</Latitude>
+    <StationCode>38314</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קפלן 12 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בית חולים שניידר</Name>
+    <Longitude>34.868576</Longitude>
+    <Latitude>32.088538</Latitude>
+    <StationCode>38315</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קפלן 34 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>חווה חקלאית/קפלן</Name>
+    <Longitude>34.867941</Longitude>
+    <Latitude>32.08464</Latitude>
+    <StationCode>38316</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ת. רכבת ת''א מרכז/רציפים</Name>
+    <Longitude>34.796091</Longitude>
+    <Latitude>32.083157</Latitude>
+    <StationCode>20001</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב ישראל אבו חצירא 2 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>הרב ישראל אבו חצירא/דרך ז'בוטינס</Name>
+    <Longitude>34.833202</Longitude>
+    <Latitude>32.092674</Latitude>
+    <StationCode>20079</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:פנחס רוזן  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>פנחס רוזן/דבורה הנביאה</Name>
+    <Longitude>34.825268</Longitude>
+    <Latitude>32.118401</Latitude>
+    <StationCode>20306</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:החמישה 8 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>החמישה/קיש בריגדיר</Name>
+    <Longitude>34.895432</Longitude>
+    <Latitude>32.072017</Latitude>
+    <StationCode>38602</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בן גוריון 22 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בית ספר עלומים/בן גוריון</Name>
+    <Longitude>34.870331</Longitude>
+    <Latitude>32.080025</Latitude>
+    <StationCode>38663</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מוריה 9 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מוריה/נווה שאנן</Name>
+    <Longitude>35.20594</Longitude>
+    <Latitude>32.101804</Latitude>
+    <StationCode>63097</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 51 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך הציונות/מבצע הראל</Name>
+    <Longitude>35.192225</Longitude>
+    <Latitude>32.106799</Latitude>
+    <StationCode>63098</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: שומרון רציף:   קומה:  </Address>
+    <Name>מסוף אורנית</Name>
+    <Longitude>34.999197</Longitude>
+    <Latitude>32.107438</Latitude>
+    <StationCode>63111</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך תא''ל אורי בראון 5 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך תא''ל אורי בראון/האצ''ל</Name>
+    <Longitude>35.177802</Longitude>
+    <Latitude>32.104861</Latitude>
+    <StationCode>63219</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך תא''ל אורי בראון 21 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך תא''ל אורי בראון/מעלה הגבעה</Name>
+    <Longitude>35.181355</Longitude>
+    <Latitude>32.106227</Latitude>
+    <StationCode>63221</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:5  עיר: שומרון רציף:   קומה:  </Address>
+    <Name>צומת גיתי</Name>
+    <Longitude>35.139731</Longitude>
+    <Latitude>32.109585</Latitude>
+    <StationCode>63227</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:5  עיר: שומרון רציף:   קומה:  </Address>
+    <Name>צומת גיתי</Name>
+    <Longitude>35.140792</Longitude>
+    <Latitude>32.109485</Latitude>
+    <StationCode>63228</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך עפרון  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך עפרון/המלאכה</Name>
+    <Longitude>35.167573</Longitude>
+    <Latitude>32.101437</Latitude>
+    <StationCode>63229</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:גנים 59 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>גנים/הורדים</Name>
+    <Longitude>35.171243</Longitude>
+    <Latitude>32.101825</Latitude>
+    <StationCode>63230</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:גנים 41 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>גנים/הכלניות</Name>
+    <Longitude>35.17337</Longitude>
+    <Latitude>32.102254</Latitude>
+    <StationCode>63231</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות 1 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>העצמאות/דרך עפרון</Name>
+    <Longitude>35.174929</Longitude>
+    <Latitude>32.105389</Latitude>
+    <StationCode>63232</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך תא''ל אורי בראון 10 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך תא''ל אורי בראון/הפסגה</Name>
+    <Longitude>35.176422</Longitude>
+    <Latitude>32.104722</Latitude>
+    <StationCode>63233</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:גנים 7 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>גנים/הסביונים</Name>
+    <Longitude>35.177108</Longitude>
+    <Latitude>32.103429</Latitude>
+    <StationCode>63234</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רון נחמן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>העצמאות/שד. ירושלים</Name>
+    <Longitude>35.178064</Longitude>
+    <Latitude>32.102837</Latitude>
+    <StationCode>63235</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך תא''ל אורי בראון 19 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך תא''ל אורי בראון/ההגנה</Name>
+    <Longitude>35.181274</Longitude>
+    <Latitude>32.105995</Latitude>
+    <StationCode>63238</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 10 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>צה''ל/יואב</Name>
+    <Longitude>35.183158</Longitude>
+    <Latitude>32.106682</Latitude>
+    <StationCode>63239</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רון נחמן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>שד. ירושלים/ששת הימים</Name>
+    <Longitude>35.188115</Longitude>
+    <Latitude>32.103551</Latitude>
+    <StationCode>63241</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בקעת הירדן 6 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>בקעת הירדן/הגליל</Name>
+    <Longitude>35.186048</Longitude>
+    <Latitude>32.106037</Latitude>
+    <StationCode>63242</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בקעת הירדן 7 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>בית כנסת הרמב''ם/בקעת הירדן</Name>
+    <Longitude>35.185959</Longitude>
+    <Latitude>32.10628</Latitude>
+    <StationCode>63243</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 18 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>יפתח/צה''ל</Name>
+    <Longitude>35.185208</Longitude>
+    <Latitude>32.107007</Latitude>
+    <StationCode>63244</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנגב 36 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>הנגב/הערבה</Name>
+    <Longitude>35.187149</Longitude>
+    <Latitude>32.105063</Latitude>
+    <StationCode>63246</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ששת הימים 15 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>ששת הימים/ימית</Name>
+    <Longitude>35.189063</Longitude>
+    <Latitude>32.104821</Latitude>
+    <StationCode>63247</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ששת הימים 2 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>ששת הימים/הציונות</Name>
+    <Longitude>35.189154</Longitude>
+    <Latitude>32.107359</Latitude>
+    <StationCode>63248</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:ששת הימים 3 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>ששת הימים/מבצע קדש</Name>
+    <Longitude>35.189268</Longitude>
+    <Latitude>32.106889</Latitude>
+    <StationCode>63249</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רון נחמן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>שד. ירושלים/שער הגיא</Name>
+    <Longitude>35.196338</Longitude>
+    <Latitude>32.10121</Latitude>
+    <StationCode>63252</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רון נחמן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>שד. ירושלים/שער הגיא</Name>
+    <Longitude>35.19619</Longitude>
+    <Latitude>32.101422</Latitude>
+    <StationCode>63253</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שער הגיא 25 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>שער הגיא/דרך רון נחמן</Name>
+    <Longitude>35.196148</Longitude>
+    <Latitude>32.101795</Latitude>
+    <StationCode>63254</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:שער הגיא 17 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>שער הגיא/עצמון</Name>
+    <Longitude>35.198285</Longitude>
+    <Latitude>32.102672</Latitude>
+    <StationCode>63259</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:התבור 6 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>התבור/הגלבוע</Name>
+    <Longitude>35.200278</Longitude>
+    <Latitude>32.104084</Latitude>
+    <StationCode>63260</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 61 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך הציונות/השקד</Name>
+    <Longitude>35.193745</Longitude>
+    <Latitude>32.105671</Latitude>
+    <StationCode>63261</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך עפרון  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>העצמאות/דרך עפרון</Name>
+    <Longitude>35.174806</Longitude>
+    <Latitude>32.104914</Latitude>
+    <StationCode>63262</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 79 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך הציונות/שער הגיא</Name>
+    <Longitude>35.196856</Longitude>
+    <Latitude>32.10506</Latitude>
+    <StationCode>63263</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רון נחמן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מוריה/שד. ירושלים</Name>
+    <Longitude>35.206225</Longitude>
+    <Latitude>32.10284</Latitude>
+    <StationCode>63267</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הגלבוע 5 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>הגלבוע/התבור</Name>
+    <Longitude>35.201535</Longitude>
+    <Latitude>32.104772</Latitude>
+    <StationCode>63269</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רמת הגולן 28 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>רמת הגולן/הגלבוע</Name>
+    <Longitude>35.202004</Longitude>
+    <Latitude>32.105895</Latitude>
+    <StationCode>63270</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רמת הגולן 23 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מעונות סטודנטים/רמת הגולן</Name>
+    <Longitude>35.203356</Longitude>
+    <Latitude>32.106246</Latitude>
+    <StationCode>63271</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רמת הגולן 40 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מעונות סטודנטים/רמת הגולן</Name>
+    <Longitude>35.205953</Longitude>
+    <Latitude>32.10606</Latitude>
+    <StationCode>63272</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רמת הגולן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>אוניברסיטת אריאל/רמת הגולן</Name>
+    <Longitude>35.207797</Longitude>
+    <Latitude>32.104936</Latitude>
+    <StationCode>63273</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:31 כביש  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>אוניברסיטת אריאל/כביש 31</Name>
+    <Longitude>35.210692</Longitude>
+    <Latitude>32.105926</Latitude>
+    <StationCode>63275</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 58 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מרכז אלמוג/דרך הציונות</Name>
+    <Longitude>35.191788</Longitude>
+    <Latitude>32.106948</Latitude>
+    <StationCode>63322</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:צה''ל 32 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>בית כנסת שבות אריאל/צה''ל</Name>
+    <Longitude>35.187537</Longitude>
+    <Latitude>32.107216</Latitude>
+    <StationCode>63401</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: ברקן רציף:   קומה:  </Address>
+    <Name>ברקן</Name>
+    <Longitude>35.108091</Longitude>
+    <Latitude>32.107993</Latitude>
+    <StationCode>63402</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך ברקן 16 עיר: מפעלי ברקן רציף:   קומה:  </Address>
+    <Name>דרך ברקן/חלמיש</Name>
+    <Longitude>35.112686</Longitude>
+    <Latitude>32.108509</Latitude>
+    <StationCode>63407</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך ברקן 16 עיר: מפעלי ברקן רציף:   קומה:  </Address>
+    <Name>דרך ברקן /חלמיש</Name>
+    <Longitude>35.112514</Longitude>
+    <Latitude>32.108619</Latitude>
+    <StationCode>63408</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 9 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך הציונות/מבצע עובדה</Name>
+    <Longitude>35.183558</Longitude>
+    <Latitude>32.108255</Latitude>
+    <StationCode>63409</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 67 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך הציונות/מצדה</Name>
+    <Longitude>35.194993</Longitude>
+    <Latitude>32.105309</Latitude>
+    <StationCode>63410</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 23 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך הציונות/מבצע חירם</Name>
+    <Longitude>35.186293</Longitude>
+    <Latitude>32.108308</Latitude>
+    <StationCode>63411</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך עפרון 8 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך עפרון/השומרון</Name>
+    <Longitude>35.172848</Longitude>
+    <Latitude>32.103739</Latitude>
+    <StationCode>63412</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:העצמאות  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>העצמאות/גנים</Name>
+    <Longitude>35.178637</Longitude>
+    <Latitude>32.103785</Latitude>
+    <StationCode>63414</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:השוהם 1 עיר: מפעלי ברקן רציף:   קומה:  </Address>
+    <Name>דרך ברקן/השהם</Name>
+    <Longitude>35.117691</Longitude>
+    <Latitude>32.109122</Latitude>
+    <StationCode>63415</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:השוהם 15 עיר: מפעלי ברקן רציף:   קומה:  </Address>
+    <Name>השהם/האודם</Name>
+    <Longitude>35.120412</Longitude>
+    <Latitude>32.104466</Latitude>
+    <StationCode>63417</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:השוהם 7 עיר: מפעלי ברקן רציף:   קומה:  </Address>
+    <Name>השהם/הברקת</Name>
+    <Longitude>35.119922</Longitude>
+    <Latitude>32.107863</Latitude>
+    <StationCode>63419</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הנגב 41 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>הנגב/ששת הימים</Name>
+    <Longitude>35.187932</Longitude>
+    <Latitude>32.105108</Latitude>
+    <StationCode>63424</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מוריה 17 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מוריה/יפה נוף</Name>
+    <Longitude>35.203624</Longitude>
+    <Latitude>32.101003</Latitude>
+    <StationCode>63425</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הנחשונים 65 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מכבי אש</Name>
+    <Longitude>35.168562</Longitude>
+    <Latitude>32.104061</Latitude>
+    <StationCode>63426</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך עפרון  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מרכז שיקום/דרך עפרון</Name>
+    <Longitude>35.170235</Longitude>
+    <Latitude>32.102683</Latitude>
+    <StationCode>63427</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4775  עיר: שומרון רציף:   קומה:  </Address>
+    <Name>צומת אריאל</Name>
+    <Longitude>35.165552</Longitude>
+    <Latitude>32.10826</Latitude>
+    <StationCode>63428</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:4775  עיר: שומרון רציף:   קומה:  </Address>
+    <Name>צומת אריאל</Name>
+    <Longitude>35.165317</Longitude>
+    <Latitude>32.108142</Latitude>
+    <StationCode>63429</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הנחשונים 43 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>קופת חולים לאומית/דרך הנחשונים</Name>
+    <Longitude>35.171849</Longitude>
+    <Latitude>32.105873</Latitude>
+    <StationCode>63433</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:רמת הגולן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>אוניברסיטת אריאל/רמת הגולן</Name>
+    <Longitude>35.207381</Longitude>
+    <Latitude>32.105393</Latitude>
+    <StationCode>63438</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הציונות 72 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>דרך הציונות/מצדה</Name>
+    <Longitude>35.196016</Longitude>
+    <Latitude>32.10504</Latitude>
+    <StationCode>63442</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מרומי שדה 2 עיר: מודיעין עילית רציף:   קומה:  </Address>
+    <Name>מרומי שדה/נתיבות המשפט</Name>
+    <Longitude>35.044406</Longitude>
+    <Latitude>31.929586</Latitude>
+    <StationCode>63800</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:31 כביש  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מגרש כדורגל</Name>
+    <Longitude>35.209071</Longitude>
+    <Latitude>32.105331</Latitude>
+    <StationCode>63946</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך הנחשונים 43 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>בית החייל/דרך הנחשונים</Name>
+    <Longitude>35.171607</Longitude>
+    <Latitude>32.105963</Latitude>
+    <StationCode>65260</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 4  עיר: לב השרון רציף:   קומה:  </Address>
+    <Name>מחלף דרור לצפון</Name>
+    <Longitude>34.893387</Longitude>
+    <Latitude>32.256516</Latitude>
+    <StationCode>36472</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לכביש 4  עיר: אבן יהודה רציף:   קומה:  </Address>
+    <Name>מחלף דרור לדרום</Name>
+    <Longitude>34.88915</Longitude>
+    <Latitude>32.254064</Latitude>
+    <StationCode>36476</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>הבורסה/דרך ז'בוטינסקי</Name>
+    <Longitude>34.800724</Longitude>
+    <Latitude>32.082534</Latitude>
+    <StationCode>28665</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 97 עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>דרך זאב ז'בוטינסקי/הרצל</Name>
+    <Longitude>34.814882</Longitude>
+    <Latitude>32.088658</Latitude>
+    <StationCode>20036</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>רכבת מרכז/על פרשת דרכים</Name>
+    <Longitude>34.797634</Longitude>
+    <Latitude>32.081421</Latitude>
+    <StationCode>20030</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מוריה 10 עיר: אריאל רציף:   קומה:  </Address>
+    <Name>מוריה/נווה שאנן</Name>
+    <Longitude>35.205804</Longitude>
+    <Latitude>32.101983</Latitude>
+    <StationCode>60396</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:  עיר: רמת גן רציף:   קומה:  </Address>
+    <Name>אוניברסיטת בר אילן/דרך אשכול</Name>
+    <Longitude>34.843931</Longitude>
+    <Latitude>32.065728</Latitude>
+    <StationCode>30530</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:המסגר 41 עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>המסגר/המלאכה</Name>
+    <Longitude>34.786424</Longitude>
+    <Latitude>32.066005</Latitude>
+    <StationCode>20143</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב ישראל אבו חצירא 45 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>אבו חצירא/הירקון</Name>
+    <Longitude>34.829242</Longitude>
+    <Latitude>32.096775</Latitude>
+    <StationCode>20162</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:מבצע קדש 46 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>אבו חצירא/הקישון</Name>
+    <Longitude>34.829067</Longitude>
+    <Latitude>32.097481</Latitude>
+    <StationCode>20155</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב ישראל אבו חצירא 24 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>אבו חצירא/הרב פתאיה</Name>
+    <Longitude>34.830981</Longitude>
+    <Latitude>32.095152</Latitude>
+    <StationCode>20150</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הרב ישראל אבו חצירא 13 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>הרב ישראל אבו חצירא/דוד מחלוף</Name>
+    <Longitude>34.831298</Longitude>
+    <Latitude>32.094491</Latitude>
+    <StationCode>20147</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:קיבוץ גלויות  עיר: ראש העין רציף:   קומה:  </Address>
+    <Name>קיבוץ גלויות/נווה אפיקים</Name>
+    <Longitude>34.969894</Longitude>
+    <Latitude>32.092186</Latitude>
+    <StationCode>31320</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:יציאה לדרך ז'בוטינסקי מערב  עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>מחלף גהה</Name>
+    <Longitude>34.844702</Longitude>
+    <Latitude>32.092849</Latitude>
+    <StationCode>20165</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך זאב ז'בוטינסקי 13 עיר: בני ברק רציף:   קומה:  </Address>
+    <Name>דרך זאב ז'בוטינסקי/החשמונאים</Name>
+    <Longitude>34.826477</Longitude>
+    <Latitude>32.091728</Latitude>
+    <StationCode>20176</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הירקונים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ת. רכבת סגולה</Name>
+    <Longitude>34.902498</Longitude>
+    <Latitude>32.112088</Latitude>
+    <StationCode>31732</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:הירקונים  עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>ת. רכבת סגולה</Name>
+    <Longitude>34.902757</Longitude>
+    <Latitude>32.112088</Latitude>
+    <StationCode>31731</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:1285  עיר: תל אביב יפו רציף:   קומה:  </Address>
+    <Name>ת. רכבת ת''א מרכז/הורדה</Name>
+    <Longitude>34.796638</Longitude>
+    <Latitude>32.082844</Latitude>
+    <StationCode>27997</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בן גוריון 35 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בן גוריון/העצמאות</Name>
+    <Longitude>34.870371</Longitude>
+    <Latitude>32.075415</Latitude>
+    <StationCode>33519</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:בן גוריון 24 עיר: פתח תקווה רציף:   קומה:  </Address>
+    <Name>בית ספר עלומים/בן גוריון</Name>
+    <Longitude>34.870424</Longitude>
+    <Latitude>32.079124</Latitude>
+    <StationCode>33514</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רון נחמן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>קניון אריאל/דרך רון נחמן</Name>
+    <Longitude>35.171424</Longitude>
+    <Latitude>32.100513</Latitude>
+    <StationCode>61374</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+  <Station>
+    <Address> רחוב:דרך רון נחמן  עיר: אריאל רציף:   קומה:  </Address>
+    <Name>קניון אריאל/דרך רון נחמן</Name>
+    <Longitude>35.171726</Longitude>
+    <Latitude>32.10046</Latitude>
+    <StationCode>61373</StationCode>
+    <IsActive>True</IsActive>
+  </Station>
+</Stations>
