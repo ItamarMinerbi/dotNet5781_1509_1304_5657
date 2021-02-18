@@ -30,7 +30,7 @@ namespace DS
             #region User
             Users.Add(new DO.User() { Username = "Admin", Password = "21232F297A57A5A743894A0E4A801FC3", IsAdmin = true, IsActive = true });
             Users.Add(new DO.User() { Username = "Itamar", Password = "88DB2BCDDD6B69B78CE8DC1F98D81950", IsAdmin = false, IsActive = true });
-            Users.Add(new DO.User() { Username = "Eli", Password = "8A24367A1F46C141048752F2D5BBD14B", IsAdmin = false, IsActive = true });
+            Users.Add(new DO.User() { Username = "vennnyux18", Password = "79B66A4BA81BC193F9609221C1875219", IsAdmin = false, IsActive = true });
             Users.Add(new DO.User() { Username = "User", Password = "B549418A11A6A12D07CA30190E768C1B", IsAdmin = false, IsActive = true });
             Users.Add(new DO.User() { Username = "username", Password = "0BF1D26D10DC7ED0CBBA5A36618FEF9E", IsAdmin = false, IsActive = true });
             Users.Add(new DO.User() { Username = "Mahon Lev", Password = "CEF2FA0C871D019A939A2A9764B5ECC0", IsAdmin = false, IsActive = true });
