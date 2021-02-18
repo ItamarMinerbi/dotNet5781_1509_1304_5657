@@ -60,15 +60,21 @@ namespace BL
                 throw new InvalidEmailException($"This email address is empty!");
             if (!IsValid(Email))
                 throw new InvalidEmailException($"It looks like we can't send e-mails to this address: {Email}\nVerify that this address is correct!");
-            try { 
-                dal.CreateUser(new DO.User() 
-                { 
-                    Username = Username, 
-                    Password = Password1, 
-                    Email = Email, 
-                    IsAdmin = false, 
-                    IsActive = true 
+
+            try
+            {
+                dal.CreateUser(new DO.User()
+                {
+                    Username = Username,
+                    Password = Password1,
+                    Email = Email,
+                    IsAdmin = false,
+                    IsActive = true
                 });
+            }
+            catch (Exception ex) { throw new InvalidUsernameException(ex.Message, ex); }
+            
+            try {
                 // Send Mail
                 string htmlBody = @"<!DOCTYPE html>
 
