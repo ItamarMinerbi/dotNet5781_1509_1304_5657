@@ -154,7 +154,7 @@ namespace BL
                 mail.To.Add(Email);
                 mail.From = new MailAddress("dotnet5781.project.help@gmail.com");
                 mail.Subject = "Register";
-                mail.Body = htmlBody.Replace("{Username}", Username).Replace("{Name}", "Itamar Minerbi & Eli Arazi Project");
+                mail.Body = htmlBody.Replace("{Username}", Username).Replace("{Name}", "Itamar Minerbi & Ben Mamistvalov Kopylov Project");
                 mail.IsBodyHtml = true;
                 smtp.Send(mail);
             }
